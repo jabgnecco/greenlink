@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
 
-    @markers = @projects.geocoded.map do |flat|
+    @markers = @projects.geocoded.map do |project|
       {
         lat: project.latitude,
         lng: project.longitude
