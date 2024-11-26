@@ -14,6 +14,7 @@ class DonationsController < ApplicationController
   def create
     @project = Project.find(params[:project_id])
     @donation = Donation.new(donation_params)
+    @donation.project = @project
     @donation.user = current_user
     @donation.save
   end
