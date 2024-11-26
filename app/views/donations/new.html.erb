@@ -1,0 +1,7 @@
+  <h1>Green Link</h1>
+  <p>Enter donation amount:</p>
+  <%= simple_form_for(@donation) do |f| %>
+    <%= f.input :amount %>
+    <%= f.input :tip
+    <%= f.submit "Checkout!", class: "checkout-button" %>
+  <% end %>
