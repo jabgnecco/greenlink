@@ -1,15 +1,19 @@
 
 <div class="main-container">
-  <div class="cards">
-
-    <div class="card">
-      <%=project.title%>
-    </div>
+  <div class="cards max-w-50">
+    <% @projects.each do |project|%>
+      <div class="card">
+        <h5><%=project.title%></h5>
+        <p class="card-text"><%= project.progress%></p>
+        <p class="card-text"><%= project.target%></p>
+        <p class="card-text"><%= project.address%></p>
+      </div>
+    <% end%>
   </div>
 
   <div id="greenlink-map"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>

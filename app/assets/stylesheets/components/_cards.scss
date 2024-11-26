@@ -1,0 +1,13 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  flex-grow: 1;
+  max-width: 66%;
+
+  .card {
+    width: calc(33% - 32px);
+    min-width: 10rem;
+  }
+}
