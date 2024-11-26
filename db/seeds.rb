@@ -10,60 +10,76 @@
 
 require "faker"
 
+puts "Cleaning Database..."
+Project.destroy_all
+puts "Creating Projects..."
+
 puts "Seeding Data "
 
+User.destroy_all
+puts "Creating Users..."
+user1 = User.new(
+  email: "test@greenlink.com",
+  password: "123123"
+)
+user1.save!
+p user1
+p user1.valid?
+
+puts "User Created: #{User.count}"
+
 titles = [
-"Solar for Schools",
-"Community Wind Turbines",
-"Solar-Powered Water Pumps",
-"Renewable Energy Training",
-"Microgrids for Villages",
-"Solar-Powered Hospitals",
-"Electric Vehicle Charging Stations",
-"Bioenergy for Cooking",
-"Energy-Efficient Homes",
-"Floating Solar Farms",
-"Solar Lights for Refugees",
-"Hydropower for Communities",
-"Wind Energy Innovation",
-"Renewable Energy Libraries",
-"Solar-Powered Desalination",
-"Green Energy for Orphanages",
-"Carbon-Neutral Events",
-"Solar Boats",
-"Renewable Energy Startups",
-"Hybrid Solar and Wind Systems",
-"Solar Street Lighting",
-"Geothermal Heating Systems",
-"Algae Biofuel Projects",
-"Solar-Powered Education Kits",
-"Eco-Friendly Urban Transport",
-"Smart Grids for Developing Regions",
-"Waste-to-Energy Plants",
-"Solar Greenhouses",
-"Offshore Wind Farms",
-"Clean Energy for Island Communities",
-"Battery Recycling Initiatives",
-"Wind-Powered Water Filtration",
-"Solar-Powered Internet Hubs",
-"Clean Energy Art Installations",
-"Hydrogen Fuel Innovations",
-"Solar-Powered Emergency Kits",
-"Wave Energy Technology",
-"Reforestation with Solar Power",
-"Renewable-Powered Public Transport",
-"Solar Farms for Food Security",
-"Biomass Heating for Schools",
-"Solar-Powered Charging Stations",
-"Renewable Energy Scholarships",
-"Community Energy Co-ops",
-"Clean Energy for Monasteries",
-"Green Data Centers",
-"Urban Solar Rooftops",
-"Zero-Energy Schools",
-"Solar Refrigerators for Farmers",
-"Energy Access Advocacy"
-]
+  "Solar for Schools",
+  "Community Wind Turbines",
+  "Solar-Powered Water Pumps",
+  "Renewable Energy Training",
+  "Microgrids for Villages",
+  "Solar-Powered Hospitals",
+  "Electric Vehicle Charging Stations",
+  "Bioenergy for Cooking",
+  "Energy-Efficient Homes",
+  "Floating Solar Farms",
+  "Solar Lights for Refugees",
+  "Hydropower for Communities",
+  "Wind Energy Innovation",
+  "Renewable Energy Libraries",
+  "Solar-Powered Desalination",
+  "Green Energy for Orphanages",
+  "Carbon-Neutral Events",
+  "Solar Boats",
+  "Renewable Energy Startups",
+  "Hybrid Solar and Wind Systems",
+  "Solar Street Lighting",
+  "Geothermal Heating Systems",
+  "Algae Biofuel Projects",
+  "Solar-Powered Education Kits",
+  "Eco-Friendly Urban Transport",
+  "Smart Grids for Developing Regions",
+  "Waste-to-Energy Plants",
+  "Solar Greenhouses",
+  "Offshore Wind Farms",
+  "Clean Energy for Island Communities",
+  "Battery Recycling Initiatives",
+  "Wind-Powered Water Filtration",
+  "Solar-Powered Internet Hubs",
+  "Clean Energy Art Installations",
+  "Hydrogen Fuel Innovations",
+  "Solar-Powered Emergency Kits",
+  "Wave Energy Technology",
+  "Reforestation with Solar Power",
+  "Renewable-Powered Public Transport",
+  "Solar Farms for Food Security",
+  "Biomass Heating for Schools",
+  "Solar-Powered Charging Stations",
+  "Renewable Energy Scholarships",
+  "Community Energy Co-ops",
+  "Clean Energy for Monasteries",
+  "Green Data Centers",
+  "Urban Solar Rooftops",
+  "Zero-Energy Schools",
+  "Solar Refrigerators for Farmers",
+  "Energy Access Advocacy"]
+puts "Seeding Data "
 
 descriptions = [
 "Solar for Schools: Install solar panels in underprivileged schools to provide clean, reliable energy for education.",
@@ -117,16 +133,21 @@ descriptions = [
 "Solar Refrigerators for Farmers: Provide solar-powered refrigeration units to reduce food waste.",
 "Energy Access Advocacy: Support campaigns that push for greater adoption of renewables worldwide."]
 
+
 number = 0
 
 50.times do
-  Project.create(
-  title: titles[number],
-  address: Faker::Address.full_address,
-  description: descriptions[number],
-  auditor: Faker::FunnyName,
-  target: Faker::Number.decimal(l_digits: 3, r_digits: 3)
-)
+  Project.create!(
+    user: user1,
+    title: titles[number],
+    address: Faker::Address.full_address,
+    description: descriptions[number],
+    auditor: Faker::FunnyName,
+    target: Faker::Number.decimal(l_digits: 3, r_digits: 3),
+    progress: 0
+  )
 
   number += 1
 end
+
+puts "Project Created: #{Project.count}"
