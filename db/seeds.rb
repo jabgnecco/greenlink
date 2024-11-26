@@ -139,7 +139,7 @@ descriptions = [
 number = 0
 
 50.times do
-  Project.create!(
+    project = Project.create!(
     user: user1,
     title: titles[number],
     address: Faker::Address.full_address,
@@ -148,7 +148,12 @@ number = 0
     target: Faker::Number.decimal(l_digits: 3, r_digits: 3),
     progress: 0
   )
-
+    Donation.create!(
+      project: project,
+      user: user1,
+      amount: 20.000,
+      state: "Paid"
+    )
   number += 1
 end
 
