@@ -9,6 +9,7 @@ class CreateProjects < ActiveRecord::Migration[7.1]
       t.float :latitude
       t.float :longitude
       t.integer :target
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
