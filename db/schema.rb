@@ -27,15 +27,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_25_155150) do
     t.index ["user_id"], name: "index_donations_on_user_id"
   end
 
-  create_table "founders", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "project_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["project_id"], name: "index_founders_on_project_id"
-    t.index ["user_id"], name: "index_founders_on_user_id"
-  end
-
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -45,8 +36,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_25_155150) do
     t.float "latitude"
     t.float "longitude"
     t.integer "target"
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,6 +59,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_25_155150) do
 
   add_foreign_key "donations", "projects"
   add_foreign_key "donations", "users"
-  add_foreign_key "founders", "projects"
-  add_foreign_key "founders", "users"
+  add_foreign_key "projects", "users"
 end
