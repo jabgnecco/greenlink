@@ -19,6 +19,8 @@ puts "Seeding Data "
 User.destroy_all
 puts "Creating Users..."
 user1 = User.new(
+  first_name: "john",
+  last_name: "smith",
   email: "test@greenlink.com",
   password: "123123"
 )
