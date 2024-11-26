@@ -12,8 +12,24 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def new
+    @projects = Project.new
+  end
+
+  def create
+    @project = Project.new(project_params)
+    @project.user = current_user
+    @project.save
+  end
+
   def show
-    @projects = Project.find(params[:id])
+    @project = Project.find(params[:id])
+  end
+
+  private
+
+  def project_params
+    params.require(:project).permit(:title, :description, :address, :auditor, :progress, :targer)
   end
 
 end
