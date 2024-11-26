@@ -16,8 +16,11 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donation_params)
     @donation.project = @project
     @donation.user = current_user
+    @donation.state = "pending"
     @donation.save
+    redirect_to new_payment_path(donation_id: @donation.id)
   end
+
   private
 
   def donation_params
