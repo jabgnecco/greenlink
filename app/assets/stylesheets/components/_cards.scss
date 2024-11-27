@@ -21,11 +21,9 @@
   box-shadow: 8px 8px 6px rgb(205, 222, 228);
 }
 
-.progress{
+.progress {
   border-radius: 10px;
 }
-
-//card-donation-styling
 
 .card-donation{
   border-radius: 8px;
@@ -35,4 +33,8 @@
     margin-bottom: 0px;
   }
   box-shadow: 4px 8px 8px rgb(207, 207, 207);
+}
+  
+.card-title {
+  text-decoration: none;
 }

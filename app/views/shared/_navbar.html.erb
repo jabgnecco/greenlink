@@ -1,38 +1,66 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+<div class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+    <!-- Left Section: Logo and Tagline -->
+    <div class="navbar-left">
+      <%= link_to "/projects", class: "d-flex align-items-center text-decoration-none logo" do %>
+        <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
+        <span class="logo-text">Green Link</span>
+      <% end %>
+    </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+    <!-- Right Section: Links -->
+    <div class="navbar-right">
+      <ul class="nav-links d-flex align-items-center mb-0">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+          <li><%= link_to "Home", "/projects", class: "nav-link fw-bold" %></li>
+          <li class="dropdown nav-link">
+            <p id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+              About Us
+            </p>
+            <div class="dropdown-menu dropdown-menu-end">
+              <%= link_to "What we do", "#", class: "dropdown-item" %>
+              <%= link_to "Our impact", "#", class: "dropdown-item" %>
+            </div>
           </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
-          </a>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+          <li><%= link_to "News", "#", class: "nav-link" %></li>
+          <li class="dropdown nav-link fw-bold">
+            <p id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+              Profile
+            </p>
+            <div class="dropdown-menu dropdown-menu-end">
+              <%= link_to "Your impact", "/donations/index", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "dropdown-item" %>
             </div>
           </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
+          <li><%= link_to "Login", new_user_session_path, class: "nav-link" %></li>
         <% end %>
       </ul>
+    </div>
+  </div>
+
+  <!-- Second Row: Search Bar and Font Adjustment -->
+  <div class="mt-2 row d-flex justify-content-between align-items-center w-100">
+    <p class="tagline col-3">Have a positive impact on the environment</p>
+
+    <!-- Search Bar -->
+    <div class="col-6", style="position: relative;">
+      <%= form_with url: projects_path, method: :get, class: "d-flex search-bar" do |f| %>
+        <%= f.text_field :query, placeholder: "Search for a project...", class: "search-input w-100" %>
+        <%= f.button nil, type: "submit", class: "search-btn", style: "position: absolute; right: 15px;", name: nil do %>
+          <i class="fas fa-search"></i><p class="fw-bold px-1">Search</p>
+        <% end %>
+      <% end %>
+    </div>
+
+    <!-- Font Adjustment -->
+    <div class="col-3", style="width: 21%;">
+      <div class="font-adjust", style="padding: 0.5rem;">
+        <label for="font-slider" class="font-label me-2">Adjust font-size</label>
+        <input type="range" id="font-slider" class="font-slider" min="10" max="19" step="3">
+      </div>
     </div>
   </div>
 </div>

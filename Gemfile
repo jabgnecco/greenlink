@@ -2,7 +2,12 @@ source "https://rubygems.org"
 
 gem "devise"
 ruby "3.3.5"
+gem "pg_search"
 
+gem 'faker'
+gem 'stripe'
+
+gem 'money-rails'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.5"
 
@@ -75,7 +80,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem 'faker'
-
-gem 'stripe'
