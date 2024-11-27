@@ -11,6 +11,7 @@
 require "faker"
 
 puts "Cleaning Database..."
+Donation.destroy_all
 Project.destroy_all
 puts "Creating Projects..."
 
@@ -190,19 +191,20 @@ addresses = ["42 Spearman Walk, Hartlepool, TS27 3PD",
 number = 0
 
 50.times do
+  puts "created #{number + 1} projects"
     project = Project.create!(
-    user: user1,
-    title: titles[number],
-    address: addresses[number],
-    description: descriptions[number],
-    auditor: Faker::FunnyName,
-    target: Faker::Number.decimal(l_digits: 3, r_digits: 3),
-    progress: 0
-  )
+      user: user1,
+      title: titles[number],
+      address: addresses[number],
+      description: descriptions[number],
+      auditor: Faker::FunnyName,
+      target: (50000..100000).to_a.sample,
+      progress: 0
+    )
     Donation.create!(
       project: project,
       user: user1,
-      amount: 20.000,
+      amount: (5..1000).to_a.sample,
       state: "Paid"
     )
   number += 1
