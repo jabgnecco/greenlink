@@ -197,7 +197,7 @@ number = 0
       title: titles[number],
       address: addresses[number],
       description: descriptions[number],
-      auditor: Faker::FunnyName,
+      auditor: Faker::Company.name,
       target: (50000..100000).to_a.sample,
       progress: 0
     )
