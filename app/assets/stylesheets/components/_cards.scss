@@ -8,7 +8,7 @@
 }
 
   .card-body{
-    background-color: #CCEAFF;
+    background-color: #E9F6FF;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
   }
@@ -21,6 +21,10 @@
     box-shadow: 8px 8px 6px rgb(205, 222, 228);
   }
 
-.progress{
+.progress {
   border-radius: 10px;
+}
+
+.card-title {
+  text-decoration: none;
 }

@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "devise"
 ruby "3.3.5"
+gem "pg_search"
 
 gem 'faker'
 gem 'stripe'
