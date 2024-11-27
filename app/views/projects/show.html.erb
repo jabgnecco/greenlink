@@ -36,7 +36,7 @@
 <h1>Description:</h1>
 <%= @project.description %>
 <h1>Location:</h1>
-<%= @project.address %>
+<p><%=@project.region %>, <%= @project.address%></p>
 <h3>Audited by:</h3>
 <%= @project.auditor %>
 <%= link_to "Donate Now", new_project_donation_path(@project) %>
