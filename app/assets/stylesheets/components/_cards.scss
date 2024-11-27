@@ -1,0 +1,26 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  flex-grow: 1;
+  max-width: 66%;
+}
+
+  .card-body{
+    background-color: #CCEAFF;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .card {
+    width: calc(33% - 32px);
+    min-width: 10rem;
+    border-radius: 15px;
+    border-style: none;
+    box-shadow: 8px 8px 6px rgb(205, 222, 228);
+  }
+
+.progress{
+  border-radius: 10px;
+}

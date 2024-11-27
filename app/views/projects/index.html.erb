@@ -1,15 +1,29 @@
 
 <div class="main-container">
-  <div class="cards">
-
-    <div class="card">
-      <%#=project.title%>
-    </div>
+<%# <div class="container m-2"> %>
+  <div class="cards max-w-50">
+    <% @projects.each do |project|%>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <%# <img src="..." class="card-img-top" alt="..."> %>
+            <h5 class="card-title d-flex justify-content-start"><%= link_to project.title, project_path(project), class: "card-title" %></h5>
+            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              <% progress = project.donations.each do |donation| %>
+                 <%  project.target - donation.amount  %>
+              <% end %>
+              <div class="progress-bar bg-success d-flex justify-content-start" style="width: <%= project.total / project.target.to_f %>%;"></div>
+            </div>
+              <h5 class="total-raise d-flex justify-content-start mt-3">£ <%= project.total %> raised</h5>
+              <p class="card-text"><%= project.target%></p>
+              <p class="card-text"><%= project.address%></p>
+        </div>
+      </div>
+    <% end%>
   </div>
 
   <div id="greenlink-map"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>

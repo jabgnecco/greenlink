@@ -11,3 +11,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+// .max-w-50 {
+//   max-width: 50% !important;
+// }
