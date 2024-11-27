@@ -7,24 +7,34 @@
   max-width: 66%;
 }
 
-  .card-body{
-    background-color: #E9F6FF;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
+.card-body{
+  background-color: #CCEAFF;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
 
-  .card {
-    width: calc(33% - 32px);
-    min-width: 10rem;
-    border-radius: 15px;
-    border-style: none;
-    box-shadow: 8px 8px 6px rgb(205, 222, 228);
-  }
+.card {
+  width: calc(33% - 32px);
+  min-width: 10rem;
+  border-radius: 15px;
+  border-style: none;
+  box-shadow: 8px 8px 6px rgb(205, 222, 228);
+}
 
 .progress {
   border-radius: 10px;
 }
 
+.card-donation{
+  border-radius: 8px;
+  padding: 28px;
+  background-color: #B2DBC0;
+  p{
+    margin-bottom: 0px;
+  }
+  box-shadow: 4px 8px 8px rgb(207, 207, 207);
+}
+  
 .card-title {
   text-decoration: none;
 }
