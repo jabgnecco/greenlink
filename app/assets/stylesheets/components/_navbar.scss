@@ -1,12 +1,148 @@
-.navbar-lewagon {
+.navbar {
+  display: flex;
   justify-content: space-between;
-  background: white;
-}
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  flex-direction: column; /* Make space for a second row */
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+  p {
+    margin-bottom: 0px;
+  }
+  .navbar-left {
+    display: flex;
+    flex-direction: column;
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      .logo-icon {
+        width: 30px;
+        height: 40px;
+        margin-right: 10px;
+        object-fit: cover;
+      }
+      .logo-text {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #247238;
+        &:hover {
+          color: #55AD9B;
+        }
+      }
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 5px;
+    }
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+
+      li {
+        list-style: none;
+        text-decoration: none;
+        color: #000;
+        font-size: 1rem;
+        &:hover {
+          color: #55AD9B;
+        }
+      }
+    }
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .search-input {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      outline: none;
+      width: 480px;
+
+      &:focus {
+        border-color: rgb(168, 167, 167);
+      }
+    }
+
+    .search-btn {
+      background-color: #4AA761;
+      color: #fff;
+      border: none;
+      border-radius: 18px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      height: 36px;
+
+      &:hover {
+        background-color: #55AD9B;
+      }
+
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .font-adjust {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    outline: none;
+
+    .font-label {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    &:hover {
+      border-color: rgb(168, 167, 167);
+    }
+
+    .font-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 5px;
+      background: #4AA761;
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+      width: 50%;
+      &:hover {
+        background-color: #55AD9B;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #fff;
+        border: 2px solid #4AA761;
+        cursor: pointer;
+      }
+    }
+  }
 }
