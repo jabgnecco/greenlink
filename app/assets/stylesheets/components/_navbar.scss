@@ -30,7 +30,7 @@
         font-weight: bold;
         color: #247238;
         &:hover {
-          color: #55AD9B;
+          color: #4AA761;
         }
       }
     }
@@ -57,7 +57,7 @@
         color: #000;
         font-size: 1rem;
         &:hover {
-          color: #55AD9B;
+          color: #247238;
         }
       }
     }
@@ -93,7 +93,7 @@
       height: 36px;
 
       &:hover {
-        background-color: #55AD9B;
+        background-color: #247238;
       }
 
       i {
@@ -128,20 +128,23 @@
       border-radius: 5px;
       outline: none;
       cursor: pointer;
-      width: 50%;
+      width: 45%;
       &:hover {
-        background-color: #55AD9B;
+        background-color: #247238;
       }
 
       &::-webkit-slider-thumb {
         -webkit-appearance: none;
         appearance: none;
-        width: 15px;
-        height: 15px;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
         background: #fff;
-        border: 2px solid #4AA761;
+        border: 3px solid #4AA761;
         cursor: pointer;
+        &:hover {
+          border: 3px solid #247238;
+        }
       }
     }
   }
