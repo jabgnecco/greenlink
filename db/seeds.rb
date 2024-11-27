@@ -205,7 +205,7 @@ number = 0
       project: project,
       user: user1,
       donation_sku: "#{project.title.split.join('_')}_donation",
-      amount: (5..1000).to_a.sample,
+      amount: (5000..100000).to_a.sample,
       state: "Paid"
     )
   number += 1
