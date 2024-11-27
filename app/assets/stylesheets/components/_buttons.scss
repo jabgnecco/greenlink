@@ -1,0 +1,65 @@
+.button-dark-green{
+  background-color: #247238;
+  color: white;
+  opacity: 0.8;
+
+}
+
+.button-dark-green:hover{
+  background-color: #247238;
+  color: white;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+
+.button-light-green{
+  background-color: #55AD9B;
+  color: white;
+
+}
+
+.button-blue{
+  background-color: #0088C2;
+  color: white;
+  opacity: 0.8;
+}
+
+.button-blue:hover{
+  background-color: #0088C2;
+  color: white;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.button-white{
+  background-color: white;
+  border-radius: 10px;
+}
+
+.button-white:hover{
+  background-color: white;
+  border-radius: 10px;
+  transition: opacity 0.3s;
+  opacity: 0.8;
+}
+
+
+.button-large{
+  width: 100%;
+}
+
+.button-medium{
+  width: 90%;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  font-size: small;
+  box-shadow: 2px 2px 6px rgb(156, 156, 156)
+}
+
+.button-small{
+  width: 42%;
+  box-shadow: 2px 2px 2px rgb(207, 207, 207);
+  font-size: small;
+}
