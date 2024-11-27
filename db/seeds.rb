@@ -196,6 +196,7 @@ number = 0
       user: user1,
       title: titles[number],
       address: addresses[number],
+      region: "Europe",
       description: descriptions[number],
       auditor: Faker::Company.name,
       target: (50000..100000).to_a.sample,
