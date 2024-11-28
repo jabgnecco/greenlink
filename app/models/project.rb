@@ -3,6 +3,7 @@ class Project < ApplicationRecord
   has_many :donations
   has_one_attached :photo
   # has_many :users, through: :donations
+  has_many :categories
 
   validates :title, presence: true
   validates :description, presence: true
@@ -13,11 +14,21 @@ class Project < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
   geocoded_by :address
 
+
+
   def total
     donations_total = 0
     donations.each do |donation|
       donations_total += donation.amount
     end
     donations_total
+  end
+
+
+  def display_categories
+    formatted_categories = categories.map do |category|
+      category.name
+    end.join(" ")
+    return formatted_categories
   end
 end
