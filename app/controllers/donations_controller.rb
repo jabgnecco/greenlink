@@ -33,15 +33,17 @@ class DonationsController < ApplicationController
         quantity: 1
       }],
       mode: 'payment',
-      success_url: project_url(@donation.project),
+      success_url: donation_success_url(@donation),
       cancel_url: project_url(@donation.project)
     )
-
-
-
-
       @donation.update(checkout_session_id: session.id)
-      redirect_to new_payment_path(donation_id: @donation.id)
+      # redirect_to session[:url], allow_other_host: true, status: 303
+      redirect_to new_payment_path(donation_id: @donation.id, stripe_url: session[:url])
+  end
+
+
+  def success
+    @donation_order = Donation.find(params[:donation_id])
   end
 
   private

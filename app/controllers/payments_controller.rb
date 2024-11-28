@@ -6,6 +6,7 @@ class PaymentsController < ApplicationController
 
   def new
     # @payment = Payment.new
-    @donation_order = current_user.donations.where(state: 'pending').find(params[:donation_id])
+    @stripe_url = params[:stripe_url]
+    @donation_order = Donation.find(params[:donation_id])
   end
 end
