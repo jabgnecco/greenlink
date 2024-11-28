@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-    resources :projects, only: [:index, :show] do
-      resources :donations, only: [:new, :create]
-    end
+  resources :projects, only: [:index, :show] do
+    resources :donations, only: [:new, :create, :index]
+  end
+  get "/my_donations", to: "users#my_donations"
 
   # resources :donations, only: [:index, :show]
   resources :payments, only: [:new, :show]
