@@ -1,6 +1,13 @@
-#greenlink-map {
+#projects-index-map {
   width: 25%;
   height: 100vh;
   position: sticky;
   top: 0;
+}
+
+.project-show-map{
+  border:0.9px solid rgb(221, 221, 221);
+  border-radius: 15px;
+  margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

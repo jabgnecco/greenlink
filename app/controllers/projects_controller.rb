@@ -10,6 +10,11 @@ class ProjectsController < ApplicationController
         lng: project.longitude
       }
     end
+
+    if params[:query].present?
+      @projects = @projects.where("title ILIKE ?", "%#{params[:query]}%")
+    end
+    @projects.sort_by { |i| i.created_at }
   end
 
   def new

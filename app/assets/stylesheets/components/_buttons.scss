@@ -1,0 +1,95 @@
+.button-main-green{
+  text-decoration: none;
+  transition: 0.3s;
+  background-color: #4AA761;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  font-weight: 600;
+}
+
+.button-main-green:hover{
+  background-color: #247238;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.button-light-green{
+  text-decoration: none;
+  transition: 0.3s;
+  background-color: #95D2B3;
+  color: black;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+.button-light-green:hover{
+  background-color: #4AA761;
+  transition: 0.3s;
+  color: black;
+}
+
+.button-blue{
+  background-color: #4DA9E8;
+  text-decoration: none;
+  transition: 0.3s;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+
+.button-blue:hover{
+  background-color: #0088C2;
+  color: white;
+  transition: 0.3s;
+}
+
+.button-white{
+  background-color: white;
+  border-radius: 8px;
+}
+
+.button-white:hover{
+  background-color: rgb(219, 219, 219);
+  border-radius: 10px;
+  transition: opacity 0.3s;
+  opacity: 0.8;
+  border:1px solid lightgray
+}
+
+
+.button-large{
+  width: 100%;
+}
+
+.button-medium{
+  width: 90%;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  font-size: small;
+  box-shadow: 2px 2px 6px rgb(156, 156, 156)
+}
+
+.button-small{
+  width: 42%;
+  box-shadow: 2px 2px 2px rgb(207, 207, 207);
+  font-size: small;
+  border:1px solid lightgray
+
+}

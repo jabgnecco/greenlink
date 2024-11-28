@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <!-- Left Section: Logo and Tagline -->
     <div class="navbar-left">
-      <%= link_to "#", class: "d-flex align-items-center text-decoration-none logo" do %>
+      <%= link_to "/projects", class: "d-flex align-items-center text-decoration-none logo" do %>
         <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
         <span class="logo-text">Green Link</span>
       <% end %>
@@ -30,7 +30,7 @@
               Profile
             </p>
             <div class="dropdown-menu dropdown-menu-end">
-              <%= link_to "Your impact", "/donations/index", class: "dropdown-item" %>
+              <%= link_to "Your donations", my_donations_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "dropdown-item" %>
             </div>
           </li>
@@ -48,7 +48,7 @@
     <!-- Search Bar -->
     <div class="col-6", style="position: relative;">
       <%= form_with url: projects_path, method: :get, class: "d-flex search-bar" do |f| %>
-        <%= f.text_field :query, placeholder: "Search for a project...", class: "search-input w-100" %>
+        <%= f.text_field :query, placeholder: "Search for renewable energy, e.g., \"solar\"...", class: "search-input w-100" %>
         <%= f.button nil, type: "submit", class: "search-btn", style: "position: absolute; right: 15px;", name: nil do %>
           <i class="fas fa-search"></i><p class="fw-bold px-1">Search</p>
         <% end %>
@@ -59,7 +59,7 @@
     <div class="col-3", style="width: 21%;">
       <div class="font-adjust", style="padding: 0.5rem;">
         <label for="font-slider" class="font-label me-2">Adjust font-size</label>
-        <input type="range" id="font-slider" class="font-slider" min="10" max="24" step="1">
+        <input type="range" id="font-slider" class="font-slider" min="10" max="19" step="3">
       </div>
     </div>
   </div>
