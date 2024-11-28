@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   end
   get "/my_donations", to: "users#my_donations"
 
+  resources :categories, only: [:new, :create]
+
   # resources :donations, only: [:index, :show]
   resources :payments, only: [:new, :show]
 end
