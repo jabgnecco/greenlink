@@ -14,7 +14,9 @@ class DonationsController < ApplicationController
 
   def create
     @project = Project.find(params[:project_id])
-    @donation = Donation.new(donation_params)
+    amount = (donation_params[:amount].to_f * 100)
+    @donation = Donation.new(amount: amount.to_i)
+
     @donation.project = @project
     @donation.donation_sku = "#{@project.title.split.join('_')}_donation"
     @donation.user = current_user
