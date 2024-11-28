@@ -10,7 +10,7 @@
               <div class="progress-bar bg-success d-flex justify-content-start" style="width: <%=( (project.total / project.target.to_f) * 100) > 100 ? 100 : (project.total / project.target.to_f) * 100  %>%;"></div>
             </div>
               <h5 class="total-raise d-flex justify-content-start mt-3"><%= humanized_money_with_symbol (project.total / 100.00) %> raised</h5>
-              <p class="card-text">Target: <%= humanized_money_with_symbol (project.target / 100.00)%></p>
+              <p class="card-text">Target: <%= humanized_money_with_symbol (project.target / 100.00) %></p>
               <p class="card-text"><%= project.region%></p>
         </div>
       </div>
