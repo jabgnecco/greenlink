@@ -43,7 +43,7 @@ class DonationsController < ApplicationController
 
 
   def success
-    @donation_order = Donation.find(params[:donation_id])
+    @donation_paid = Donation.find(params[:id])
   end
 
   private
