@@ -1,14 +1,22 @@
 <h1 class="project-title pt-3"><%= @project.title %></h1>
 <div class="donation-container">
-  <%= simple_form_for @donation, url: project_donations_path, html: { class: 'donation-form' } do |f| %>
+  <%= simple_form_for @donation, url: project_donations_path, html: { class: 'donation-form', data: { controller: "donation" } } do |f| %>
     <div class="form-group">
       <%= f.label :amount, "Enter donation amount:", class: "fs-5 fw-bold" %>
       <div class="donation-buttons">
         <% [50, 100, 200, 500, 1000].each do |preset| %>
-          <button type="button" class="donation-option" data-value="<%= preset %>">£<%= preset %></button>
+          <button type="button" class="donation-option" data-action="click->donation#setPreset" data-value="<%= preset %>">£<%= preset %></button>
         <% end %>
       </div>
-      <%= f.input :amount, input_html: { class: 'donation-input', placeholder: "£" }, label: false %>
+      <div>
+        <%= f.input :amount,
+        wrapper_html: { style: "display: flex; position: relative" },
+        input_html: { as: :number, class: 'donation-input', placeholder: "20", style: "padding-left: 20px;", pattern: "[0-9]",
+        data: { donation_target: "donationInput" } },
+        label_html: { style: "position: absolute; top: 25%; left: 2%; font-weight: 600;" },
+        label: "£"
+        %>
+      </div>
     </div>
 
     <%# <div class="form-group"> %>

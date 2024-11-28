@@ -27,6 +27,7 @@
               <h5 class="total-raise d-flex justify-content-start mt-3"><%= humanized_money_with_symbol (project.total / 100.00) %> raised</h5>
               <p class="card-text">Target: <%= humanized_money_with_symbol (project.target / 100.00) %></p>
               <p class="card-text"><%= project.region%></p>
+              <p class="card-text"><%= project.display_categories %></p>
         </div>
       </div>
     <% end%>
