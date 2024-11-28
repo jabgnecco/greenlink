@@ -3,7 +3,14 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
-
+    if params[:query].present?
+      sql_subquery = <<~SQL
+        projects.title @@ :query
+        OR projects.region @@ :query
+        OR categories.name @@ :query
+      SQL
+      @projects = @projects.joins(:categories).where(sql_subquery, query: params[:query])
+    end
     @markers = @projects.geocoded.map do |project|
       {
         lat: project.latitude,

@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   end
   get "/my_donations", to: "users#my_donations"
 
-
   resources :donations, only: [:index, :show]
+
   resources :payments, only: [:new, :show]
 
   get '/donations/:id/success', to: 'donations#success', as: :donation_success

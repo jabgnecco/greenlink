@@ -188,6 +188,59 @@ addresses = ["42 Spearman Walk, Hartlepool, TS27 3PD",
   "Cilrhiwe, Llangrannog, SA44 6SL",
   "203 Sandown Road, Shanklin, PO37 6HE"]
 
+  renewable_energy_keywords = [
+    "Solar Energy",
+    "Wind Energy",
+    "Hydropower",
+    "Biomass Energy",
+    "Geothermal Energy",
+    "Tidal Energy",
+    "Wave Energy",
+    "Solar Power",
+    "Wind Power",
+    "Hydroelectric Power",
+    "Biomass Power",
+    "Geothermal Power",
+    "Ocean Energy",
+    "Photovoltaic Energy",
+    "Solar Thermal Energy",
+    "Offshore Wind Energy",
+    "Solar Panels",
+    "Wind Turbines",
+    "Solar Farms",
+    "Geothermal Heating",
+    "Biofuels",
+    "Solar Cells",
+    "Tidal Power",
+    "Hydroelectric Energy",
+    "Wind Farms",
+    "Concentrated Solar Power",
+    "Clean Energy",
+    "Renewable Energy",
+    "Solar Irrigation",
+    "Bioenergy",
+    "Green Hydrogen",
+    "Ocean Current Energy",
+    "Small-Scale Hydropower",
+    "Biomass Fuel",
+    "Solar Heating",
+    "Wind Generation",
+    "Solar Electricity",
+    "Biomass Gasification",
+    "Geothermal Heat Pumps",
+    "Ocean Thermal Energy",
+    "Wind Generation",
+    "Renewable Resources",
+    "Carbon-Free Energy",
+    "Solar Water Heating",
+    "Geothermal Systems",
+    "Offshore Wind Power",
+    "Biogas",
+    "Tidal Stream Energy",
+    "Renewable Power",
+    "Solar Cooking"
+  ]
+
 number = 0
 
 50.times do
@@ -208,6 +261,11 @@ number = 0
       donation_sku: "#{project.title.split.join('_')}_donation",
       amount: (5000..100000).to_a.sample,
       state: "Paid"
+    )
+
+    Category.create!(
+      project: project,
+      name: renewable_energy_keywords.sample
     )
   number += 1
 end
