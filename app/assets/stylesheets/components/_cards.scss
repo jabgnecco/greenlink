@@ -37,4 +37,11 @@
 
 .card-title {
   text-decoration: none;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.card-title:hover{
+  transition: 0.2s;
+  background-color: #e2f1fb;
 }
