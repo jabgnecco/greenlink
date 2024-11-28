@@ -242,9 +242,38 @@ addresses = ["42 Spearman Walk, Hartlepool, TS27 3PD",
   ]
 
 number = 0
+# directory_path = File.dirname(file_path.path)
+# image_files = Dir.glob(File.join(directory_path, '*.png'))
 
 50.times do
   puts "created #{number + 1} projects"
+  # file = File.open("app/assets/images/odd13/ODD1.png")
+  # image_file.each do |image_file|
+  #   puts "Processing file: #{image_file}"
+  #   file = File.open(image_file)
+  #   puts "File content length: #{file.size}"
+  #   file.close
+  # end
+  project = Project.new(
+    user: user1,
+    title: titles[number],
+    address: addresses[number],
+    region: "Europe",
+    description: descriptions[number],
+    auditor: Faker::Company.name,
+    target: (50000..100000).to_a.sample,
+    progress: 0
+  )
+  # project.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  project.save!
+  Donation.create!(
+    project: project,
+    user: user1,
+    donation_sku: "#{project.title.split.join('_')}_donation",
+    amount: (5000..100000).to_a.sample,
+    state: "Paid"
+  )
+
     project = Project.create!(
       user: user1,
       title: titles[number],
@@ -267,6 +296,7 @@ number = 0
       project: project,
       name: renewable_energy_keywords.sample
     )
+
   number += 1
 end
 

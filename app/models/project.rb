@@ -1,6 +1,8 @@
 class Project < ApplicationRecord
   belongs_to :user
   has_many :donations
+  has_one_attached :photo
+  # has_many :users, through: :donations
   has_many :categories
 
   validates :title, presence: true
