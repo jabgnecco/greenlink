@@ -10,10 +10,14 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-    resources :projects, only: [:index, :show] do
-      resources :donations, only: [:new, :create]
-    end
+  resources :projects, only: [:index, :show] do
+    resources :donations, only: [:new, :create]
+  end
 
-  # resources :donations, only: [:index, :show]
+  resources :donations, only: [:index, :show]
   resources :payments, only: [:new, :show]
+
+  get '/donations/:id/success', to: 'donations#success', as: :donation_success
+
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
 end
