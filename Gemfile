@@ -7,6 +7,8 @@ gem "pg_search"
 gem 'faker'
 gem 'stripe', "~>9.0"
 gem 'stripe_event'
+gem "cloudinary"
+
 
 gem 'money-rails'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

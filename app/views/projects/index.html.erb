@@ -1,5 +1,20 @@
 <div class="main-container">
 <%# <div class="container m-2"> %>
+  <div class="d-flex">
+    <%= image_tag "odd13/ODD1.png", height: 50 %>
+    <%= image_tag "odd13/ODD2.png", height: 50 %>
+    <%= image_tag "odd13/ODD3.png", height: 50 %>
+    <%= image_tag "odd13/ODD4.png", height: 50 %>
+    <%= image_tag "odd13/ODD5.png", height: 50 %>
+    <%= image_tag "odd13/ODD6.jpg", height: 50 %>
+    <%= image_tag "odd13/ODD7.jpg", height: 50 %>
+    <%= image_tag "odd13/ODD8.png", height: 50 %>
+    <%= image_tag "odd13/ODD9.png", height: 50 %>
+    <%= image_tag "odd13/ODD10.png", height: 50 %>
+    <%= image_tag "odd13/ODD11.png", height: 50 %>
+    <%= image_tag "odd13/ODD12.jpg", height: 50 %>
+    <%= image_tag "odd13/ODD13.jpg", height: 50 %>
+  </div>
   <div class="cards max-w-50">
     <% @projects.each do |project|%>
       <div class="card" style="width: 18rem;">
@@ -12,6 +27,7 @@
               <p class="total-raise d-flex justify-content-start mt-3"><%= humanized_money_with_symbol (project.total / 100.00) %> raised</p>
               <p class="card-text">Target: <%= humanized_money_with_symbol (project.target / 100.00) %></p>
               <p class="card-text"><%= project.region%></p>
+              <p class="card-text"><%= project.display_categories %></p>
         </div>
       </div>
     <% end%>

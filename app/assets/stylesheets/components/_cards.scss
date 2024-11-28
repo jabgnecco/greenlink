@@ -8,7 +8,7 @@
 }
 
 .card-body{
-  background-color: #CCEAFF;
+  background-color: #fcf7e4;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
@@ -19,6 +19,11 @@
   border-radius: 15px;
   border-style: none;
   box-shadow: 8px 8px 6px rgb(205, 222, 228);
+}
+
+.popup-card {
+  width: 100%;
+  height: 100%;
 }
 
 .progress {

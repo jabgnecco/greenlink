@@ -1,0 +1,7 @@
+
+      <%# <img src="..." class="card-img-top" alt="..."> %>
+      <h5 class="card-title d-flex justify-content-start"><%= link_to project.title, project_path(project), class: "card-title" %></h5>
+      <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-success d-flex justify-content-start" style="width: <%=( (project.total / project.target.to_f) * 100) > 100 ? 100 : (project.total / project.target.to_f) * 100  %>%;"></div>
+      </div>
+        <p class="total-raise d-flex justify-content-start mt-3"><%= humanized_money_with_symbol (project.total / 100.00) %> raised out of <%= humanized_money_with_symbol (project.target / 100.00) %></h5>
