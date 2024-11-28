@@ -1,16 +1,16 @@
 <div class="container">
 
-  <h1><%= @project.title %></h1>
+  <h1 class="projects-title"><%= @project.title %></h1>
   <div class="flex-container">
     <div class="flex-item col-8">
       <%= link_to image_tag("logo.png", style: "width: 50%; height: auto;") %>
       <hr>
-      <h5>Audited by:</h5>
+      <h5><strong>Audited by:</strong></h5>
       <p><%= @project.auditor %></p>
       <hr>
       <p><%= @project.description %></p>
       <hr>
-      <p><%=@project.region %>, <%= @project.address%></p>
+      <p><strong>Location :</strong> <%=@project.region %>, <%= @project.address%></p>
     </div>
 
     <div class="flex-item col-3">
@@ -31,7 +31,7 @@
           <a class="btn button-small button-white" href="#">See Top</a>
         </div>
       </div>
-        <div id="greenlink-map" class="project-show-map" style="width: 100%; height: 250px;"
+        <div id="greenlink-map" class="project-show-map" style="width: 100%; height: 280px;"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -39,4 +39,3 @@
     </div>
   </div>
 </div>
-
