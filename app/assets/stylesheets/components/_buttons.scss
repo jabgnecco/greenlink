@@ -1,47 +1,72 @@
-.button-dark-green{
-  background-color: #247238;
-  color: white;
-  opacity: 0.8;
-
+.button-main-green{
+  text-decoration: none;
+  transition: 0.3s;
+  background-color: #4AA761;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  font-weight: 600;
 }
 
-.button-dark-green:hover{
+.button-main-green:hover{
   background-color: #247238;
-  color: white;
-  transition: opacity 0.3s;
-  opacity: 1;
+  transition: 0.3s;
+  color: #fff;
 }
-
 
 .button-light-green{
-  background-color: #55AD9B;
-  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  background-color: #95D2B3;
+  color: black;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
 
+.button-light-green:hover{
+  background-color: #4AA761;
+  transition: 0.3s;
+  color: black;
 }
 
 .button-blue{
-  background-color: #0088C2;
-  color: white;
-  opacity: 0.8;
+  background-color: #4DA9E8;
+  text-decoration: none;
+  transition: 0.3s;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  height: 36px;
 }
 
 .button-blue:hover{
   background-color: #0088C2;
   color: white;
-  transition: opacity 0.3s;
-  opacity: 1;
+  transition: 0.3s;
 }
 
 .button-white{
   background-color: white;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .button-white:hover{
   background-color: white;
-  border-radius: 10px;
-  transition: opacity 0.3s;
-  opacity: 0.8;
+  transition: 0.3s;
 }
 
 
