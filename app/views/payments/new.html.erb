@@ -1,13 +1,10 @@
 <h1>Checkout Summary</h1>
-<p>Purchase of <strong><%= @donation.project.title %></strong> for <strong> <%= @donation.amount %></strong></p>
+<p>Purchase of <strong><%= @donation_order.project.title %></strong> for <strong> £<%= @donation_order.amount %></strong></p>
 <button id="pay" class="btn btn-primary">Pay</button>
-      <script src="https://js.stripe.com/v3/"></script>
       <script>
-        const paymentButton = document.getElementById('pay');
-        paymentButton.addEventListener('click', () => {
-          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
-          stripe.redirectToCheckout({
-            sessionId: '<%= @order.checkout_session_id %>'
+        const stripePaymentButton = document.getElementById('pay');
+
+        stripePaymentButton.addEventListener('click', () => {
+          window.location.replace('<%= @stripe_url %>')
           });
-        });
       </script>
