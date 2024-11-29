@@ -165,7 +165,7 @@ number = 0
       user: user1,
       donation_sku: "#{project.title.split.join('_')}_donation",
       amount: (5000..100000).to_a.sample,
-      state: "Paid"
+      state: "paid"
     )
 
     Category.create!(
