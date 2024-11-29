@@ -40,13 +40,16 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @projects = Project.all
+    @markers = @projects.geocoded.map do |project|
 
-    @markers = [{
-      latitude: @project.latitude,
-      longitude: @project.longitude,
-      title: @project.title,
-      description: @project.description
-    }]
+      {
+        lat: project.latitude,
+        lng: project.longitude,
+
+        info_window_html: render_to_string(partial: "info_window", locals: {project: project}),
+      }
+    end
   end
 
   private
