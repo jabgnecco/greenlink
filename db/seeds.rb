@@ -113,42 +113,8 @@ addresses = ["42 Spearman Walk, Hartlepool, TS27 3PD",
   "17 Copperas Lane, Droylsden, M43 6HP",
   "Flat 6, Marlborough House, Park Road, Bognor Regis, PO21 2PZ",
   "15 Poppy Court, Headstone Drive, Harrow, HA3 5UB",
-  "Perryan Lodge, The Green, Eythorne, CT15 4BN",
-  "3 Millers Copse, Millers Lane, Outwood, RH1 5QB",
-  "1 Sheralds Croft Lane, Thriplow, SG8 7RB",
-  "9 Parc Clai Coediog, Pentraeth, LL75 8HQ",
-  "Herdwick, Winkleigh, EX19 8LD",
-  "2 Old Chapel, Main Street, Gisburn, BB7 4HH",
-  "48 Nadder Park Road, Exeter, EX4 1NU",
-  "2 Rose Farm Close, Ferndown, BH22 8JA",
-  "Hyfrydle, Capel Curig, LL24 0EU",
-  "Flat 9, Merlins Court, 30 Margery Street, London, WC1X 0JG",
-  "16 The Veale, Bleadon, BS24 0NW",
-  "1 Sutton Lane, London, EC1M 5PU",
-  "Flat 43, 6 Birkby Close, Hamilton, LE5 1PS",
-  "Westering, Poulders Road, Sandwich, CT13 0LU",
-  "5 High Trees Road, Knowle, B93 9PR",
-  "2 Jeake Drive, Rye, TN31 7FH",
-  "11 Yarrow Close, Gloucester, GL4 6SR",
-  "Apartment 20, Nye House, 324 Sherlock Street, Birmingham, B5 7EQ",
-  "124 Minto Street, Ashton-Under-Lyne, OL7 9BG",
-  "29 Imber Cross, Thames Ditton, KT7 0LG",
-  "16 Cotswold Green, Leicester, LE4 2LF",
-  "119 Penton Road, Staines, TW18 2LL",
-  "29A Studland Road, London, W7 3QU",
-  "Flat 22, Stonehouse House, Westbourne Park Road, London, W2 5UU",
-  "2 Clos Bowen, Llanelli, SA15 4BQ",
-  "31 Beauchamp Street, Cardiff, CF11 6AX",
-  "Flat 8, 4 Berkeley Street, Cheltenham, GL52 2SX",
-  "5 West Drive, Neston, CH64 0SA",
-  "14 Bradford Road, Otley, LS21 3EQ",
-  "80 Village Way, Beckenham, BR3 3NR",
-  "21 Wildflower Lane, Shaftesbury, SP7 8UA",
-  "48 Wordsworth Close, Tipton, DY4 0TQ",
-  "Cornerwyas, Middle Hill, Chalford Hill, GL6 8BD",
-  "3 Poplar Road, Wooburn Green, HP10 0FA",
-  "Cilrhiwe, Llangrannog, SA44 6SL",
-  "203 Sandown Road, Shanklin, PO37 6HE"]
+  "Perryan Lodge, The Green, Eythorne, CT15 4BN"
+]
 
   renewable_energy_keywords = [
     "Solar Energy",
@@ -172,7 +138,7 @@ number = 0
 # directory_path = File.dirname(file_path.path)
 # image_files = Dir.glob(File.join(directory_path, '*.png'))
 
-50.times do
+15.times do
   puts "created #{number + 1} projects"
   # file = File.open("app/assets/images/odd13/ODD1.png")
   # image_file.each do |image_file|
