@@ -16,6 +16,7 @@
 }
 
 .card {
+  background-color: #ffffff;
   font-weight: bold;
   display: flex;
   text-decoration: none;
@@ -26,7 +27,7 @@
   min-width: 10rem;
   border-radius: 15px;
   border-style: none;
-  box-shadow: 8px 8px 6px rgb(205, 222, 228);
+  box-shadow: 8px 8px 6px rgb(200, 200, 200);
   flex-direction: column;
 }
 
@@ -54,6 +55,7 @@
   text-decoration: none;
   border-radius: 8px;
   padding: 3px;
+  border: none;
 }
 
 .card-body:hover{
@@ -73,5 +75,25 @@
   }
   p {
     margin: 0;
+  }
+}
+
+.green-card {
+  background-color: #95D2B3;
+  text-decoration: none;
+  padding-bottom: 10px;
+  border-radius: 15px;
+}
+
+.summary-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  .summary-box {
+    width: 90%;
+    height: 50px;
+    background-color: white;
+    border-radius: 8px;
   }
 }
