@@ -2,7 +2,7 @@
 <div>
   <% @donations.each do | donation | %>
     <div>
-      <%= donation.project.title, class: "fs-5 fw-bold" %>
+      <p class="fs-5 fw-bold"><%= donation.project.title %></p>
       <%= donation.amount %>
     </div>
   <% end%>
