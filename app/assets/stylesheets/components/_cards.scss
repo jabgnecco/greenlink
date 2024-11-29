@@ -1,24 +1,33 @@
 .cards {
+  justify-content: flex-start;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px;
   padding: 16px;
   flex-grow: 1;
-  max-width: 66%;
+  max-width: 55%;
 }
 
 .card-body{
-  background-color: #fcf7e4;
+  background-color: #ffffff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  border: 0.5px solid rgb(232, 232, 232);
 }
 
 .card {
-  width: calc(33% - 32px);
+  font-weight: bold;
+  display: flex;
+  text-decoration: none;
+  flex: 1 1 calc(33.33% - 1rem);
+  box-sizing: border-box;
+  max-width: calc(33.33% - 1rem);
+  align-items: stretch;
   min-width: 10rem;
   border-radius: 15px;
   border-style: none;
   box-shadow: 8px 8px 6px rgb(205, 222, 228);
+  flex-direction: column;
 }
 
 .popup-card {
@@ -27,6 +36,7 @@
 }
 
 .progress {
+  border: 0.5px solid white;
   border-radius: 10px;
 }
 
@@ -46,9 +56,10 @@
   padding: 3px;
 }
 
-.card-title:hover{
+.card-body:hover{
   transition: 0.2s;
-  background-color: #fff3cf;
+  background-color: #f4f4f4;
+  cursor: pointer;
 }
 
 .thin-card {
