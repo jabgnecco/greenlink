@@ -31,4 +31,32 @@ class Project < ApplicationRecord
     end.join(" ")
     return formatted_categories
   end
+
+  def names
+    random_names = ["Jaime Barros",
+    "Alvin Baldwin",
+    "Braylen Nielsen",
+    "Juliet Conrad",
+    "Nico Repetto",
+    "Roland Ralte",
+    "Theodore Bischoff",
+    "Roland Lalhruaizela",
+    "Iliana Sawyer",
+    "Angelo Roth",
+    "Averi Mclaughlin",
+    "Bobby Gonzalez",
+    "Kaden Frank",
+    "Peyton Chan",
+    "Audrey Yates",
+    "Jacob Kline"]
+    return random_names.sample
+  end
+
+  def top_donation
+    return (9000..100000).to_a.sample
+  end
+
+  def recent_donation
+    return (1000..8999).to_a.sample
+  end
 end
