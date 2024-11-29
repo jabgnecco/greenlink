@@ -11,13 +11,13 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :projects, only: [:index, :show] do
-  resources :donations, only: [:new, :create]
+    resources :donations, only: [:new, :create]
   end
   get "/my_donations", to: "users#my_donations"
 
   resources :donations, only: [:index, :show, :success]
 
-  resources :payments, only: [:new, :show]
+  # resources :payments, only: [:new, :show]
 
   get '/donations/:id/success', to: 'donations#success', as: :donation_success
 
