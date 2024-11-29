@@ -1,21 +1,23 @@
 <div class="main-container">
-<%# <div class="container m-2"> %>
-  <div class="cards max-w-50">
-    <% @projects.each do |project|%>
-      <div class="card" style="width: 18rem;">
+  <div class="cards">
+    <% @projects.each do |project| %>
+      <%= link_to project_path(project), class: "card", style: "width: 100%;" do %>
         <div class="card-body">
-            <%# <img src="..." class="card-img-top" alt="..."> %>
-            <h5 class="card-title custom-padding d-flex justify-content-start"><%= link_to project.title, project_path(project), class: "card-title" %></h5>
-            <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-              <div class="progress-bar bg-success d-flex justify-content-start" style="width: <%=( (project.total / project.target.to_f) * 100) > 100 ? 100 : (project.total / project.target.to_f) * 100  %>%;"></div>
-            </div>
-              <p class="total-raise d-flex justify-content-start mt-3"><%= humanized_money_with_symbol (project.total / 100.00) %> raised</p>
-              <p class="card-text">Target: <%= humanized_money_with_symbol (project.target / 100.00) %></p>
-              <p class="card-text"><%= project.region%></p>
-              <p class="card-text"><%= project.display_categories %></p>
+          <h5 class="card-title custom-padding d-flex justify-content-start">
+            <p class="card-title"><%= project.title %></p>
+          </h5>
+          <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar bg-success d-flex justify-content-start" style="width: <%=( (project.total / project.target.to_f) * 100) > 100 ? 100 : (project.total / project.target.to_f) * 100  %>%;"></div>
+          </div>
+          <p class="total-raise d-flex justify-content-start mt-3">
+            <%= humanized_money_with_symbol (project.total / 100.00) %> raised
+          </p>
+          <p class="card-text">Target: <%= humanized_money_with_symbol (project.target / 100.00) %></p>
+          <p class="card-text"><%= project.region %></p>
+          <p class="card-text"><%= project.display_categories %></p>
         </div>
-      </div>
-    <% end%>
+      <% end %>
+    <% end %>
   </div>
 
   <div id="projects-index-map"
