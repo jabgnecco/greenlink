@@ -1,6 +1,6 @@
 <h1>Checkout Summary</h1>
-<p>Purchase of <strong><%= @donation_order.project.title %></strong> for <strong> £<%= @donation_order.amount %></strong></p>
-<button id="pay" class="btn btn-primary">Pay</button>
+<p>Purchase of <strong><%= @donation_order.project.title %></strong> for <strong> £<%= (@donation_order.amount.to_f / 100) %>0</strong></p>
+<button id="pay" class="button-main-green">Pay</button>
       <script>
         const stripePaymentButton = document.getElementById('pay');
 

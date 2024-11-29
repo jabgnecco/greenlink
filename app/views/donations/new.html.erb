@@ -11,7 +11,7 @@
       <div>
         <%= f.input :amount,
         wrapper_html: { style: "display: flex; position: relative" },
-        input_html: { as: :number, class: 'donation-input', placeholder: "20", style: "padding-left: 20px;", pattern: "[0-9]",
+        input_html: { as: :number, class: 'donation-input', placeholder: "20.00", style: "padding-left: 20px; color: grey;", pattern: "[0-9]",
         data: { donation_target: "donationInput" } },
         label_html: { style: "position: absolute; top: 25%; left: 2%; font-weight: 600;" },
         label: "£"

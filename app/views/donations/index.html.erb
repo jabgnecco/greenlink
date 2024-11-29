@@ -1,4 +1,9 @@
-<% @donations.each do | donation | %>
-  <%=  donation.project.title %>
-  <%= donation.amount %>
-<% end%>
+<h1>All donations:</h1>
+<div>
+  <% @donations.each do | donation | %>
+    <div>
+      <%= donation.project.title, class: "fs-5 fw-bold" %>
+      <%= donation.amount %>
+    </div>
+  <% end%>
+</div>
