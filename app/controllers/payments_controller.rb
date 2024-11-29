@@ -6,7 +6,7 @@ class PaymentsController < ApplicationController
 
   def new
     # @payment = Payment.new
-    @stripe_url = params[:stripe_url]
-    @donation_order = Donation.find(params[:donation_id])
+    # @stripe_url = params[:stripe_url]
+    # @donation_order = Donation.find(params[:donation_id])
   end
 end

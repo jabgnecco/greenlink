@@ -10,6 +10,7 @@ class DonationsController < ApplicationController
   def new
     @project = Project.find(params[:project_id])
     @donation = Donation.new
+    # @stripe_url = params[:stripe_url]
   end
 
   def create
@@ -23,7 +24,7 @@ class DonationsController < ApplicationController
     @donation.state = "pending"
     @donation.save
 
-    session = Stripe::Checkout::Session.create(
+    stripe_session = Stripe::Checkout::Session.create(
       line_items: [{
         price_data: {
           unit_amount: @donation.amount,
@@ -38,9 +39,12 @@ class DonationsController < ApplicationController
       success_url: donation_success_url(@donation),
       cancel_url: project_url(@donation.project)
     )
-      @donation.update(checkout_session_id: session.id)
-      # redirect_to session[:url], allow_other_host: true, status: 303
-      redirect_to new_payment_path(donation_id: @donation.id, stripe_url: session[:url])
+    @donation.update(checkout_session_id: session.id)
+    @stripe_url = stripe_session[:url]
+    # TODO: Redirect to the new stripe_url - the external route here wasn't working.
+    # redirect_to session[:url], allow_other_host: true, status: 303
+    # render :new
+    redirect_to donation_success_path(@donation)
   end
 
 

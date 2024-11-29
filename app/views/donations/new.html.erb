@@ -6,6 +6,7 @@
       <div class="donation-buttons">
         <% [50, 100, 200, 500, 1000].each do |preset| %>
           <button type="button" class="donation-option" data-action="click->donation#setPreset" data-value="<%= preset %>">£<%= preset %></button>
+
         <% end %>
       </div>
       <div>
@@ -25,5 +26,15 @@
     <%# </div> %>
 
     <%= f.button :submit, "Checkout", class: "checkout-button" %>
+  <% end %>
+  <% if @stripe_url.present? %>
+    <p>Stripe url should be here</p>
+    <script>
+      window.location.replace('<%= @stripe_url %>')
+      // const stripePaymentButton = document.getElementById('checkout');
+
+      //stripePaymentButton.addEventListener('click', () => {
+        //});
+    </script>
   <% end %>
 </div>
