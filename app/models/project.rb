@@ -1,9 +1,9 @@
 class Project < ApplicationRecord
   belongs_to :user
-  has_many :donations
+  has_many :donations, dependent: :destroy
   has_one_attached :photo
   # has_many :users, through: :donations
-  has_many :categories
+  has_many :categories, dependent: :destroy
 
   validates :title, presence: true
   validates :description, presence: true
