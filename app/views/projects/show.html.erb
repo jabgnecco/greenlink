@@ -20,12 +20,12 @@
         <p>226 Donations</p>
         <%= link_to "Donate Now", new_project_donation_path(@project), class: "btn button-medium button-main-green donate-button" %>
         <a class="btn button-medium button-blue share-button" href="#">Share</a>
-        <p>Theo</p>
-        <p><strong>£ 4.000</strong> - Recent Donation</p>
-        <p>Nico </p>
-        <p><strong>£ 4.650</strong> - Top donation</p>
-        <p>Jaime </p>
-        <p><strong>£ 3.000</strong> - Recent Donation</p>
+        <p><%= @project.names %></p>
+        <p><strong><%=humanized_money_with_symbol (@project.recent_donation / 100.0)%></strong> - Recent Donation</p>
+        <p><%= @project.names %></p>
+        <p><strong><%= humanized_money_with_symbol (@project.top_donation / 100.0)%></strong> - Top donation</p>
+        <p><%= @project.names %></p>
+        <p><strong><%= humanized_money_with_symbol (@project.recent_donation / 100.0)%></strong> - Recent Donation</p>
         <div class="flex-container justify-content-around py-4 see-button">
           <a class="btn button-small button-white" href="#">See All</a>
           <a class="btn button-small button-white" href="#">See Top</a>
