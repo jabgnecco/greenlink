@@ -1,5 +1,4 @@
 <div class="container">
-
   <h1 class="projects-title"><%= @project.title %></h1>
   <div class="flex-container">
     <div class="flex-item col-8">
@@ -14,22 +13,22 @@
     </div>
 
     <div class="flex-item col-3">
-      <div class="card-donation">
+      <div class="card-donation mb-4">
         <h6><strong><%= humanized_money_with_symbol (@project.total / 100.00) %> Raised</strong></h6>
         <p><%= humanized_money_with_symbol (@project.target / 100.00) %> Target</p>
         <p>226 Donations</p>
-        <%= link_to "Donate Now", new_project_donation_path(@project), class: "btn button-medium button-main-green donate-button" %>
-        <a class="btn button-medium button-blue share-button" href="#">Share</a>
+        <%= link_to "Donate Now", new_project_donation_path(@project), class: "button-main-green fw-bold" %>
+        <a class="button-blue" href="#">Share</a>
         <p>Theo</p>
         <p><strong>£ 4.000</strong> - Recent Donation</p>
         <p>Nico </p>
         <p><strong>£ 4.650</strong> - Top donation</p>
         <p>Jaime </p>
         <p><strong>£ 3.000</strong> - Recent Donation</p>
-        <div class="flex-container justify-content-around py-4 see-button">
+        <%# <div class="flex-container justify-content-around pt-4 see-button", style="margin: 0;">
           <a class="btn button-small button-white" href="#">See All</a>
           <a class="btn button-small button-white" href="#">See Top</a>
-        </div>
+        </div> %>
       </div>
         <div id="greenlink-map" class="project-show-map" style="width: 100%; height: 280px;"
           data-controller="map"
