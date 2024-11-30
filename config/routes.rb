@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :projects, only: [:index, :show] do
     resources :donations, only: [:new, :create]
   end
-  get "/my_donations", to: "users#my_donations"
+  get "/profile", to: "users#profile"
 
   resources :donations, only: [:index, :show, :success]
 
