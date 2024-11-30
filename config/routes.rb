@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   end
   get "/profile", to: "users#profile"
 
+  get "/about_energy", to: "projects#about_energy"
+
   resources :donations, only: [:index, :show, :success]
 
   # resources :payments, only: [:new, :show]
