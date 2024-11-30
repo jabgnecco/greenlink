@@ -12,8 +12,9 @@
           <p class="total-raise d-flex justify-content-start mt-3"><strong>
             <%= humanized_money_with_symbol (project.total / 100.00) %> raised </strong>
           </p>
-          <p class="card-text" style="color: gray">£<%= number_to_human(project.target / 100, :format => '%n%u', :units => { :thousand => 'K' }) %> Target</p>
           <button class="pill"><%= project.display_categories %></button>
+          <button class="pill"><%= project.region %></button>
+
         </div>
       <% end %>
     <% end %>
