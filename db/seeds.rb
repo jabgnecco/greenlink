@@ -31,26 +31,107 @@ p user1.valid?
 
 puts "User Created: #{User.count}"
 
-titles = [
-  "Solar for Schools",
-  "Community Wind Turbines",
-  "Solar-Powered Water Pumps",
-  "Renewable Energy Training",
-  "Microgrids for Villages",
-  "Solar-Powered Hospitals",
-  "Electric Vehicle Charging Stations",
-  "Bioenergy for Cooking",
-  "Energy-Efficient Homes",
-  "Floating Solar Farms",
-  "Solar Lights for Refugees",
-  "Hydropower for Communities",
-  "Wind Energy Innovation",
-  "Renewable Energy Libraries",
-  "Solar-Powered Desalination"
-]
+  titles = [
+    "Tengger Desert Solar Park",
+    "Hornsdale Power Reserve",
+    "Noor Ouarzazate Solar Complex",
+    "Walney Extension Offshore Wind Farm",
+    "Sihwa Lake Tidal Power Station",
+    "Lake Turkana Wind Power Project",
+    "Itaipu Hydroelectric Plant",
+    "Hornsea Project One",
+    "Murchison Renewable Hydrogen Project",
+    "KivuWatt",
+    "Vindeby Offshore Wind Farm",
+    "Hellisheidi Geothermal Power Plant",
+    "Alta Wind Energy Center",
+    "Walchensee Hydroelectric Power Plant",
+    "Gemini Solar Project",
+  ]
+
+  addresses = [
+    "Zhongwei, Ningxia, China",
+    "Hornsdale SA 5491, Australia",
+    "Ouarzazate, Morocco",
+    "Lancashire, United Kingdom",
+    "Sihwa Lake, South Korea",
+    "Kenya",
+    "Brazil",
+    "Yorkshire, United Kingdom",
+    "Perth, Western Australia",
+    "Gitesi, Rwanda",
+    "Denmark",
+    "Hellisheiðarvirkjun, 816 Ölfus, Iceland",
+    "Tehachapi Pass, Kern County, California",
+    "Kochel, Bavaria, Germany",
+    "Mojave Desert, California, USA",
+
+  ]
+
+  regions = [
+    "Asia",
+    "Oceania",
+    "Africa",
+    "Europe",
+    "Asia",
+    "Africa",
+    "South America",
+    "Europe",
+    "Oceania",
+    "Africa",
+    "Europe",
+    "Europe",
+    "North America",
+    "Europe",
+    "North America",
+  ]
+
+renewable_energy_keywords = [
+    "Solar Energy",
+    "Wind Energy",
+    "Solar Energy",
+    "Wind Energy",
+    "Tidal Energy",
+    "Solar Energy",
+    "Hyrdopower",
+    "Wind Energy",
+    "Mixed Energy",
+    "Biogas",
+    "Wind Energy",
+    "Geothermal Energy",
+    "Wind Energy",
+    "Hydropower",
+    "Solar Energy"
+  ]
+  # old titles:
+  # titles = [
+    #   "Solar for Schools",
+    #   "Community Wind Turbines",
+    #   "Solar-Powered Water Pumps",
+    #   "Renewable Energy Training",
+    #   "Microgrids for Villages",
+    #   "Solar-Powered Hospitals",
+    #   "Electric Vehicle Charging Stations",
+    #   "Bioenergy for Cooking",
+    #   "Energy-Efficient Homes",
+#   "Floating Solar Farms",
+#   "Solar Lights for Refugees",
+#   "Hydropower for Communities",
+#   "Wind Energy Innovation",
+#   "Renewable Energy Libraries",
+#   "Solar-Powered Desalination"
+# ]
 
 puts "Seeding Data "
 
+# descriptions = [
+#   "One of the largest solar power installations globally, with a capacity of 1,547 MW, located in the Tengger Desert.",
+
+#   "Located in South Australia, this Tesla-built lithium-ion battery system stabilizes renewable energy from nearby wind farms.",
+
+# ]
+
+# old descriptions:
 descriptions = [
 "Many schools in rural and underserved regions struggle with inadequate or unreliable electricity, limiting access to technology and hindering learning opportunities. Solar for Schools equips these institutions with solar panel systems, providing clean, uninterrupted energy for essential tools like lighting, computers, and projectors. This renewable energy solution fosters better educational outcomes while reducing reliance on diesel generators or unstable grid connections.
 Additionally, the project integrates sustainability into the curriculum by teaching students about renewable energy systems and their benefits. These hands-on learning opportunities inspire eco-consciousness and encourage students to consider careers in the growing green energy sector. By combining education and clean energy access, this initiative empowers schools and their communities to embrace a sustainable future.",
@@ -99,40 +180,9 @@ The initiative supports communities struggling with limited access to fresh wate
 ]
 
 
-addresses = ["42 Spearman Walk, Hartlepool, TS27 3PD",
-  "Wickham Cottage, Chideock, DT6 6JB",
-  "Arkil, Wadborough Road, Norton, WR5 2QN",
-  "Sunset, Standlake Road, Ducklington, OX29 7UZ",
-  "21 St Lawrence Road, Eastleigh, SO50 4GB",
-  "6 Henshall Close, Shavington, CW2 5XE",
-  "Gwynant, Plumley Moor Road, Plumley, WA16 0TR",
-  "8 Kingston Way, Shoreham-By-Sea, BN43 6YA",
-  "10 Cavell Drive, Danesmoor, S45 9SD",
-  "25 Briars Brook, Lathom, L40 5XD",
-  "145 Stanley Road, Teddington, TW11 8UF",
-  "17 Copperas Lane, Droylsden, M43 6HP",
-  "Flat 6, Marlborough House, Park Road, Bognor Regis, PO21 2PZ",
-  "15 Poppy Court, Headstone Drive, Harrow, HA3 5UB",
-  "Perryan Lodge, The Green, Eythorne, CT15 4BN"
-]
 
-  renewable_energy_keywords = [
-    "Solar Energy",
-    "Wind Energy",
-    "Solar Energy",
-    "Mixed Renewable Energy (Solar, Wind, and Biomass)",
-    "Mixed Renewable Energy (Solar and Wind)",
-    "Solar Energy",
-    "Electric Mobility (Solar-Powered Charging)",
-    "Bioenergy",
-    "Energy Efficiency and Solar Energy",
-    "Solar Energy",
-    "Solar Energy",
-    "Hydropower",
-    "Wind Energy",
-    "Mixed Renewable Energy (Solar and Wind)",
-    "Solar Energy"
-  ]
+
+
 
 number = 0
 # directory_path = File.dirname(file_path.path)
@@ -154,7 +204,7 @@ number = 0
       user: user1,
       title: titles[number],
       address: addresses[number],
-      region: "Europe",
+      region: regions[number],
       description: descriptions[number],
       auditor: Faker::Company.name,
       target: (50000..100000).to_a.sample,
