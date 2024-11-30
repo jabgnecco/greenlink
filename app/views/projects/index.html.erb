@@ -13,7 +13,7 @@
             <%= humanized_money_with_symbol (project.total / 100.00) %> raised </strong>
           </p>
           <p class="card-text" style="color: gray">£<%= number_to_human(project.target / 100, :format => '%n%u', :units => { :thousand => 'K' }) %> Target</p>
-          <p class="card-text"><%= project.display_categories %></p>
+          <button class="pill"><%= project.display_categories %></button>
         </div>
       <% end %>
     <% end %>
