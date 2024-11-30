@@ -1,0 +1,9 @@
+<h3>Starting a conservation project today is an investment in a healthier planet tomorrow</h3>
+<%= simple_form_for(@project) do |f| %>
+  <%= f.input :title%>
+  <p>Tell us about your project:</p>
+  <%= f.input :description %>
+  <p>Choose the location where you plan to withdrawl your funds</p>
+  <%= f.input :address %>
+  <%= f.submit "post", class: "button-light-green" %>
+<% end %>

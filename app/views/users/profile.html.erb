@@ -1,5 +1,5 @@
 <div class="mx-5">
-  <h1 class="my-4 fw-bold">Your donations:</h1>
+  <h3 class="my-4 fw-bold">Your donations:</h2>
   <% @donations.each do | donation | %>
     <%= link_to project_path(donation.project), style: "flex: 1;" do %>
       <div class="mx-2 my-3 p-3 thin-card">
