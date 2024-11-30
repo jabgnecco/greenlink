@@ -280,14 +280,14 @@ number = 0
       region: regions[number],
       description: descriptions[number],
       auditor: auditors[number],
-      target: (5000000..10000000).to_a.sample,
+      target: (50000000..100000000).to_a.sample,
       progress: 0
     )
     Donation.create!(
       project: project,
       user: user1,
       donation_sku: "#{project.title.split.join('_')}_donation",
-      amount: (500000..10000000).to_a.sample,
+      amount: (5000000..100000000).to_a.sample,
       state: "paid"
     )
 
