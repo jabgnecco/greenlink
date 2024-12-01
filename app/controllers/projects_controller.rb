@@ -40,7 +40,11 @@ class ProjectsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
 
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
   end
 
   def show
