@@ -3,7 +3,6 @@
 <button id="pay" class="button-main-green">Pay</button>
       <script>
         const stripePaymentButton = document.getElementById('pay');
-
         stripePaymentButton.addEventListener('click', () => {
           window.location.replace('<%= @stripe_url %>')
           });

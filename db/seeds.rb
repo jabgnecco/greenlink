@@ -113,7 +113,7 @@ puts "User Created: #{User.count}"
   "Renewable Energy Training",
   "Microgrids for Villages",
   "Solar-Powered Hospitals",
-  "Electric Vehicle Charging Stations",
+  "E car Charging Stations",
   "Bioenergy for Cooking",
   "Energy-Efficient Homes",
   "Floating Solar Farms",

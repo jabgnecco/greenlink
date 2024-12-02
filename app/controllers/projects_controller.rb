@@ -43,11 +43,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def destroy
-    @project = Project.find(params[:id])
-    @project.destroy
-  end
-
   def show
     @project = Project.find(params[:id])
     @projects = Project.all
@@ -60,8 +55,15 @@ class ProjectsController < ApplicationController
         info_window_html: render_to_string(partial: "info_window", locals: {project: project}),
       }
     end
+
+
   end
 
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to profile_path, status: :see_other
+  end
   private
 
   def project_params
