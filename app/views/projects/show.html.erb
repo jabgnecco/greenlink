@@ -2,7 +2,8 @@
   <h1 class="projects-title"><%= @project.title %></h1>
   <div class="flex-container">
     <div class="flex-item col-8">
-      <%= link_to image_tag("logo.png", style: "width: 50%; height: auto;", class: "image-class") %>
+      <%# <%= link_to image_tag("logo.png", style: "width: 50%; height: auto;", class: "image-class") %> %>
+      <%= cl_image_tag @project.photo.key, height: 300, width: 400, crop: :fill %>
       <hr>
       <h5><strong>Audited by:</strong></h5>
       <p><%= @project.auditor %></p>

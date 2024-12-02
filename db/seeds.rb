@@ -135,20 +135,24 @@ addresses = ["42 Spearman Walk, Hartlepool, TS27 3PD",
   ]
 
 number = 0
-# directory_path = File.dirname(file_path.path)
-# image_files = Dir.glob(File.join(directory_path, '*.png'))
+directory_path = File.dirname('app/assets/images/project_pictures/bioenergy-for-cooking.jpg')
+# p directory_path
+image_files = Dir.glob(File.join(directory_path, '*.jpg'))
+p image_files
 
-15.times do
+# 15.times do
+
+image_files.each do |image_file|
   puts "created #{number + 1} projects"
   # file = File.open("app/assets/images/odd13/ODD1.png")
   # image_file.each do |image_file|
-  #   puts "Processing file: #{image_file}"
-  #   file = File.open(image_file)
-  #   puts "File content length: #{file.size}"
-  #   file.close
+    # puts "Processing file: #{image_file}"
+    # file =
+    # puts "File content length: #{file.size}"
+    # file.close
   # end
 
-  # project.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  # file = File.open()
 
     project = Project.create!(
       user: user1,
@@ -160,6 +164,13 @@ number = 0
       target: (50000..100000).to_a.sample,
       progress: 0
     )
+
+    # attaching photo to project
+    puts "attaching photo to project"
+    project.photo.attach(io: File.open(image_file), filename: "nes.jpg", content_type: "image/jpg")
+    project.save
+    p project.photo.attached?
+
     Donation.create!(
       project: project,
       user: user1,
