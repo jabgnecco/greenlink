@@ -1,2 +1,19 @@
-<h1>Greenlink</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-page-background-image" style="background-image: url('<%= asset_path('background_image/home-page-background.JPG') %>'); margin-bottom: 0;">
+  <div class="container home-page-card">
+    <div class="container home-page-title">
+      <h1 class="greenlink-title"><strong>GREENLINK</strong><h1>
+      <h3><strong>Find and donate to verified projects whose goal it is to combat climate change by providing sources of green energy to their communities.</strong></h3>
+    </div>
+    <div class="flex-item text-flex">
+      <div class="container green-energy-text">
+        <h5>What is Green Energy?</h5>
+        <p>Green energy refers to renewable and sustainable energy sources, such as solar, wind, hydro, and geothermal, that produce minimal environmental impact and reduce greenhouse gas emissions.</p>
+      </div>
+      <div class="container important-text">
+        <h5>Why is Green Energy so important?</h5>
+        <p>Renewable energy is crucial for addressing climate change, reducing dependence on finite fossil fuels, and promoting sustainable economic growth</p>
+      </div>
+    </div>
+    <%= link_to "Start your search", projects_path, class:"home-page-button"%>
+  </div>
+</div>
