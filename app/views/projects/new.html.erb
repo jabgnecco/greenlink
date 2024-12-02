@@ -3,6 +3,10 @@
   <%= f.input :title%>
   <p>Tell us about your project:</p>
   <%= f.input :description %>
+  <p>What will the funds go towards?</p>
+  <%= f.simple_fields_for :categories do |c| %>
+    <%= c.input :name%>
+  <% end %>
   <p>Choose the location where you plan to withdrawl your funds</p>
   <%= f.input :address %>
   <%= f.input :target %>

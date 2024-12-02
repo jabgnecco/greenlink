@@ -30,6 +30,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @project.categories.build
   end
 
   def create
@@ -64,7 +65,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :address, :auditor, :progress, :target, :region)
+    params.require(:project).permit(:title, :description, :address, :auditor, :progress, :target, :region, categories_attributes: [:id, :name])
   end
 
 end

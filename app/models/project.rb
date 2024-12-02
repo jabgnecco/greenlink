@@ -4,6 +4,7 @@ class Project < ApplicationRecord
   has_one_attached :photo
   # has_many :users, through: :donations
   has_many :categories, dependent: :destroy
+  accepts_nested_attributes_for :categories
 
   validates :title, presence: true
   validates :description, presence: true
