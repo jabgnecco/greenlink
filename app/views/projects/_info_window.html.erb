@@ -4,5 +4,6 @@
   <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
     <div class="progress-bar bg-success d-flex justify-content-start" style="width: <%=( (project.total / project.target.to_f) * 100) > 100 ? 100 : (project.total / project.target.to_f) * 100  %>%;"></div>
   </div>
-  <p class="total-raise d-flex justify-content-start mt-3"><%= humanized_money_with_symbol (project.total / 100.00) %> raised out of <%= humanized_money_with_symbol (project.target / 100.00) %></p>
+  <p class="total-raise d-flex justify-content-start mt-3"><%= humanized_money_with_symbol (project.total / 100.00) %> raised out of £<%= number_to_human(project.target / 100, :format => '%n%u', :units => { :thousand => 'K' }) %></p>
+  <p class="total-raise d-flex justify-content-start mt-3"><%= project.address %></p>
 </div>

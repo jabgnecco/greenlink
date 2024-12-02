@@ -54,10 +54,10 @@ class Project < ApplicationRecord
   end
 
   def top_donation
-    return (9000..100000).to_a.sample
+    return (90000..1000000).to_a.sample
   end
 
   def recent_donation
-    return (1000..8999).to_a.sample
+    return (10000..89999).to_a.sample
   end
 end

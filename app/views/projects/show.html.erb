@@ -16,17 +16,17 @@
     <div class="flex-item col-3">
       <div class="card-donation mb-4">
         <h6><strong><%= humanized_money_with_symbol (@project.total / 100.00) %> Raised</strong></h6>
-        <p><%= humanized_money_with_symbol (@project.target / 100.00) %> Target</p>
-        <p>226 Donations</p>
+        <p style="color: gray">£<%= number_to_human(@project.target / 100, :format => '%n%u', :units => { :thousand => 'K' })%> Target</p>
+        <p><%= rand(142..4200)%> Donations</p>
         <%= link_to "Donate Now", new_project_donation_path(@project), class: "btn button-medium button-main-green donate-button" %>
         <a class="btn button-medium button-blue share-button" href="#">Share</a>
         <p><%= @project.names %></p>
-        <p><strong><%=humanized_money_with_symbol (@project.recent_donation / 100.0)%></strong> - Recent Donation</p>
+        <p><strong><%=humanized_money_with_symbol (@project.recent_donation / 100)%></strong> - Recent Donation</p>
         <p><%= @project.names %></p>
-        <p><strong><%= humanized_money_with_symbol (@project.top_donation / 100.0)%></strong> - Top donation</p>
+        <p><strong><%= humanized_money_with_symbol (@project.top_donation / 100)%></strong> - Top donation</p>
         <p><%= @project.names %></p>
-        <p><strong><%= humanized_money_with_symbol (@project.recent_donation / 100.0)%></strong> - Recent Donation</p>
-        <div class="flex-container justify-content-around py-4 see-button">
+        <p><strong><%= humanized_money_with_symbol (@project.recent_donation / 100)%></strong> - Recent Donation</p>
+        <%# <div class="flex-container justify-content-around py-4 see-button">
           <a class="btn button-small button-white" href="#">See All</a>
           <a class="btn button-small button-white" href="#">See Top</a>
         </div> %>
