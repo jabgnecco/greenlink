@@ -1,0 +1,75 @@
+.home-page-background-image {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-size: 130%;
+  background-position: 50% 50%;
+  margin-bottom: 10px;
+}
+
+.home-page-card {
+  border-radius: 10px;
+  color: black;
+  width: 75%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgb(227, 255, 234);
+  background: linear-gradient(137deg, rgba(227, 255, 234, 1) 0%, rgba(85, 173, 155, 1) 100%);
+}
+
+.home-page-button {
+  background: rgb(36,114,56);
+  background: linear-gradient(180deg, rgba(36,114,56,1) 8%, rgb(62, 134, 119) 100%);
+  text-decoration: none;
+  color: #fff;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1.0rem;
+  display: flex; /* Center content inside the button */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.5px 0.5px 2px rgb(201, 201, 201);
+  margin: 0 auto;
+  width: 180px;
+  padding: 12px;
+  text-align: center;
+}
+
+.home-page-button:hover {
+  background: rgb(36,114,56);
+  background: linear-gradient(180deg, rgb(22, 73, 35) 8%, rgb(41, 98, 87) 100%);
+  color: white;
+  transition: 0.3s;
+}
+
+.home-page-title {
+  padding: 20px 0px;
+  width: 50%;
+  font-weight: bolder;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.text-flex {
+  display: flex;
+  max-width: 80ch;
+  gap: 40px;
+  padding: 15px 0px;
+  text-align: justify;
+  margin: 0px auto;
+}
+
+.text-flex h5 {
+  font-weight: bold;
+}
+
+
+.greenlink-title{
+  background-image: linear-gradient(rgb(36,114,56), rgb(118, 178, 166));
+  color: transparent;
+  background-clip: text;
+}
