@@ -31,6 +31,21 @@ p user1.valid?
 
 puts "User Created: #{User.count}"
 
+  project_data = [
+    {
+      title: "",
+      description: "",
+      auditor: "",
+      address: "",
+      region: "",
+      target: (50000000..100000000).to_a.sample,
+      progress: 0,
+      categories_attributes: {
+        name: "Solar Energy"
+      }
+    }
+  ]
+
   auditors = [
     "GreenPeak Auditors",
     "CleanEnergy Compliance",
@@ -182,7 +197,7 @@ The initiative supports communities struggling with limited access to fresh wate
 number = 0
 directory_path = File.dirname('app/assets/images/project_pictures/bioenergy-for-cooking.jpg')
 # p directory_path
-image_files = Dir.glob(File.join(directory_path, '*.jpg'))
+image_files = Dir.glob(File.join(Rails.root, directory_path, '*.jpg'))
 p image_files
 
 # 15.times do
@@ -197,22 +212,24 @@ image_files.each do |image_file|
     # file.close
   # end
 
-  # file = File.open()
+  file = File.open(image_file)
+  p file
 
-    project = Project.create!(
-      user: user1,
-      title: titles[number],
-      address: addresses[number],
-      region: regions[number],
-      description: descriptions[number],
-      auditor: auditors[number],
-      target: (50000000..100000000).to_a.sample,
-      progress: 0
+    project = Project.new(
+      project_data[number]
+      # user: user1,
+      # title: titles[number],
+      # address: addresses[number],
+      # region: regions[number],
+      # description: descriptions[number],
+      # auditor: auditors[number],
+      # target: (50000000..100000000).to_a.sample,
+      # progress: 0
     )
-
+    project.user = user1
     # attaching photo to project
     puts "attaching photo to project"
-    project.photo.attach(io: File.open(image_file), filename: "nes.jpg", content_type: "image/jpg")
+    project.photo.attach(io: file, filename: "nes.jpg", content_type: "image/jpg")
     project.save
     p project.photo.attached?
 
