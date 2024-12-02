@@ -31,7 +31,82 @@ p user1.valid?
 
 puts "User Created: #{User.count}"
 
-titles = [
+  auditors = [
+    "GreenPeak Auditors",
+    "CleanEnergy Compliance",
+    "SolarTrust Solutions",
+    "EcoAudit Group",
+    "RenewEx Audit Services",
+    "PowerWise Auditing",
+    "BlueSky Energy Auditors",
+    "EnviroCheck Auditors",
+    "SunCert Auditing",
+    "EcoVerify Consulting",
+    "GreenGuard Energy Auditors",
+    "SolisTech Auditors",
+    "EarthFirst Renewable Audits",
+    "GreenWave Inspection Services",
+    "ClearPath Energy Audits"
+  ]
+
+  addresses = [
+    "Zhongwei, Ningxia, China",
+    "Hornsdale SA 5491, Australia",
+    "Ouarzazate, Morocco",
+    "Lancashire, United Kingdom",
+    "Sihwa Lake, South Korea",
+    "Kenya",
+    "Brazil",
+    "Yorkshire, United Kingdom",
+    "Perth, Western Australia",
+    "Gitesi, Rwanda",
+    "Denmark",
+    "Hellisheiðarvirkjun, 816 Ölfus, Iceland",
+    "Tehachapi Pass, Kern County, California",
+    "Kochel, Bavaria, Germany",
+    "Mojave Desert, California, USA",
+
+  ]
+
+  regions = [
+    "Asia",
+    "Oceania",
+    "Africa",
+    "Europe",
+    "Asia",
+    "Africa",
+    "South America",
+    "Europe",
+    "Oceania",
+    "Africa",
+    "Europe",
+    "Europe",
+    "North America",
+    "Europe",
+    "North America",
+  ]
+
+
+  renewable_energy_keywords = [
+    "Solar Energy",
+    "Wind Energy",
+    "Hydropower",
+    "Mixed Energy",
+    "Solar Energy",
+    "Solar Energy",
+    "Electric",
+    "Bionergy",
+    "Solar Energy",
+    "Biogas",
+    "Wind Energy",
+    "Hydropower",
+    "Wind Energy",
+    "Hydropower",
+    "Solar Energy"
+  ]
+
+
+  titles = [
   "Solar for Schools",
   "Community Wind Turbines",
   "Solar-Powered Water Pumps",
@@ -50,6 +125,7 @@ titles = [
 ]
 
 puts "Seeding Data "
+
 
 descriptions = [
 "Many schools in rural and underserved regions struggle with inadequate or unreliable electricity, limiting access to technology and hindering learning opportunities. Solar for Schools equips these institutions with solar panel systems, providing clean, uninterrupted energy for essential tools like lighting, computers, and projectors. This renewable energy solution fosters better educational outcomes while reducing reliance on diesel generators or unstable grid connections.
@@ -99,40 +175,9 @@ The initiative supports communities struggling with limited access to fresh wate
 ]
 
 
-addresses = ["42 Spearman Walk, Hartlepool, TS27 3PD",
-  "Wickham Cottage, Chideock, DT6 6JB",
-  "Arkil, Wadborough Road, Norton, WR5 2QN",
-  "Sunset, Standlake Road, Ducklington, OX29 7UZ",
-  "21 St Lawrence Road, Eastleigh, SO50 4GB",
-  "6 Henshall Close, Shavington, CW2 5XE",
-  "Gwynant, Plumley Moor Road, Plumley, WA16 0TR",
-  "8 Kingston Way, Shoreham-By-Sea, BN43 6YA",
-  "10 Cavell Drive, Danesmoor, S45 9SD",
-  "25 Briars Brook, Lathom, L40 5XD",
-  "145 Stanley Road, Teddington, TW11 8UF",
-  "17 Copperas Lane, Droylsden, M43 6HP",
-  "Flat 6, Marlborough House, Park Road, Bognor Regis, PO21 2PZ",
-  "15 Poppy Court, Headstone Drive, Harrow, HA3 5UB",
-  "Perryan Lodge, The Green, Eythorne, CT15 4BN"
-]
 
-  renewable_energy_keywords = [
-    "Solar Energy",
-    "Wind Energy",
-    "Solar Energy",
-    "Mixed Renewable Energy (Solar, Wind, and Biomass)",
-    "Mixed Renewable Energy (Solar and Wind)",
-    "Solar Energy",
-    "Electric Mobility (Solar-Powered Charging)",
-    "Bioenergy",
-    "Energy Efficiency and Solar Energy",
-    "Solar Energy",
-    "Solar Energy",
-    "Hydropower",
-    "Wind Energy",
-    "Mixed Renewable Energy (Solar and Wind)",
-    "Solar Energy"
-  ]
+
+
 
 number = 0
 # directory_path = File.dirname(file_path.path)
@@ -154,18 +199,18 @@ number = 0
       user: user1,
       title: titles[number],
       address: addresses[number],
-      region: "Europe",
+      region: regions[number],
       description: descriptions[number],
-      auditor: Faker::Company.name,
-      target: (50000..100000).to_a.sample,
+      auditor: auditors[number],
+      target: (50000000..100000000).to_a.sample,
       progress: 0
     )
     Donation.create!(
       project: project,
       user: user1,
       donation_sku: "#{project.title.split.join('_')}_donation",
-      amount: (5000..100000).to_a.sample,
-      state: "Paid"
+      amount: (5000000..100000000).to_a.sample,
+      state: "paid"
     )
 
     Category.create!(

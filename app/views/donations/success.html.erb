@@ -1,4 +1,7 @@
-<h2><%= @donation_paid.project.title %></h2>
-<p><%= @donation_paid.project.description %></p>
-<h5> you donated: </h5>
-<%= @donation_paid.amount %>
+<div class="summary-card card my-3">
+  <div class="green-card px-3">
+    <h1 class="project-title pt-3 pb-2"><%= @donation_paid.project.title %></h1>
+    <h5 class="mt-2">You donated:</h5>
+    <div class="summary-box d-flex align-items-center px-3 mb-2">£<%= (@donation_paid.amount.to_f / 100) %>0</div>
+  </div>
+</div>

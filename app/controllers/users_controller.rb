@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  def my_donations
+  def profile
     @donations = current_user.donations.where(state: "paid")
   end
 end

@@ -29,13 +29,22 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @projects = Project.new
+    @project = Project.new
   end
 
   def create
     @project = Project.new(project_params)
     @project.user = current_user
-    @project.save
+    if @project.save
+      redirect_to projects_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
   end
 
   def show
@@ -55,7 +64,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :address, :auditor, :progress, :target)
+    params.require(:project).permit(:title, :description, :address, :auditor, :progress, :target, :region)
   end
 
 end
