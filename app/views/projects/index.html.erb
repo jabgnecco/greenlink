@@ -1,6 +1,7 @@
 <div class="main-container">
   <div class="cards">
     <% @projects.each do |project| %>
+
       <%= link_to project_path(project), class: "card", style: "width: 100%;" do %>
         <div class="card-body">
           <h5 class="card-title custom-padding d-flex justify-content-start">
@@ -15,7 +16,6 @@
           </p>
           <button class="pill"><%= project.display_categories %></button>
           <button class="pill"><%= project.region %></button>
-
         </div>
       <% end %>
     <% end %>

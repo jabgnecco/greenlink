@@ -32,6 +32,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @project.categories.build
   end
 
   def create
@@ -42,11 +43,6 @@ class ProjectsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-  end
-
-  def destroy
-    @project = Project.find(params[:id])
-    @project.destroy
   end
 
   def show
@@ -61,12 +57,19 @@ class ProjectsController < ApplicationController
         info_window_html: render_to_string(partial: "info_window", locals: {project: project}),
       }
     end
+
+
   end
 
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to profile_path, status: :see_other
+  end
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :address, :auditor, :progress, :target, :region)
+    params.require(:project).permit(:title, :description, :address, :auditor, :progress, :target, :region, categories_attributes: [:id, :name])
   end
 
 end

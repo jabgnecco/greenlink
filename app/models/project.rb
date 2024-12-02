@@ -3,6 +3,7 @@ class Project < ApplicationRecord
   has_many :donations, dependent: :destroy
   # has_many :users, through: :donations
   has_many :categories, dependent: :destroy
+  accepts_nested_attributes_for :categories
 
   has_one_attached :photo
 
