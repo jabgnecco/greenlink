@@ -50,7 +50,7 @@ class ProjectsController < ApplicationController
       @markers = [
         lat: @project.latitude,
         lng: @project.longitude,
-
+        marker_html: render_to_string(partial: "marker"),
         info_window_html: render_to_string(partial: "info_window", locals: {project: @project})
       ]
     else
