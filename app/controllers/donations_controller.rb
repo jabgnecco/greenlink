@@ -1,6 +1,11 @@
 class DonationsController < ApplicationController
   def index
     @donations = Donation.all
+    @donations = Donation.order(created_at: :desc).limit(50) # Adjust limit as needed
+    respond_to do |format|
+      format.html # Render the normal index view
+      format.json { render json: @donations }
+    end
   end
 
   def show

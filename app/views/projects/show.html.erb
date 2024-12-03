@@ -23,19 +23,19 @@
       <div class="card-donation mb-4">
         <h6><strong><%= humanized_money_with_symbol (@project.total / 100.00) %> Raised</strong></h6>
         <p style="color: gray">£<%= number_to_human(@project.target / 100, :format => '%n%u', :units => { :thousand => 'K' })%> Target</p>
-        <p><%= rand(142..4200)%> Donations</p>
+        <p><%= @project.donations.count%> Donations</p>
         <%= link_to "Donate Now", new_project_donation_path(@project), class: "btn button-medium button-main-green donate-button" %>
         <a class="btn button-medium button-blue share-button" href="whatsapp://send?text=<%= request.original_url %>" id="shareButton">Share on Whatsapp</a>
-        <p><%= @project.names %></p>
-        <p><strong><%=humanized_money_with_symbol (@project.recent_donation / 100)%></strong> - Recent Donation</p>
-        <p><%= @project.names %></p>
-        <p><strong><%= humanized_money_with_symbol (@project.top_donation / 100)%></strong> - Top donation</p>
-        <p><%= @project.names %></p>
-        <p><strong><%= humanized_money_with_symbol (@project.recent_donation / 100)%></strong> - Recent Donation</p>
-        <%# <div class="flex-container justify-content-around py-4 see-button">
-          <a class="btn button-small button-white" href="#">See All</a>
+        <p>Most Recent Donation</p>
+        <p><strong><%=humanized_money_with_symbol (@project.recent_donation.amount / 100)%></strong> - <%= @project.recent_donation.user.first_name %></p>
+        <p>Top Donation</p>
+        <p><strong><%= humanized_money_with_symbol (@project.top_donation.amount / 100)%></strong> - <%= @project.top_donation.user.first_name %></p>
+        <div class="flex-container justify-content-around py-4 see-button">
+          <!-- Button to Open Modal -->
+          <a class="btn button-small button-white" href="#" data-bs-toggle="modal" data-bs-target="#donations-modal">See All</a>
+          <%# STILL TO DO - CODE 'SEE TOP' BUTTON %>
           <a class="btn button-small button-white" href="#">See Top</a>
-        </div> %>
+        </div>
       </div>
         <div id="greenlink-map" class="project-show-map" style="width: 100%; height: 280px;"
           data-controller="map"
@@ -44,4 +44,15 @@
         </div>
     </div>
   </div>
+
+
+
+    <%# DONATIONS MODAL CONTENT %>
+  <div id="donations-modal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <%= render "donations/index_modal", donations: @donations %>
+    </div>
+  </div>
+</div>
 </div>
