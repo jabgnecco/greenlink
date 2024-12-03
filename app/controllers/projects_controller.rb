@@ -48,17 +48,16 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @projects = Project.all
-    @markers = @projects.geocoded.map do |project|
+    if @project.geocoded?
+      @markers = [
+        lat: @project.latitude,
+        lng: @project.longitude,
 
-      {
-        lat: project.latitude,
-        lng: project.longitude,
-
-        info_window_html: render_to_string(partial: "info_window", locals: {project: project}),
-      }
+        info_window_html: render_to_string(partial: "info_window", locals: {project: @project})
+      ]
+    else
+      @markers = []
     end
-
-
   end
 
   def destroy
