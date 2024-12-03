@@ -7,7 +7,7 @@
     <%= f.input :description, label: false %>
     <p class="mb-2"><strong>Which category does your project fall under?</strong></p>
     <%= f.simple_fields_for :categories do |c| %>
-      <%= c.input :name, as: :select, collection: Project::ENERGY_TYPES, label: false %>
+      <%= c.input :name, as: :select, collection: Category::ENERGY_TYPES, label: false %>
     <% end %>
     <p class="mb-2"><strong>Add your fund-raising target:</strong></p>
     <%= f.input :target, label: false %>
