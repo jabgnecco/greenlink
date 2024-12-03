@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @projects = Project.all
+    @projects = Project.order(created_at: :desc)
     if params[:query].present?
       sql_subquery = <<~SQL
         projects.title @@ :query
@@ -23,7 +23,6 @@ class ProjectsController < ApplicationController
     if params[:query].present?
       @projects = @projects.where("title ILIKE ?", "%#{params[:query]}%")
     end
-    @projects.sort_by { |i| i.created_at }
   end
 
   def new

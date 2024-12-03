@@ -1,4 +1,23 @@
 class Project < ApplicationRecord
+  ENERGY_TYPES = [
+    "Solar Energy",
+    "Wind Energy",
+    "Hydropower",
+    "Mixed Energy",
+    "Solar Energy",
+    "Solar Energy",
+    "Electric",
+    "Bionergy",
+    "Solar Energy",
+    "Biogas",
+    "Wind Energy",
+    "Hydropower",
+    "Wind Energy",
+    "Hydropower",
+    "Solar Energy"
+  ]
+  CONTINENTS = ["Africa", "Antarctica", "Asia", "Oceania", "Europe", "North America", "South America"]
+
   belongs_to :user
   has_many :donations, dependent: :destroy
   # has_many :users, through: :donations
@@ -12,7 +31,8 @@ class Project < ApplicationRecord
   validates :auditor, presence: true
   validates :progress, presence: true, numericality: { only_integer: true }
   validates :target, presence: true, numericality: { only_integer: true }
-
+  validates :name, inclusion: { in: ENERGY_TYPES}
+  validates :region, inclusion: { in: CONTINENTS}
   after_validation :geocode, if: :will_save_change_to_address?
   geocoded_by :address
 
@@ -35,7 +55,8 @@ class Project < ApplicationRecord
   end
 
   def names
-    random_names = ["Jaime Barros",
+    random_names =
+    ["Jaime Barros",
     "Alvin Baldwin",
     "Braylen Nielsen",
     "Juliet Conrad",
