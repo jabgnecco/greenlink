@@ -20,8 +20,8 @@
           <p class="total-raise d-flex justify-content-start mt-3"><strong>
             <%= humanized_money_with_symbol (project.total / 100.00) %> raised </strong>
           </p>
-          <button class="pill"><%= project.display_categories %></button>
-          <button class="pill"><%= project.region %></button>
+          <button class="pill row my-2"><%= project.display_categories %></button>
+          <button class="pill row"><%= project.region %></button>
         </div>
       <% end %>
     <% end %>

@@ -13,7 +13,8 @@
   height: 40px;
   font-weight: 600;
   justify-content: center;
-  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156)
+  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
+  border: none;
 }
 
 .button-main-green:hover{
@@ -36,7 +37,8 @@
   align-items: center;
   height: 40px;
   justify-content: center;
-  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156)
+  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
+  border: none;
 }
 
 .button-light-green:hover{
@@ -54,6 +56,7 @@
   margin: 10px auto;
   color: #fff;
   border-radius: 8px;
+  border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 0.9rem;
@@ -61,7 +64,8 @@
   align-items: center;
   height: 40px;
   justify-content: center;
-  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156)
+  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
+  border: none;
 }
 
 .button-blue:hover{
@@ -74,6 +78,7 @@
   background-color: white;
   border-radius: 8px;
   margin: 10px auto;
+  border: none;
 }
 
 .button-white:hover{
