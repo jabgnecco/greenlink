@@ -7,7 +7,7 @@
     <%= f.input :description, label: false %>
     <p class="mb-2"><strong>Which category does your project fall under?</strong></p>
     <%= f.simple_fields_for :categories do |c| %>
-      <%= c.input :name, label: false %>
+      <%= c.input :name, as: :select, collection: Project::ENERGY_TYPES, label: false %>
     <% end %>
     <p class="mb-2"><strong>Add your fund-raising target:</strong></p>
     <%= f.input :target, label: false %>
@@ -15,7 +15,7 @@
     <p class="mb-1">Address:</p>
     <%= f.input :address, label: false %>
     <p class="mb-1">Region:</p>
-    <%= f.input :region, label: false %>
+    <%= f.input :region, as: :select, collection: Project::CONTINENTS, label: false %>
     <p class="mb-2"><strong>Who audited your project?</strong></p>
     <%= f.input :auditor, label: false %>
     <p class="mb-2"><strong>Choose a fund-raising end date for your project:</strong></p>
