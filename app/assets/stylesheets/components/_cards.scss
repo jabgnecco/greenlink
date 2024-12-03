@@ -16,12 +16,9 @@
 
 .card-body{
   background-color: #ffffff;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
   border: 0.5px solid rgb(232, 232, 232);
-  &:hover {
-    border: 2px solid rgb(107, 107, 107);
-  }
   p {
     margin: 0;
   }
@@ -37,10 +34,13 @@
   max-width: calc(33.33% - 1rem);
   align-items: stretch;
   min-width: 10rem;
-  border-radius: 15px;
+  border-radius: 18px;
   border-style: none;
   box-shadow: 0.5px 0.5px 0.25px rgb(200, 200, 200);
   flex-direction: column;
+  &:hover {
+    border: 2px solid rgb(107, 107, 107);
+  }
 }
 
 .popup-card {
@@ -54,7 +54,7 @@
 }
 
 .card-donation{
-  border-radius: 15px;
+  border-radius: 16px;
   padding: 28px;
   background-color: #ffffff;
   p{
@@ -81,7 +81,7 @@
   min-width: 10rem;
   padding: 5px;
   border: 1px solid #ccc;
-  border-radius: 15px;
+  border-radius: 16px;
   box-shadow: 0.5px 0.5px 0.25px rgb(169, 169, 169);
   &:hover {
     border: 2px solid rgb(107, 107, 107);
@@ -95,7 +95,7 @@
   background-color: #95D2B3;
   text-decoration: none;
   padding-bottom: 10px;
-  border-radius: 15px;
+  border-radius: 16px;
 }
 
 .summary-card {
@@ -109,4 +109,11 @@
     background-color: white;
     border-radius: 8px;
   }
+}
+
+.card-image {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }

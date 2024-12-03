@@ -39,12 +39,12 @@ class DonationsController < ApplicationController
       success_url: donation_success_url(@donation),
       cancel_url: project_url(@donation.project)
     )
-    @donation.update(checkout_session_id: session.id)
+    @donation.update(checkout_session_id: stripe_session.id)
     @stripe_url = stripe_session[:url]
     # TODO: Redirect to the new stripe_url - the external route here wasn't working.
-    # redirect_to session[:url], allow_other_host: true, status: 303
+    redirect_to stripe_session[:url], allow_other_host: true, status: 303
     # render :new
-    redirect_to donation_success_path(@donation)
+    # redirect_to donation_success_path(@donation)
   end
 
 

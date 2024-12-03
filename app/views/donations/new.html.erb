@@ -1,6 +1,6 @@
 <h1 class="project-title pt-3"><%= @project.title %></h1>
 <div class="donation-container">
-  <%= simple_form_for @donation, url: project_donations_path, html: { class: 'donation-form', data: { controller: "donation" } } do |f| %>
+  <%= simple_form_for @donation, url: project_donations_path, html: { class: 'donation-form', data: { controller: "donation", turbo: false } } do |f| %>
     <div class="form-group">
       <%= f.label :amount, "Enter donation amount:", class: "fs-5 fw-bold" %>
       <div class="donation-buttons">
@@ -27,6 +27,8 @@
 
     <%= f.button :submit, "Checkout", class: "checkout-button" %>
   <% end %>
+
+  <!--
   <% if @stripe_url.present? %>
     <p>Stripe url should be here</p>
     <script>
@@ -37,4 +39,5 @@
         //});
     </script>
   <% end %>
+  -->
 </div>
