@@ -1,8 +1,10 @@
 .donation-container {
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 640px;
+  margin: 16px auto;
   padding: 20px;
   font-family: Arial, sans-serif;
+  background-color: white;
+  border-radius: 8px;
 
   .donation-form {
     .form-group {
@@ -15,36 +17,39 @@
       }
     }
 
+    .donation-box {
+      gap: 10px;
+      padding: 16px;
+      border-radius: 8px;
+      background-color: #4a90e2;
+    }
+
     .donation-buttons {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 15px;
+      justify-content: space-between;
 
       .donation-option {
-        flex: 1;
+        width: 16%;
         padding: 10px 15px;
         font-size: 16px;
         font-weight: bold;
-        color: white;
-        background-color: #4a90e2; // Blue button color
+        background-color: white;
+        color: black;
         border: none;
         border-radius: 5px;
         cursor: pointer;
         text-align: center;
 
         &:hover {
-          background-color: #357abd;
+          border: black;
         }
       }
     }
 
-    .donation-input,
-    .tip-input {
+    .donation-input {
       width: 100%;
       padding: 10px;
       font-size: 16px;
-      border: 2px solid #4a90e2; // Matches blue button color
       border-radius: 5px;
     }
 
