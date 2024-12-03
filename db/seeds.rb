@@ -151,7 +151,7 @@ puts "All users Created: #{User.count}"
         auditor: "GreenPeak Auditors",
         address: "Zhongwei, Ningxia, China",
         region: "Asia",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -170,7 +170,7 @@ puts "All users Created: #{User.count}"
         auditor: "CleanEnergy Compliance",
         address: "Hornsdale SA 5491, Australia",
         region: "Oceania",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -189,7 +189,7 @@ puts "All users Created: #{User.count}"
         auditor: "SolarTrust Solutions",
         address: "Ouarzazate, Morocco",
         region: "Africa",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -208,7 +208,7 @@ puts "All users Created: #{User.count}"
         auditor: "EcoAudit Group",
         address: "Lancashire, United Kingdom",
         region: "Europe",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -227,7 +227,7 @@ puts "All users Created: #{User.count}"
         auditor: "RenewEx Audit Services",
         address: "Sihwa Lake, South Korea",
         region: "Asia",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -246,7 +246,7 @@ puts "All users Created: #{User.count}"
         auditor: "PowerWise Auditing",
         address: "Kenya",
         region: "Africa",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -266,7 +266,7 @@ puts "All users Created: #{User.count}"
         auditor: "BlueSky Energy Auditors",
         address: "Brazil",
         region: "South America",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -285,7 +285,7 @@ puts "All users Created: #{User.count}"
         auditor: "EnviroCheck Auditors",
         address: "Yorkshire, United Kingdom",
         region: "Europe",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -304,7 +304,7 @@ puts "All users Created: #{User.count}"
         auditor: "SunCert Auditing",
         address: "Perth, Western Australia",
         region: "Oceania",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -323,7 +323,7 @@ puts "All users Created: #{User.count}"
         auditor: "EcoVerify Consulting",
         address: "Gitesi, Rwanda",
         region: "Africa",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -342,7 +342,7 @@ puts "All users Created: #{User.count}"
         auditor: "GreenGuard Energy Auditors",
         address: "Denmark",
         region: "Europe",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -361,7 +361,7 @@ puts "All users Created: #{User.count}"
         auditor: "SolisTech Auditors",
         address: "Hellisheiðarvirkjun, 816 Ölfus, Iceland",
         region: "Europe",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -380,7 +380,7 @@ puts "All users Created: #{User.count}"
         auditor: "EarthFirst Renewable Audits",
         address: "Tehachapi Pass, Kern County, California",
         region: "North America",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -399,7 +399,7 @@ puts "All users Created: #{User.count}"
         auditor: "GreenWave Inspection Services",
         address: "Kochel, Bavaria, Germany",
         region: "Europe",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -418,7 +418,7 @@ puts "All users Created: #{User.count}"
         auditor: "ClearPath Energy Audits",
         address: "Mojave Desert, California, USA",
         region: "North America",
-        target: (50000000..100000000).to_a.sample,
+        target: (5000000..10000000).to_a.sample,
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -443,7 +443,7 @@ project_data.each do |project|
       project: new_project,
       user: created_users.sample,
       donation_sku: "#{new_project.title.split.join('_')}_donation",
-      amount: (50000..1000000).to_a.sample,
+      amount: (500000..10000000).to_a.sample,
       state: "paid"
     )
 end

@@ -3,7 +3,7 @@
   <div class="flex-container">
     <div class="flex-item col-8">
       <% if @project.photo.attached? %>
-          <%= cl_image_tag project.photo.key, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag @project.photo.key, height: 300, width: 400, crop: :fill %>
       <% else %>
         <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
       <% end %>
