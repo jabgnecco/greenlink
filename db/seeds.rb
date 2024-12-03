@@ -26,10 +26,121 @@ user1 = User.new(
   password: "123123"
 )
 user1.save!
-p user1
-p user1.valid?
 
-puts "User Created: #{User.count}"
+users = [
+  {
+    first_name: "Jaime",
+    last_name: "Barros",
+    email: "jabgnecco@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Alvin",
+    last_name: "Baldwin",
+    email: "alvinbaldwin@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Braylen",
+    last_name: "Nielsen",
+    email: "braylenielsen@gmail.com",
+    password: "123123"
+  },
+  {
+    first_name: "Juliet",
+    last_name: "Conrad",
+    email: "julietconrad@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Nico",
+    last_name: "Repetto",
+    email: "nicorepetto@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Rogelio",
+    last_name: "Ralte",
+    email: "rogelioralte@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Theodore",
+    last_name: "Bischoff",
+    email: "theobischoff@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Roland Lalhruaizela",
+    last_name: "Lalhruaizela",
+    email: "rolandlalhruaizela@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Iliana",
+    last_name: "Sawyer",
+    email: "ilianasawyer@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Angelo",
+    last_name: "Angelo Roth",
+    email: "angeloroth@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Averi",
+    last_name: "Mclaughlin",
+    email: "averimclaughlin@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Bobby",
+    last_name: "Gonzalez",
+    email: "bobbygonzalez@gmail.com",
+    password: "123123"
+  },
+  {
+    first_name: "Pablo",
+    last_name: "Escobar",
+    email: "pabloescobar@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Kaden",
+    last_name: "Frank",
+    email: "kadenfrank@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Peyton",
+    last_name: "Chan",
+    email: "peytonchan@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Audrey",
+    last_name: "Yates",
+    email: "audreyyates@greenlink.com",
+    password: "123123"
+  },
+  {
+    first_name: "Jacob",
+    last_name: "Kline",
+    email: "jacobkline@greenlink.com",
+    password: "123123"
+  }
+]
+
+created_users = []
+
+users.each do |user|
+  created_users << User.create!(user)
+  puts "User Created: #{User.count}"
+end
+
+
+puts "All users Created: #{User.count}"
 
   project_data = [
     [
@@ -236,7 +347,7 @@ puts "User Created: #{User.count}"
         user: user1,
         categories_attributes: [
           {
-            name: "Solar Energy"
+            name: ""
           }
         ]
       },
@@ -327,7 +438,14 @@ project_data.each do |project|
   file = File.open(filepath)
   new_project.photo.attach(io: file, filename: project[0][:title], content_type: "image/jpg")
   new_project.save!
-  puts "project created!"
+  puts "project created: #{Project.count}!"
+      Donation.create!(
+      project: new_project,
+      user: created_users.sample,
+      donation_sku: "#{new_project.title.split.join('_')}_donation",
+      amount: (50000..1000000).to_a.sample,
+      state: "paid"
+    )
 end
 
 titles = [
