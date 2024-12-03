@@ -449,4 +449,4 @@ project_data.each do |project|
 end
 
 puts "Seeding Data "
-puts "Project Created: #{Project.count}"
+rputs "Project Created: #{Project.count}"
