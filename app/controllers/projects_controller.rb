@@ -12,14 +12,12 @@ class ProjectsController < ApplicationController
       @projects = @projects.joins(:categories).where(sql_subquery, query: params[:query])
     end
     @markers = @projects.geocoded.map do |project|
-
     {
       lat: project.latitude,
       lng: project.longitude,
-
+      marker_html: render_to_string(partial: "marker"),
       info_window_html: render_to_string(partial: "info_window", locals: {project: project}),
     }
-
     end
 
     if params[:query].present?
