@@ -26,8 +26,6 @@ class ProjectsController < ApplicationController
       @projects = @projects.where("title ILIKE ?", "%#{params[:query]}%")
     end
     @projects.sort_by { |i| i.created_at }
-
-
   end
 
   def new
@@ -38,12 +36,13 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     @project.user = current_user
+    @project.progress = 0
     if @project.save
       redirect_to projects_path
     else
       render :new, status: :unprocessable_entity
     end
-    
+
   end
 
   def show
