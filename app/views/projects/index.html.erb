@@ -3,15 +3,17 @@
     <% @projects.each do |project| %>
 
       <%= link_to project_path(project), class: "card", style: "width: 100%;" do %>
+        <div>
+          <% if project.photo.attached? %>
+            <%= cl_image_tag project.photo.key, height: 300, class: "card-image", crop: :fill %>
+          <% else %>
+            <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
+          <% end %>
+        </div>
         <div class="card-body">
           <h5 class="card-title custom-padding d-flex justify-content-start">
             <p class="card-title"><%= project.title %></p>
           </h5>
-            <% if project.photo.attached? %>
-              <%= cl_image_tag project.photo.key, height: 300, width: 400, crop: :fill %>
-            <% else %>
-              <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
-            <% end %>
           <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar bg-success d-flex justify-content-start" style="width: <%=( (project.total / project.target.to_f) * 100) > 100 ? 100 : (project.total / project.target.to_f) * 100  %>%;"></div>
           </div>
