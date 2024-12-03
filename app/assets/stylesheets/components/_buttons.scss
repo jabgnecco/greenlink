@@ -9,12 +9,16 @@
   cursor: pointer;
   font-size: 0.9rem;
   display: flex;
+  align-content: center;
   align-items: center;
   height: 40px;
   font-weight: 600;
   justify-content: center;
   box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
   border: none;
+  font-family: "Roboto", sans-serif;
+  width: 90%;
+  font-style: normal;
 }
 
 .button-main-green:hover{
@@ -34,11 +38,15 @@
   cursor: pointer;
   font-size: 0.9rem;
   display: flex;
+  align-content: center;
   align-items: center;
   height: 40px;
   justify-content: center;
   box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
   border: none;
+  font-family: "Roboto", sans-serif;
+  width: 90%;
+  font-style: normal;
 }
 
 .button-light-green:hover{
@@ -61,11 +69,15 @@
   cursor: pointer;
   font-size: 0.9rem;
   display: flex;
+  align-content: center;
   align-items: center;
   height: 40px;
   justify-content: center;
   box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
   border: none;
+  font-family: "Roboto", sans-serif;
+  width: 90%;
+  font-style: normal;
 }
 
 .button-blue:hover{
@@ -108,17 +120,4 @@
   box-shadow: 0.5px 0.5px 0.25px rgb(207, 207, 207);
   font-size: small;
   border:1px solid lightgray
-
-}
-
-.share-button{
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-style: normal;
-}
-
-.donate-button{
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-style: normal;
 }
