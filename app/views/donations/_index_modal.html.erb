@@ -1,0 +1,18 @@
+<div class="modal-header">
+        <%# PUT YOUR DONATIONS HEADER CONTENT INTO THE H5 %>
+        <h5 class="modal-title">Donations: (<%= @project.donations.count %>) </h5>
+      </div>
+      <div class="modal-body">
+        <%#  ALL YOUR MODAL BODY CONTENT INSIDE THIS MODAL-BODY DIV %>
+        <div id="donations-list">
+          <% @project.donations.each do |donation|%>
+            <li><%= donation.user.first_name %>
+            <%= donation.user.last_name %></li>
+            <%= humanized_money_with_symbol (donation.amount / 100.00) %>
+          <% end %>
+          <!-- Donations will be dynamically loaded here -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
