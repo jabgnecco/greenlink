@@ -20,16 +20,27 @@
     </div>
 
     <div class="flex-item col-3">
-      <div class="card-donation mb-4">
+      <div class="card-donation mb-4" >
         <h6><strong><%= humanized_money_with_symbol (@project.total / 100.00) %> Raised</strong></h6>
         <p style="color: gray">£<%= number_to_human(@project.target / 100, :format => '%n%u', :units => { :thousand => 'K' })%> Target</p>
         <p><%= @project.donations.count%> Donations</p>
         <%= link_to "Donate Now", new_project_donation_path(@project), class: "btn button-medium button-main-green donate-button" %>
         <a class="btn button-medium button-blue share-button" href="whatsapp://send?text=<%= request.original_url %>" id="shareButton">Share on Whatsapp</a>
-        <p>Most Recent Donation</p>
-        <p><strong><%=humanized_money_with_symbol (@project.recent_donation.amount / 100)%></strong> - <%= @project.recent_donation.user.first_name %></p>
-        <p>Top Donation</p>
-        <p><strong><%= humanized_money_with_symbol (@project.top_donation.amount / 100)%></strong> - <%= @project.top_donation.user.first_name %></p>
+        <ul style="overflow: hidden; overflow-y: scroll; height:20dvh;">
+          <li>
+            <p>Most Recent Donation</p>
+            <p><strong><%=humanized_money_with_symbol (@project.recent_donation.amount / 100)%></strong> - <%= @project.recent_donation.user.first_name %></p>
+          </li>
+          <li>
+            <p>Top Donation</p>
+            <p><strong><%= humanized_money_with_symbol (@project.top_donation.amount / 100)%></strong> - <%= @project.top_donation.user.first_name %></p>
+          </li>
+            <% @project.donations.each do |donation|%>
+            <li><%= donation.user.first_name %>
+            <%= donation.user.last_name %></li>
+            <%= humanized_money_with_symbol (donation.amount / 100.00) %>
+          <% end %>
+        </ul>
         <div class="flex-container justify-content-around py-4 see-button">
           <!-- Button to Open Modal -->
           <a class="btn button-small button-white" href="#" data-bs-toggle="modal" data-bs-target="#donations-modal">See All</a>
