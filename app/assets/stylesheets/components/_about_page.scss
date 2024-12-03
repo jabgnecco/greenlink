@@ -1,0 +1,56 @@
+
+.m-4 {
+  font-family: 'Arimo', sans-serif;
+  padding: 20px;
+  background-color: #f0f9f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.m-4 h5 {
+  font-size: 1.4rem;
+  color: #2c6e49;
+  margin-bottom: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.m-4 p {
+  font-size: 1rem;
+  color: #34495e;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+
+.m-4 hr {
+  border: 0;
+  height: 3px;
+  background: linear-gradient(to right, #4caf50, #8bc34a);
+  margin: 25px 0;
+  border-radius: 2px;
+}
+
+
+.m-4 h5 + p {
+  margin-top: 5px;
+}
+
+.m-4 p + h5 {
+  margin-top: 25px;
+}
+
+
+.m-4 h5:hover {
+  color: #54ca58; /* Green highlight on hover */
+  cursor: pointer; /* Changes cursor to pointer */
+}
+
+.m-4 h5 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
