@@ -14,8 +14,6 @@
   <%= f.input :auditor %>
   <%= f.input :closing_date,
                     html5: true %>
-  <%= simple_form_for(@project) do |f| %>
-    <%= f.input :photo, as: :file %>
-  <% end %>
-  <%= f.submit "post", class: "button-light-green" %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Post", class: "button-light-green" %>
 <% end %>
