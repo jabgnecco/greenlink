@@ -153,6 +153,7 @@ puts "All users Created: #{User.count}"
         region: "Asia",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2025,1,16),
         user: user1,
         categories_attributes: [
           {
@@ -172,6 +173,7 @@ puts "All users Created: #{User.count}"
         region: "Oceania",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2024,12,14),
         user: user1,
         categories_attributes: [
           {
@@ -191,6 +193,7 @@ puts "All users Created: #{User.count}"
         region: "Africa",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2024,12,25),
         user: user1,
         categories_attributes: [
           {
@@ -210,6 +213,7 @@ puts "All users Created: #{User.count}"
         region: "Europe",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2025,1,4),
         user: user1,
         categories_attributes: [
           {
@@ -229,6 +233,7 @@ puts "All users Created: #{User.count}"
         region: "Asia",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2025,2,11),
         user: user1,
         categories_attributes: [
           {
@@ -248,6 +253,8 @@ puts "All users Created: #{User.count}"
         region: "Africa",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+
+        closing_date: Date.new(2025,2,25),
         user: user1,
         categories_attributes: [
           {
@@ -268,6 +275,7 @@ puts "All users Created: #{User.count}"
         region: "South America",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2025,2,26),
         user: user1,
         categories_attributes: [
           {
@@ -287,6 +295,7 @@ puts "All users Created: #{User.count}"
         region: "Europe",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2025,3,1),
         user: user1,
         categories_attributes: [
           {
@@ -305,6 +314,7 @@ puts "All users Created: #{User.count}"
         address: "Perth, Western Australia",
         region: "Oceania",
         target: (5000000..10000000).to_a.sample,
+        closing_date: Date.new(2025,3,27),
         progress: 0,
         user: user1,
         categories_attributes: [
@@ -325,6 +335,7 @@ puts "All users Created: #{User.count}"
         region: "Africa",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2025,1,8),
         user: user1,
         categories_attributes: [
           {
@@ -343,11 +354,12 @@ puts "All users Created: #{User.count}"
         address: "Denmark",
         region: "Europe",
         target: (5000000..10000000).to_a.sample,
+        closing_date: Date.new(2025,2,22),
         progress: 0,
         user: user1,
         categories_attributes: [
           {
-            name: ""
+            name: "Solar Energy"
           }
         ]
       },
@@ -363,6 +375,7 @@ puts "All users Created: #{User.count}"
         region: "Europe",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2025,3,13),
         user: user1,
         categories_attributes: [
           {
@@ -382,6 +395,7 @@ puts "All users Created: #{User.count}"
         region: "North America",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2025,4,29),
         user: user1,
         categories_attributes: [
           {
@@ -401,6 +415,7 @@ puts "All users Created: #{User.count}"
         region: "Europe",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2025,5,19),
         user: user1,
         categories_attributes: [
           {
@@ -420,6 +435,7 @@ puts "All users Created: #{User.count}"
         region: "North America",
         target: (5000000..10000000).to_a.sample,
         progress: 0,
+        closing_date: Date.new(2024,4,17),
         user: user1,
         categories_attributes: [
           {
