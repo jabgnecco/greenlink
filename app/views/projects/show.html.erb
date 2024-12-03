@@ -2,15 +2,21 @@
   <h1 class="projects-title"><%= @project.title %></h1>
   <div class="flex-container">
     <div class="flex-item col-8">
-      <%# <%= link_to image_tag("logo.png", style: "width: 50%; height: auto;", class: "image-class") %>
-      <%= cl_image_tag @project.photo.key, height: 300, width: 400, crop: :fill %>
+      <% if @project.photo.attached? %>
+          <%= cl_image_tag project.photo.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
+      <% end %>
       <hr>
       <h5><strong>Audited by:</strong></h5>
       <p><%= @project.auditor %></p>
       <hr>
       <p><%= @project.description %></p>
       <hr>
-      <p><strong>Location :</strong> <%=@project.region %>, <%= @project.address%></p>
+      <div class="info-flex">
+        <p><strong>Location:</strong> <%=@project.region %>, <%= @project.address%></p>
+        <p><strong>closing date:</strong> <%= @project.closing_date %></p>
+      </div>
     </div>
 
     <div class="flex-item col-3">
