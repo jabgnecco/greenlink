@@ -347,7 +347,7 @@ puts "All users Created: #{User.count}"
         user: user1,
         categories_attributes: [
           {
-            name: ""
+            name: "Solar Energy"
           }
         ]
       },
