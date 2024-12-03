@@ -58,13 +58,12 @@
                 <button class="pill"><%= project.region %></button>
               </div>
             <% end %>
-            <%= link_to "X", project_path(project), class: "button-blue", style: "position: absolute; left: 10px;",
-                    data: {
-                      turbo_method: :delete,
-                      turbo_confirm: "Are you sure?" } %>
-          </div>
-        <% end %>
-      </div>
+            <%= link_to "Delete", project_path(project), class: "pill-small-green", style: "position: absolute; right: 10px; bottom: 10px;",
+            data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?" } %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

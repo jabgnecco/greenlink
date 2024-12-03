@@ -1,21 +1,4 @@
 class Project < ApplicationRecord
-  ENERGY_TYPES = [
-    "Solar Energy",
-    "Wind Energy",
-    "Hydropower",
-    "Mixed Energy",
-    "Solar Energy",
-    "Solar Energy",
-    "Electric",
-    "Bionergy",
-    "Solar Energy",
-    "Biogas",
-    "Wind Energy",
-    "Hydropower",
-    "Wind Energy",
-    "Hydropower",
-    "Solar Energy"
-  ]
   CONTINENTS = ["Africa", "Antarctica", "Asia", "Oceania", "Europe", "North America", "South America"]
 
   belongs_to :user
@@ -31,7 +14,6 @@ class Project < ApplicationRecord
   validates :auditor, presence: true
   validates :progress, presence: true, numericality: { only_integer: true }
   validates :target, presence: true, numericality: { only_integer: true }
-  validates :name, inclusion: { in: ENERGY_TYPES}
   validates :region, inclusion: { in: CONTINENTS}
   after_validation :geocode, if: :will_save_change_to_address?
   geocoded_by :address
@@ -54,32 +36,11 @@ class Project < ApplicationRecord
     return formatted_categories
   end
 
-  def names
-    random_names =
-    ["Jaime Barros",
-    "Alvin Baldwin",
-    "Braylen Nielsen",
-    "Juliet Conrad",
-    "Nico Repetto",
-    "Roland Ralte",
-    "Theodore Bischoff",
-    "Roland Lalhruaizela",
-    "Iliana Sawyer",
-    "Angelo Roth",
-    "Averi Mclaughlin",
-    "Bobby Gonzalez",
-    "Kaden Frank",
-    "Peyton Chan",
-    "Audrey Yates",
-    "Jacob Kline"]
-    return random_names.sample
-  end
-
   def top_donation
-    return (90000..1000000).to_a.sample
+    return donations.order(amount: :desc).first
   end
 
   def recent_donation
-    return (10000..89999).to_a.sample
+    return donations.order(created_at: :desc).first
   end
 end
