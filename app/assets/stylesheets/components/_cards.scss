@@ -130,3 +130,34 @@
   flex-grow: 1;
   margin-bottom: 10px;
 }
+
+.project-new-container {
+  max-width: 840px;
+  margin: 16px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  border-radius: 8px;
+
+  p {
+    margin: 0;
+  }
+
+  .donation-form {
+    .form-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .tagline {
+    padding: 8px;
+    background-color: #95D2B3;
+    border-radius: 8px;
+  }
+}

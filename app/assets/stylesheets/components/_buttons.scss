@@ -9,19 +9,49 @@
   cursor: pointer;
   font-size: 0.9rem;
   display: flex;
+  align-content: center;
   align-items: center;
   height: 40px;
   font-weight: 600;
   justify-content: center;
-  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
   border: none;
+  font-family: "Roboto", sans-serif;
+  width: 90%;
+  font-style: normal;
+  &:hover{
+    background-color: #247238;
+    transition: 0.3s;
+    color: #fff;
+  }
 }
 
-.button-main-green:hover{
-  background-color: #247238;
+
+.button-small-green{
+  text-decoration: none;
+  margin: 10px auto;
   transition: 0.3s;
+  background-color: #4AA761;
   color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 40px;
+  font-weight: 600;
+  justify-content: center;
+  border: none;
+  width: 20%;
+  font-style: normal;
+  &:hover{
+    background-color: #247238;
+    transition: 0.3s;
+    color: #fff;
+  }
 }
+
 
 .button-light-green{
   text-decoration: none;
@@ -34,59 +64,87 @@
   cursor: pointer;
   font-size: 0.9rem;
   display: flex;
+  align-content: center;
   align-items: center;
-  height: 40px;
+  height: 30px;
   justify-content: center;
-  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
   border: none;
+  font-style: normal;
+  &:hover{
+    background-color: #4AA761;
+    transition: 0.3s;
+    color: black;
+  }
 }
 
-.button-light-green:hover{
-  background-color: #4AA761;
-  transition: 0.3s;
-  color: black;
-}
 
 .button-blue{
   background-color: #4DA9E8;
-  // background-color: #A74A90;
-  // background-color: #75cff0;
   text-decoration: none;
   transition: 0.3s;
   margin: 10px auto;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 50%;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 0.9rem;
   display: flex;
+  align-content: center;
   align-items: center;
   height: 40px;
   justify-content: center;
-  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
   border: none;
+  font-family: "Roboto", sans-serif;
+  width: 90%;
+  font-style: normal;
+  &:hover{
+    background-color: #0088C2;
+    color: white;
+    transition: 0.3s;
+  }
 }
 
-.button-blue:hover{
-  background-color: #0088C2;
-  color: white;
+
+.button-circle{
+  background-color: #4AA761;
+  text-decoration: none;
   transition: 0.3s;
+  margin: 10px auto;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 40px;
+  justify-content: center;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  &:hover {
+    background-color: #247238;
+    transition: 0.3s;
+    color: #fff;
+  }
 }
+
 
 .button-white{
   background-color: white;
   border-radius: 8px;
   margin: 10px auto;
   border: none;
-}
-
-.button-white:hover{
-  background-color: rgb(219, 219, 219);
-  border-radius: 10px;
-  transition: opacity 0.3s;
-  opacity: 0.8;
-  border:1px solid lightgray
+  &:hover {
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+    transition: opacity 0.3s;
+    opacity: 0.8;
+    border:1px solid lightgray
+  }
 }
 
 
@@ -108,17 +166,4 @@
   box-shadow: 0.5px 0.5px 0.25px rgb(207, 207, 207);
   font-size: small;
   border:1px solid lightgray
-
-}
-
-.share-button{
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-style: normal;
-}
-
-.donate-button{
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-style: normal;
 }

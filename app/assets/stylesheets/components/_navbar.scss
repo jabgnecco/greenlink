@@ -34,12 +34,6 @@
         }
       }
     }
-
-    .tagline {
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 5px;
-    }
   }
 
   .navbar-right {
@@ -66,14 +60,16 @@
   .search-bar {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+    position: relative;
 
     .search-input {
       padding: 0.5rem;
       border: 1px solid #ccc;
       border-radius: 20px;
       outline: none;
-      width: 480px;
+      flex: 1;
 
       &:focus {
         border-color: rgb(168, 167, 167);

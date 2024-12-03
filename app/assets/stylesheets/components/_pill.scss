@@ -3,8 +3,37 @@
   padding: 0.5em 1em;
   margin-top: 4px;
   margin-bottom: 4px;
+  margin-left: 0;
   background-color: lightgray;
   border-radius: 1em;
   border: none;
   outline: none;
+}
+
+.pill-small-green{
+  text-decoration: none;
+  margin: 10px auto;
+  transition: 0.3s;
+  background-color: #4AA761;
+  color: #fff;
+  border-radius: 1em;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 35px;
+  font-weight: 600;
+  justify-content: center;
+  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
+  border: none;
+  font-family: "Roboto", sans-serif;
+  width: 20%;
+  font-style: normal;
+  &:hover{
+    background-color: #247238;
+    transition: 0.3s;
+    color: #fff;
+  }
 }

@@ -1,7 +1,6 @@
 <div class="main-container">
   <div class="cards">
     <% @projects.each do |project| %>
-
       <%= link_to project_path(project), class: "card", style: "width: 100%;" do %>
         <div>
           <% if project.photo.attached? %>
@@ -26,7 +25,6 @@
       <% end %>
     <% end %>
   </div>
-
   <div id="projects-index-map"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
