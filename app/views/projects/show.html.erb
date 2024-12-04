@@ -1,3 +1,7 @@
+  <% content_for :meta_title, "#{@project.name} is on #{DEFAULT_META["meta_name"]}" %>
+  <% content_for :meta_description, @project.description %>
+  <% content_for :meta_image, cl_image_path(@project.photo.path) %>
+
 <div class="container">
   <h1 class="projects-title my-2"><%= @project.title %></h1>
   <div class="flex-container">
@@ -15,14 +19,17 @@
       <hr>
       <div class="info-flex">
         <p><strong>Location:</strong> <%=@project.region %>, <%= @project.address%></p>
-        <p><strong>Closing date:</strong> <%= @project.closing_date %></p>
       </div>
     </div>
+
+
+
 
     <div class="flex-item col-3">
       <div class="card-donation mb-4" >
         <h6><strong><%= humanized_money_with_symbol (@project.total / 100.00) %> Raised</strong></h6>
         <p style="color: gray">£<%= number_to_human(@project.target / 100, :format => '%n%u', :units => { :thousand => 'K' })%> Target</p>
+        <p><strong>Closing date:</strong> <%= @project.closing_date %></p>
         <p class="mb-3"><%= @project.donations.count%> Donations</p>
         <%= link_to "Donate Now", new_project_donation_path(@project), class: "btn button-medium button-main-green" %>
         <a class="btn button-medium button-blue" href="whatsapp://send?text=<%= request.original_url %>" id="shareButton">Share on Whatsapp</a>

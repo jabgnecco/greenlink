@@ -84,7 +84,7 @@ users = [
   },
   {
     first_name: "Angelo",
-    last_name: "Angelo Roth",
+    last_name: "Roth",
     email: "angeloroth@greenlink.com",
     password: "123123"
   },
@@ -455,7 +455,7 @@ project_data.each do |project|
   new_project.photo.attach(io: file, filename: project[0][:title], content_type: "image/jpg")
   new_project.save!
   puts "project created: #{Project.count}!"
-  (1..5).to_a.sample.times do
+  (1..17).to_a.sample.times do
       Donation.create!(
       project: new_project,
       user: created_users.sample,
