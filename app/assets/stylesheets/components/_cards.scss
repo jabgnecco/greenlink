@@ -18,9 +18,8 @@
   background-color: #f0f9f4;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
-  p {
-    margin: 0;
-  }
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .card {
@@ -72,6 +71,9 @@
   padding: 3px;
   border: none;
   min-height: 4rem;
+  p {
+    margin: 0;
+  }
 }
 
 // .card-body:hover{
@@ -99,6 +101,7 @@
   padding-bottom: 10px;
   border-radius: 16px;
   background-color: #f0f9f4;
+  border: 1px solid #DDDDDD;
   &:hover {
     border: 1px solid #888888;
   }
@@ -108,9 +111,7 @@
   max-width: 700px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
-  border: 1px solid #DDDDDD;
   .summary-box {
-    width: 90%;
     height: 50px;
     background-color: white;
     border-radius: 8px;
