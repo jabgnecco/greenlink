@@ -1,48 +1,19 @@
-.home-page-background-image {
-  background-size: cover;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-size: 165%;
-  background-position: 42% 40%;
-  margin-bottom: 10px;
-  border-radius: 20px;
-}
-
-.greenlink-title{
-  margin-top: 10px;
-  background-image: linear-gradient(rgb(181, 252, 200), rgb(220, 248, 241));
-  color: transparent;
-  background-clip: text;
-  font-family: "Arimo", sans-serif;
-}
-
-.title-text{
-  padding-top: 15px;
-  padding-bottom: 10px;
-  font-weight:bolder;
-  color: rgb(255, 255, 255);
-  font-family: "Arimo", sans-serif;
-}
-
-
 .home-page-card {
   border-radius: 20px;
   color: black;
   width: 75%;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Keeps spacing from the card's bottom */
   padding: 0px;
-  background: rgb(227, 255, 234);
-  background: linear-gradient(137deg, rgba(227, 255, 234, 1) 0%, rgb(141, 216, 201) 100%);
-  box-shadow: 5px 5px 10px rgb(190, 190, 190);
+  padding-bottom: 15px;
+  background: rgb(245, 245, 245);
+  box-shadow: 5px 5px 10px #d5d5d5;
 }
 
 .home-page-button {
-  background: rgb(255, 255, 255);
+  background: #247238;
   text-decoration: none;
-  color: #022c13;
+  color: #ffffff;
   border-radius: 14px;
   cursor: pointer;
   font-weight: bolder;
@@ -50,19 +21,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 15px auto;
+  margin: 40px auto 20px auto;
   width: 190px;
   padding: 14px;
   text-align: center;
-
-
-  &.home-page-button:hover {
-    background-color: rgb(0, 136, 32);
-    color: #ffffff;
-    transition: 0.5s;
-  }
-
 }
+
+.home-page-button:hover {
+  background-color: #409554;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
 
 
 .home-page-title {
@@ -77,7 +47,7 @@
 .text-flex {
   display: flex;
   justify-content: flex-start;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   gap: 15px; /* Reduced gap further */
   max-width: 80ch;
   padding: 15px 0px;
@@ -96,7 +66,7 @@
   }
 
   span{
-    color: #bcf6d3;
+    color: #146234;
   }
 }
 

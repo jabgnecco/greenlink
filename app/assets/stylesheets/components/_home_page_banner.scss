@@ -1,0 +1,30 @@
+.home-page-banner {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.greenlink-title {
+  font-size: 4.0rem;
+  margin-top: 10px;
+  background-image: linear-gradient(rgb(181, 252, 200), rgb(220, 248, 241));
+  color: transparent;
+  background-clip: text;
+  font-family: "Arimo", sans-serif;
+}
+
+.title-text {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  font-family: "Arimo", sans-serif;
+  max-width: 60ch;
+  margin: 0 auto;
+  text-align: center;
+}
