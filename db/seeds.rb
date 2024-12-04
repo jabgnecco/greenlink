@@ -172,6 +172,7 @@ puts "All users Created: #{User.count}"
         address: "Hornsdale SA 5491, Australia",
         region: "Oceania",
         target: (30000..30000).to_a.sample,
+
         progress: 0,
         closing_date: Date.new(2024,12,14),
         user: user1,
@@ -454,6 +455,7 @@ project_data.each do |project|
   new_project.photo.attach(io: file, filename: project[0][:title], content_type: "image/jpg")
   new_project.save!
   puts "project created: #{Project.count}!"
+  (1..5).to_a.sample.times do
       Donation.create!(
       project: new_project,
       user: created_users.sample,
@@ -461,6 +463,7 @@ project_data.each do |project|
       amount: (7000..10000).to_a.sample,
       state: "paid"
     )
+  end
 end
 
 puts "Seeding Data "
