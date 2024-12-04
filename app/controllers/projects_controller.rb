@@ -19,10 +19,6 @@ class ProjectsController < ApplicationController
       info_window_html: render_to_string(partial: "info_window", locals: {project: project}),
     }
     end
-
-    if params[:query].present?
-      @projects = @projects.where("title ILIKE ?", "%#{params[:query]}%")
-    end
   end
 
   def new
