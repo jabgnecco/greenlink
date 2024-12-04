@@ -151,7 +151,7 @@ puts "All users Created: #{User.count}"
         auditor: "GreenPeak Auditors",
         address: "Zhongwei, Ningxia, China",
         region: "Asia",
-        target: (5000000..1000000).to_a.sample,
+        target: (5000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,1,16),
         user: user1,
@@ -171,7 +171,7 @@ puts "All users Created: #{User.count}"
         auditor: "CleanEnergy Compliance",
         address: "Hornsdale SA 5491, Australia",
         region: "Oceania",
-        target: (5000000..1000000).to_a.sample,
+        target: (30000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2024,12,14),
         user: user1,
@@ -191,13 +191,13 @@ puts "All users Created: #{User.count}"
         auditor: "SolarTrust Solutions",
         address: "Ouarzazate, Morocco",
         region: "Africa",
-        target: (5000000..1000000).to_a.sample,
+        target: (30000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2024,12,25),
         user: user1,
         categories_attributes: [
           {
-            name: "Hydropower"
+            name: "Mixed Energy"
           }
         ]
       },
@@ -211,7 +211,7 @@ puts "All users Created: #{User.count}"
         auditor: "EcoAudit Group",
         address: "Lancashire, United Kingdom",
         region: "Europe",
-        target: (5000000..1000000).to_a.sample,
+        target: (30000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,1,4),
         user: user1,
@@ -231,7 +231,7 @@ puts "All users Created: #{User.count}"
         auditor: "RenewEx Audit Services",
         address: "Sihwa Lake, South Korea",
         region: "Asia",
-        target: (5000000..1000000).to_a.sample,
+        target: (30000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,2,11),
         user: user1,
@@ -251,9 +251,8 @@ puts "All users Created: #{User.count}"
         auditor: "PowerWise Auditing",
         address: "Kenya",
         region: "Africa",
-        target: (5000000..1000000).to_a.sample,
+        target: (10000..30000).to_a.sample,
         progress: 0,
-
         closing_date: Date.new(2025,2,25),
         user: user1,
         categories_attributes: [
@@ -273,7 +272,7 @@ puts "All users Created: #{User.count}"
         auditor: "BlueSky Energy Auditors",
         address: "Brazil",
         region: "South America",
-        target: (5000000..1000000).to_a.sample,
+        target: (10000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,2,26),
         user: user1,
@@ -293,7 +292,7 @@ puts "All users Created: #{User.count}"
         auditor: "EnviroCheck Auditors",
         address: "Yorkshire, United Kingdom",
         region: "Europe",
-        target: (5000000..1000000).to_a.sample,
+        target: (10000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,3,1),
         user: user1,
@@ -313,13 +312,13 @@ puts "All users Created: #{User.count}"
         auditor: "SunCert Auditing",
         address: "Perth, Western Australia",
         region: "Oceania",
-        target: (5000000..1000000).to_a.sample,
+        target: (10000..30000).to_a.sample,
         closing_date: Date.new(2025,3,27),
         progress: 0,
         user: user1,
         categories_attributes: [
           {
-            name: "Solar Energy"
+            name: "Mixed Energy"
           }
         ]
       },
@@ -333,13 +332,13 @@ puts "All users Created: #{User.count}"
         auditor: "EcoVerify Consulting",
         address: "Gitesi, Rwanda",
         region: "Africa",
-        target: (5000000..1000000).to_a.sample,
+        target: (10000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,1,8),
         user: user1,
         categories_attributes: [
           {
-            name: "Biogas"
+            name: "Solar Energy"
           }
         ]
       },
@@ -353,7 +352,7 @@ puts "All users Created: #{User.count}"
         auditor: "GreenGuard Energy Auditors",
         address: "Denmark",
         region: "Europe",
-        target: (5000000..1000000).to_a.sample,
+        target: (10000..30000).to_a.sample,
         closing_date: Date.new(2025,2,22),
         progress: 0,
         user: user1,
@@ -373,7 +372,7 @@ puts "All users Created: #{User.count}"
         auditor: "SolisTech Auditors",
         address: "Hellisheiðarvirkjun, 816 Ölfus, Iceland",
         region: "Europe",
-        target: (5000000..1000000).to_a.sample,
+        target: (10000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,3,13),
         user: user1,
@@ -393,7 +392,7 @@ puts "All users Created: #{User.count}"
         auditor: "EarthFirst Renewable Audits",
         address: "Tehachapi Pass, Kern County, California",
         region: "North America",
-        target: (5000000..1000000).to_a.sample,
+        target: (10000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,4,29),
         user: user1,
@@ -413,7 +412,7 @@ puts "All users Created: #{User.count}"
         auditor: "GreenWave Inspection Services",
         address: "Kochel, Bavaria, Germany",
         region: "Europe",
-        target: (5000000..1000000).to_a.sample,
+        target: (10000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,5,19),
         user: user1,
@@ -433,7 +432,7 @@ puts "All users Created: #{User.count}"
         auditor: "ClearPath Energy Audits",
         address: "Mojave Desert, California, USA",
         region: "North America",
-        target: (5000000..1000000).to_a.sample,
+        target: (10000..30000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2024,4,17),
         user: user1,
@@ -459,7 +458,7 @@ project_data.each do |project|
       project: new_project,
       user: created_users.sample,
       donation_sku: "#{new_project.title.split.join('_')}_donation",
-      amount: (50000..100000).to_a.sample,
+      amount: (7000..10000).to_a.sample,
       state: "paid"
     )
 end
