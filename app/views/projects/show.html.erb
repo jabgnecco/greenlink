@@ -1,9 +1,9 @@
 <div class="container">
-  <h1 class="projects-title"><%= @project.title %></h1>
+  <h1 class="projects-title my-2"><%= @project.title %></h1>
   <div class="flex-container">
     <div class="flex-item col-8">
       <% if @project.photo.attached? %>
-        <%= cl_image_tag @project.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag @project.photo.key, class: "show-image" %>
       <% else %>
         <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
       <% end %>
@@ -15,7 +15,7 @@
       <hr>
       <div class="info-flex">
         <p><strong>Location:</strong> <%=@project.region %>, <%= @project.address%></p>
-        <p><strong>closing date:</strong> <%= @project.closing_date %></p>
+        <p><strong>Closing date:</strong> <%= @project.closing_date %></p>
       </div>
     </div>
 
@@ -23,10 +23,10 @@
       <div class="card-donation mb-4" >
         <h6><strong><%= humanized_money_with_symbol (@project.total / 100.00) %> Raised</strong></h6>
         <p style="color: gray">£<%= number_to_human(@project.target / 100, :format => '%n%u', :units => { :thousand => 'K' })%> Target</p>
-        <p><%= @project.donations.count%> Donations</p>
-        <%= link_to "Donate Now", new_project_donation_path(@project), class: "btn button-medium button-main-green donate-button" %>
-        <a class="btn button-medium button-blue share-button" href="whatsapp://send?text=<%= request.original_url %>" id="shareButton">Share on Whatsapp</a>
-        <ul style="overflow: hidden; overflow-y: scroll; height:20dvh;">
+        <p class="mb-3"><%= @project.donations.count%> Donations</p>
+        <%= link_to "Donate Now", new_project_donation_path(@project), class: "btn button-medium button-main-green" %>
+        <a class="btn button-medium button-blue" href="whatsapp://send?text=<%= request.original_url %>" id="shareButton">Share on Whatsapp</a>
+        <ul class="mt-3", style="overflow: hidden; overflow-y: scroll; height: 20dvh;">
           <li>
             <p>Most Recent Donation</p>
             <p><strong><%=humanized_money_with_symbol (@project.recent_donation.amount / 100)%></strong> - <%= @project.recent_donation.user.first_name %></p>
@@ -41,7 +41,7 @@
             <%= humanized_money_with_symbol (donation.amount / 100.00) %>
           <% end %>
         </ul>
-        <div class="flex-container justify-content-around py-4 see-button">
+        <div class="show-container justify-content-around see-button">
           <!-- Button to Open Modal -->
           <a class="btn button-small button-white" href="#" data-bs-toggle="modal" data-bs-target="#donations-modal">See All</a>
           <%# STILL TO DO - CODE 'SEE TOP' BUTTON %>
