@@ -2,38 +2,13 @@
   border-radius: 20px;
   color: black;
   width: 75%;
+  border: 1px solid rgb(231, 230, 230);
   margin-top: 20px;
-  margin-bottom: 40px; /* Keeps spacing from the card's bottom */
-  padding: 0px;
-  padding-bottom: 15px;
-  background: rgb(245, 245, 245);
-  box-shadow: 5px 5px 10px #d5d5d5;
+  margin-bottom: 40px;
+  padding: 15px 0px;
+  box-shadow: 4px 5px 10px #eeeeee;
+  background-color: #f1fffe;
 }
-
-.home-page-button {
-  background: #247238;
-  text-decoration: none;
-  color: #ffffff;
-  border-radius: 14px;
-  cursor: pointer;
-  font-weight: bolder;
-  font-size: 1.0rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px auto 20px auto;
-  width: 190px;
-  padding: 14px;
-  text-align: center;
-}
-
-.home-page-button:hover {
-  background-color: #409554;
-  color: #ffffff;
-  transition: 0.5s;
-}
-
-
 
 .home-page-title {
   font-family: 'Arimo', sans-serif;
@@ -45,10 +20,11 @@
 }
 
 .text-flex {
+  font-family: "Nunito", sans-serif;
   display: flex;
   justify-content: flex-start;
   color: rgb(0, 0, 0);
-  gap: 15px; /* Reduced gap further */
+  gap: 25px;
   max-width: 80ch;
   padding: 15px 0px;
   text-align: justify;
@@ -57,16 +33,14 @@
 }
 
 .green-energy-text, .important-text {
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 18px 20px; /* Reduced padding */
-  border-radius: 15px;
+  padding: 18px 20px;
 
   h5{
     font-family: "Arimo", sans-serif;
   }
 
   span{
-    color: #146234;
+    color: #409554;
   }
 }
 
