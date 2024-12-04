@@ -1,6 +1,6 @@
-  <% content_for :meta_title, "#{@project.name} is on #{DEFAULT_META["meta_name"]}" %>
+  <% content_for :meta_title, "#{@project.title} is on #{DEFAULT_META["meta_name"]}" %>
   <% content_for :meta_description, @project.description %>
-  <% content_for :meta_image, cl_image_path(@project.photo.path) %>
+  <% content_for :meta_image, cl_image_path(@project.photo.key) %>
 
 <div class="container">
   <h1 class="projects-title my-2"><%= @project.title %></h1>
@@ -28,7 +28,7 @@
     <div class="flex-item col-3">
       <div class="card-donation mb-4" >
         <h6><strong><%= humanized_money_with_symbol (@project.total / 100.00) %> Raised</strong></h6>
-        <p style="color: gray">£<%= number_to_human(@project.target / 100, :format => '%n%u', :units => { :thousand => 'K' })%> Target</p>
+        <h6><strong>£<%= number_to_human(@project.target / 100, :format => '%n%u', :units => { :thousand => 'K' })%> Target</strong></h6>
         <p><strong>Closing date:</strong> <%= @project.closing_date %></p>
         <p class="mb-3"><%= @project.donations.count%> Donations</p>
         <%= link_to "Donate Now", new_project_donation_path(@project), class: "btn button-medium button-main-green" %>
