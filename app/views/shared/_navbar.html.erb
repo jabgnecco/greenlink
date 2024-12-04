@@ -31,17 +31,10 @@
   </div>
 
   <!-- Second Row: Search Bar and Font Adjustment -->
-  <div class="mt-2 row d-flex justify-content-center align-items-center w-100">
+  <%# <div class="mt-2 row d-flex justify-content-center align-items-center w-100"> %>
 
     <!-- Search Bar -->
-    <div style="width: 60%;">
-      <%= form_with url: projects_path, method: :get, class: "d-flex search-bar" do |f| %>
-        <%= f.text_field :query, placeholder: "Search for renewable energy, e.g., \"solar\"...", class: "search-input" %>
-        <%= f.button nil, type: "submit", class: "search-btn", style: "position: absolute; right: 3px;", name: nil do %>
-          <i class="fas fa-search"></i><p class="fw-bold px-1">Search</p>
-        <% end %>
-      <% end %>
-    </div>
+
 
     <!-- Font Adjustment -->
     <%# <div class="col-3", style="width: 21%;">
@@ -50,5 +43,5 @@
         <input type="range" id="font-slider" class="font-slider" min="10" max="19" step="3">
       </div>
     </div> %>
-  </div>
+  <%# </div> %>
 </div>
