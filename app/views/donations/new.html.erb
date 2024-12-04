@@ -1,5 +1,5 @@
 <div class="donation-container">
-  <h1 class="project-title pt-3"><%= @project.title %></h1>
+  <h2 class="project-title pt-3"><%= @project.title %></h2>
   <%= simple_form_for @donation, url: project_donations_path, html: { class: 'donation-form', data: { controller: "donation", turbo: false } } do |f| %>
     <div class="form-group">
       <%= f.label :amount, "Enter donation amount:", class: "fs-5 fw-bold px-2" %>

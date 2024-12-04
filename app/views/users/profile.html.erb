@@ -41,7 +41,7 @@
                 <%= link_to project_path(project) do %>
                   <div>
                     <% if project.photo.attached? %>
-                      <%= cl_image_tag project.photo.key, height: 300, class: "card-image", crop: :fill %>
+                      <%= cl_image_tag project.photo.key, class: "card-image" %>
                     <% else %>
                       <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
                     <% end %>
@@ -73,10 +73,8 @@
           <div style="position: relative;" class="card w-100">
             <%= link_to project_path(project) do %>
               <div>
-                <%# <% image = project.photo.attached? ? cl_image_tag project.photo.key, height: 300, class: "card-image", crop: :fill : image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
-                <%# <%= image %>
                 <% if project.photo.attached? %>
-                  <%= cl_image_tag project.photo.key, height: 300, class: "card-image", crop: :fill %>
+                  <%= cl_image_tag project.photo.key, class: "card-image",  %>
                 <% else %>
                   <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
                 <% end %>

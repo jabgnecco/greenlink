@@ -4,7 +4,7 @@
       <%= link_to project_path(project), class: "card", style: "width: 100%;" do %>
         <div>
           <% if project.photo.attached? %>
-            <%= cl_image_tag project.photo.key, class: "card-image", crop: :fill %>
+            <%= cl_image_tag project.photo.key, class: "card-image" %>
           <% else %>
             <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
           <% end %>
