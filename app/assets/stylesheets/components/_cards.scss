@@ -15,7 +15,8 @@
 }
 
 .card-body{
-  background-color: #f0f9f4;
+  //border: 0.5px solid #c9f9f6;
+  background-color: #f1fffe;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   p {
@@ -35,7 +36,8 @@
   border-radius: 18px;
   border-style: none;
   flex-direction: column;
-  background-color: white;
+  //background-color: white;
+  background-color: #f1fffe;
   // border: 2px solid #DDDDDD;
   &:hover {
     border: 1px solid #888888;
@@ -60,7 +62,7 @@
 .card-donation{
   border-radius: 16px;
   padding: 28px;
-  background-color: #f0f9f4;
+  background-color: #f1fffe;
   p{
     margin-bottom: 0px;
   }
@@ -85,7 +87,7 @@
   padding: 5px;
   border-radius: 16px;
   border: 1px solid #DDDDDD;
-  background-color: #f0f9f4;
+  background-color: #f1fffe;
   &:hover {
     border: 1px solid #888888;
   }
@@ -107,7 +109,6 @@
 .summary-card {
   max-width: 700px;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
   border: 1px solid #DDDDDD;
   .summary-box {
     width: 90%;
@@ -144,7 +145,6 @@
   max-width: 840px;
   margin: 16px auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
   background-color: #f0f9f4;
   border-radius: 8px;
   // border: 1px solid #efe3c8;

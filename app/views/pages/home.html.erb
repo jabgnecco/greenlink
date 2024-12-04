@@ -1,19 +1,20 @@
 
 <div class="home-page-banner" style="background-image: url('<%= asset_path('background_image/home-page-background.JPG') %>');">
   <h1 class="greenlink-title"><strong>GREENLINK</strong></h1>
-  <h4 class="title-text">Find and donate to verified projects whose goal is to combat climate change by providing sources of green energy to their communities.</h4>
+  <h4 class="title-text">Find and donate to verified projects that bring green energy to communities and fight climate change.</h4>
+  <%= link_to "START YOUR SEARCH", projects_path, class: "home-page-button" %>
 </div>
 
 <div class="container home-page-card">
     <div class="flex-item text-flex">
       <div class="container green-energy-text">
-        <h5>What is <span>Green Energy</span>?</h5>
+        <h5>What is <span>Green Energy</span> ?</h5>
         <p>Green energy refers to renewable and sustainable energy sources, such as solar, wind, hydro, and geothermal, that produce minimal environmental impact and reduce greenhouse gas emissions.</p>
       </div>
       <div class="container important-text">
-        <h5>Why is <span>Green Energy</span> so important?</h5>
+        <h5>Why is <span>Green Energy</span> so important ?</h5>
         <p>Renewable energy is crucial for addressing climate change, reducing dependence on finite fossil fuels, and promoting sustainable economic growth.</p>
       </div>
     </div>
-    <%= link_to "Start your search", projects_path, class: "home-page-button" %>
+
 </div>
