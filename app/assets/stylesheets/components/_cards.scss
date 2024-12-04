@@ -15,7 +15,7 @@
 }
 
 .card-body{
-  background-color: #ffffff;
+  background-color: #f0f9f4;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   p {
@@ -24,7 +24,6 @@
 }
 
 .card {
-  background-color: #ffffff;
   font-weight: bold;
   display: flex;
   text-decoration: none;
@@ -36,7 +35,7 @@
   border-radius: 18px;
   border-style: none;
   flex-direction: column;
-  border: 2px solid #DDDDDD;
+  // border: 2px solid #DDDDDD;
   &:hover {
     border: 2px solid #888888;
   }
@@ -50,16 +49,20 @@
 .progress {
   border: 0.5px solid white;
   border-radius: 10px;
+  .progress-bar {
+    background: #4AA761;
+    height: 100%;
+    border-radius: 8px;
+  }
 }
 
 .card-donation{
   border-radius: 16px;
   padding: 28px;
-  background-color: #ffffff;
+  background-color: #f0f9f4;
   p{
     margin-bottom: 0px;
   }
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 0.5px 0.25px;
 }
 
 .card-title {
@@ -106,7 +109,7 @@
   .summary-box {
     width: 90%;
     height: 50px;
-    background-color: white;
+    background-color: #FFF6E3;
     border-radius: 8px;
   }
 }
@@ -139,9 +142,9 @@
   margin: 16px auto;
   padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: white;
+  background-color: #f0f9f4;
   border-radius: 8px;
-  border: 2px solid #DDDDDD;
+  // border: 1px solid #efe3c8;
 
   p {
     margin: 0;
