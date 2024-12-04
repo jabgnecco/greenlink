@@ -253,7 +253,6 @@ puts "All users Created: #{User.count}"
         region: "Africa",
         target: (10000..30000).to_a.sample,
         progress: 0,
-
         closing_date: Date.new(2025,2,25),
         user: user1,
         categories_attributes: [

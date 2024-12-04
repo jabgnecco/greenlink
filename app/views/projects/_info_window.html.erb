@@ -5,9 +5,9 @@
   </h5>
 
   <%# Progress bar showing the percentage of funding achieved %>
-  <div class="progress" role="progressbar" aria-label="Funding progress" aria-valuenow="<%= (project.total / project.target.to_f * 100).clamp(0, 100).round %>" aria-valuemin="0" aria-valuemax="100">
+  <div class="info-progress" role="progressbar" aria-label="Funding progress" aria-valuenow="<%= (project.total / project.target.to_f * 100).clamp(0, 100).round %>" aria-valuemin="0" aria-valuemax="100">
     <div
-      class="progress-bar"
+      class="info-progress-bar"
       style="width: <%= [(project.total / project.target.to_f * 100).round, 100].min %>%;">
     </div>
   </div>

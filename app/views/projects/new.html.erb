@@ -2,7 +2,7 @@
   <h5 class="d-flex justify-content-center tagline">Start your own project and build the world you want to live in</h3>
   <%= simple_form_for(@project) do |f| %>
     <p class="mt-4 mb-2"><strong>Add your project title:</strong></p>
-    <%= f.input :title, label: false %>
+    <%= f.input :title, label: false, style: "background-color: white;" %>
     <p class="mb-2"><strong>Tell us about your project:</strong></p>
     <%= f.input :description, label: false %>
     <p class="mb-2"><strong>What energy does your project provide?</strong></p>
