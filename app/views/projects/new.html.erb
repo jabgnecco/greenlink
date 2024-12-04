@@ -1,11 +1,11 @@
 <div class="project-new-container">
-  <h5 class="d-flex justify-content-center tagline">Starting a conservation project today is an investment in a healthier planet tomorrow</h3>
+  <h5 class="d-flex justify-content-center tagline">Start your own project and build the world you want to live in</h3>
   <%= simple_form_for(@project) do |f| %>
     <p class="mt-4 mb-2"><strong>Add your project title:</strong></p>
-    <%= f.input :title, label: false %>
+    <%= f.input :title, label: false, style: "background-color: white;" %>
     <p class="mb-2"><strong>Tell us about your project:</strong></p>
     <%= f.input :description, label: false %>
-    <p class="mb-2"><strong>Which category does your project fall under?</strong></p>
+    <p class="mb-2"><strong>What energy does your project provide?</strong></p>
     <%= f.simple_fields_for :categories do |c| %>
       <%= c.input :name, as: :select, collection: Category::ENERGY_TYPES, label: false %>
     <% end %>
@@ -18,10 +18,10 @@
     <%= f.input :region, as: :select, collection: Project::CONTINENTS, label: false %>
     <p class="mb-2"><strong>Who audited your project?</strong></p>
     <%= f.input :auditor, label: false %>
-    <p class="mb-2"><strong>Choose a fund-raising end date for your project:</strong></p>
+    <p class="mb-2"><strong>Choose the fund-raising closing date for your project:</strong></p>
     <%= f.input :closing_date, label: false,
                       html5: true %>
-    <p class="mb-2"><strong>Add a photo of your project:</strong></p>
+    <p class="mb-2"><strong>Add a photo of your project (optional):</strong></p>
     <%= f.input :photo, label: false, as: :file %>
     <%= f.submit "Post", class: "button-small-green" %>
   <% end %>

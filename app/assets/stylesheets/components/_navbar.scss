@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #FFFDD0;
+  background-color: white;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #DDDDDD;
   font-family: Arial, sans-serif;
   flex-direction: column; /* Make space for a second row */
 
@@ -66,7 +66,7 @@
 
     .search-input {
       padding: 0.5rem;
-      border: 1px solid #ccc;
+      border: 1px solid #DDDDDD;
       border-radius: 20px;
       outline: none;
       flex: 1;
@@ -103,7 +103,7 @@
     align-items: center;
     gap: 0.5rem;
     height: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     border-radius: 30px;
     outline: none;
 
@@ -144,4 +144,12 @@
       }
     }
   }
+}
+
+.form-control {
+  background-color: white;
+}
+
+.form-select {
+  background-color: white;
 }
