@@ -1,0 +1,6 @@
+# config/meta.yml
+meta_name: "Green Link"
+meta_title: "GreenLink - Be a part of something bigger than yourself"
+meta_description: "GreenLink is a forward-thinking initiative designed to connect people, organizations, and resources dedicated to environmental conservation. By leveraging technology and collaboration, GreenLink fosters partnerships, streamlines resource allocation, and amplifies the collective impact of conservation efforts worldwide. Our mission is to empower grassroots movements, bridge gaps in sustainability projects, and drive measurable outcomes in protecting ecosystems, combating climate change, and preserving biodiversity.
+With GreenLink, we’re not just supporting conservation—we’re building a global network for sustainable change."
+meta_image: "logo-modified-removebg-preview.png" # should exist in `app/assets/images/`

@@ -1,10 +1,20 @@
+<div class="mt-2 row d-flex justify-content-center align-items-center w-100">
+  <div style="width: 60%;">
+    <%= form_with url: projects_path, method: :get, class: "d-flex search-bar" do |f| %>
+      <%= f.text_field :query, placeholder: "Search for renewable energy, e.g., \"solar\"...", class: "search-input" %>
+      <%= f.button nil, type: "submit", class: "search-btn", style: "position: absolute; right: 3px;", name: nil do %>
+        <i class="fas fa-search"></i><p class="fw-bold px-1", style="margin: 0;">Search</p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 <div class="main-container">
   <div class="cards">
     <% @projects.each do |project| %>
       <%= link_to project_path(project), class: "card", style: "width: 100%;" do %>
         <div>
           <% if project.photo.attached? %>
-            <%= cl_image_tag project.photo.key, class: "card-image", crop: :fill %>
+            <%= cl_image_tag project.photo.key, class: "card-image" %>
           <% else %>
             <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
           <% end %>
