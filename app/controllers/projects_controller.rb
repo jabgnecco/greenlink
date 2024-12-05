@@ -56,7 +56,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
-    redirect_to profile_path, status: :see_other
+    redirect_to profile_path(current_user), status: :see_other
   end
   private
 

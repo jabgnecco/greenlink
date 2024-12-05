@@ -1,19 +1,27 @@
-
+<div class="mt-3 mb-3 row d-flex justify-content-center align-items-center w-100">
+  <div style="width: 60%;">
+    <%= form_with url: projects_path, method: :get, class: "d-flex search-bar" do |f| %>
+      <%= f.text_field :query, placeholder: "Search for renewable energy, e.g., \"solar\"...", class: "search-input" %>
+      <%= f.button nil, type: "submit", class: "search-btn", style: "position: absolute; right: 3px;", name: nil do %>
+        <i class="fas fa-search"></i><p class="fw-bold px-1", style="margin: 0;">Search</p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 <div class="home-page-banner" style="background-image: url('<%= asset_path('background_image/home-page-background.JPG') %>');">
   <h1 class="greenlink-title"><strong>GREENLINKS</strong></h1>
   <h4 class="title-text">Find and donate to verified projects whose goal is to combat climate change by providing sources of green energy to their communities.</h4>
 </div>
 
-<div class="container home-page-card">
-    <div class="flex-item text-flex">
-      <div class="container green-energy-text">
-        <h5>What is <span>Green Energy</span>?</h5>
-        <p>Green energy refers to renewable and sustainable energy sources, such as solar, wind, hydro, and geothermal, that produce minimal environmental impact and reduce greenhouse gas emissions.</p>
-      </div>
-      <div class="container important-text">
-        <h5>Why is <span>Green Energy</span> so important?</h5>
-        <p>Renewable energy is crucial for addressing climate change, reducing dependence on finite fossil fuels, and promoting sustainable economic growth.</p>
-      </div>
+<div class="consistent-container home-page-card", style="margin: 30px auto 30px auto;">
+  <div class="flex-item text-flex">
+    <div class="container green-energy-text">
+      <h5>What is <span>Green Energy</span> ?</h5>
+      <p>Green energy refers to renewable and sustainable energy sources, such as solar, wind, hydro, and geothermal, that produce minimal environmental impact and reduce greenhouse gas emissions.</p>
     </div>
-    <%= link_to "Start your search", projects_path, class: "home-page-button" %>
+    <div class="container important-text">
+      <h5>Why is <span>Green Energy</span> so important ?</h5>
+      <p>Renewable energy is crucial for addressing climate change, reducing dependence on finite fossil fuels, and promoting sustainable economic growth.</p>
+    </div>
+  </div>
 </div>

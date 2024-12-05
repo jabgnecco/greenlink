@@ -1,13 +1,15 @@
 .pill {
-  font-size: 14px;
+  display: flex;
+  font-size: 13px;
   padding: 0.5em 1em;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-left: 0;
+  margin: 4px 6px;
   background-color: white;
   border-radius: 1em;
-  border: none;
+  border:none;
   outline: none;
+  box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
+  width: fit-content;
+
 }
 
 .pill-small-green{
@@ -36,4 +38,13 @@
     transition: 0.3s;
     color: #fff;
   }
+}
+
+.pill-container{
+  margin: 4px 0px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+
 }

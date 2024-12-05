@@ -24,12 +24,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="white-background">
+  <body class="white-background font">
     <% unless @hide_navbar %>
       <%= render "shared/navbar" %>
     <% end %>
     <%= render "shared/flashes" %>
-    <div style="min-height: calc(100vh - 256px); margin-bottom: 0px;">
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <div style="min-height: calc(100vh - 220px);">
       <%= yield %>
     </div>
     <%= render "shared/footer" %>

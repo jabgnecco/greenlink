@@ -101,9 +101,9 @@ users = [
     password: "123123"
   },
   {
-    first_name: "Pablo",
+    first_name: "Pedro",
     last_name: "Escobar",
-    email: "pabloescobar@greenlink.com",
+    email: "pedroescobar@greenlink.com",
     password: "123123"
   },
   {
@@ -460,7 +460,7 @@ project_data.each do |project|
       project: new_project,
       user: created_users.sample,
       donation_sku: "#{new_project.title.split.join('_')}_donation",
-      amount: (10000..100000).to_a.sample,
+      amount: (90000..200000).to_a.sample,
       state: "paid"
     )
   end
