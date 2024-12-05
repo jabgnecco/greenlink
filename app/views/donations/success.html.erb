@@ -17,9 +17,10 @@
   <h4 class="title-text" style="display:block">Thank you for donating!</h4>
 </div>
 
-<div class="summary-card my-4 green-card">
-  <h5 class="d-flex justify-content-center mb-4">Your support really makes a difference</h5>
-  <div class="px-3>
+<h5 class="d-flex justify-content-center m-4">Your support really makes a difference</h5>
+
+<div class="summary-card my-4 green-card", style="margin: auto;">
+  <div class="px-3">
     <h2 class="project-title pt-3 pb-2"><%= @donation_paid.project.title %></h2>
 
 
@@ -56,5 +57,5 @@
 
 
   </div>
-  <%= button_to "View my Donations", profile_path(current_user), class:"button-main-green my-4", style: "width: 100%; font-weight: 400;" %>
 </div>
+<%= link_to "View my Donations", profile_path(current_user), class:"button-main-green my-4", style: "max-width: 800px; font-weight: 400;" %>

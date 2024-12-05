@@ -3,10 +3,8 @@
   // overflow-y: scroll;
   display: flex;
   justify-content: space-evenly;
-  gap: 10px;
   flex-wrap: wrap;
   margin-top: 5px;
-  padding: 16px 0px;
   flex-grow: 1;
   max-width: 70%;
   margin-bottom: 0;
@@ -20,6 +18,7 @@
 }
 
 .card {
+  margin-top: 16px;
   font-weight: bold;
   display: flex;
   text-decoration: none;
@@ -37,7 +36,6 @@
   &:hover {
     border: 1px solid #888888;
   }
-  margin-bottom: 20px;
 }
 
 .popup-card {
@@ -67,9 +65,8 @@
 .card-title {
   text-decoration: none;
   border-radius: 8px;
-  padding: 3px;
   border: none;
-  min-height: 4rem;
+  min-height: 3rem;
   p {
     margin: 0;
   }
