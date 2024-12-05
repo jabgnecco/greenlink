@@ -131,16 +131,29 @@
 
 
 .button-white{
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
   margin: 10px 0;
+  color: black;
   border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 40px;
+  justify-content: center;
+  border: none;
+  width: 90%;
+  font-style: normal;
+  border: 0.5px solid rgb(221, 221, 221);
   &:hover {
-    background-color: rgb(219, 219, 219);
     border-radius: 10px;
-    transition: opacity 0.3s;
-    opacity: 0.8;
-    border:1px solid lightgray
+    transition: 0.3s;
+    border: 1px solid rgb(174, 174, 174);
   }
 }
 

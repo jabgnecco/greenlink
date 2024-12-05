@@ -55,13 +55,10 @@
               <p><strong><i class="fa-solid fa-earth-americas", style="color: green;"></i> <%= humanized_money_with_symbol (@project.top_donation.amount / 100)%></strong> - <%= @project.top_donation.user.first_name %> <%= time_ago_in_words(@project.top_donation.created_at) %> ago</p>
             <% end %>
 
+
         <div class="show-container justify-content-between see-button">
-          <!-- Button to Open Modal -->
-          <a class="btn button-small button-white" href="#" data-bs-toggle="modal" data-bs-target="#donations-modal" id="see-all">See All</a>
+          <a class="button-white" href="#" data-bs-toggle="modal" data-bs-target="#donations-modal" id="see-all">See All</a>
           <%# STILL TO DO - CODE 'SEE TOP' BUTTON %>
-          <a class="btn button-small button-white" href="#"
-            data-bs-toggle="modal" data-bs-target="#donations-modal"
-          >See Top</a>
         </div>
       </div>
         <div id="greenlink-map" class="project-show-map" style="width: 100%; height: 280px;"
