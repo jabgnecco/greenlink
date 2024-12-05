@@ -1,8 +1,14 @@
+<div class="home-page-banner" style="background-image: url('<%= asset_path('background_image/home-page-background.JPG') %>');">
+  <h1 class="greenlink-title"><strong>GREENLINKS</strong></h1>
+  <h4 class="title-text">Join the fight against climate change and stand up for the future generations, who cannot stand up for themselves.</h4>
+</div>
+
+
 <div class="donation-container">
   <h2 class="project-title pt-3"><%= @project.title %></h2>
   <%= simple_form_for @donation, url: project_donations_path, html: { class: 'donation-form', data: { controller: "donation", turbo: false } } do |f| %>
     <div class="form-group">
-      <%= f.label :amount, "Enter donation amount:", class: "fs-5 fw-bold px-2" %>
+      <%= f.label :amount, "Enter Donation Amount:", class: "fs-5 fw-bold px-2" %>
       <div class="donation-box">
         <div class="donation-buttons mt-2 mb-4">
           <% [50, 100, 200, 500, 1000].each do |preset| %>

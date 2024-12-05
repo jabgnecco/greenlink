@@ -1,5 +1,8 @@
-<h1 class="d-flex justify-content-center mt-4 mb-2">Start a new project</h1>
-<h5 class="d-flex justify-content-center mb-2">Post your project and build the world you want to live in!</h5>
+<div class="home-page-banner" style="background-image: url('<%= asset_path('background_image/home-page-background.JPG') %>'); text-align: center;">
+  <h1 class="greenlink-title"><strong>GREENLINKS</strong></h1>
+  <h4 class="title-text" style='display:block;'>Post your project and build the world you want to live in!</h4>
+</div>
+
 <div class="project-new-container">
   <%= simple_form_for(@project) do |f| %>
     <p class="mt-2 mb-2"><strong>Add your project title:</strong></p>
