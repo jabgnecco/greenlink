@@ -46,8 +46,8 @@
             </div>
           </div>
         <% else %>
-          <div class="mx-2 my-3 p-3 thin-info-card">
-            <h5>No donations yet, browse some projects below:</h5>
+          <div class="my-3 p-3 thin-info-card">
+            <h5>You haven't made any donations yet, browse some projects to support below:</h5>
           </div>
           <div class="profile-cards">
             <% @other_projects.sample(3).each do |project| %>
@@ -82,38 +82,44 @@
       </div>
     </div>
     <div class="tab-pane fade" id="pills-projects" role="tabpanel" aria-labelledby="pills-projects-tab" tabindex="0">
-      <div class="profile-cards">
-        <% @projects.each do |project| %>
-          <div style="position: relative;" class="card w-100">
-            <%= link_to project_path(project) do %>
-              <div>
-                <% if project.photo.attached? %>
-                  <%= cl_image_tag project.photo.key, class: "card-image"  %>
-                <% else %>
-                  <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
-                <% end %>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title custom-padding d-flex justify-content-start">
-                  <p class="card-title"><%= project.title %></p>
-                </h5>
-                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar d-flex justify-content-start" style="width: <%=( (project.total / project.target.to_f) * 100) > 100 ? 100 : (project.total / project.target.to_f) * 100  %>%;"></div>
+      <% unless @donations.empty? %>
+        <div class="profile-cards">
+          <% @projects.each do |project| %>
+            <div style="position: relative;" class="card w-100">
+              <%= link_to project_path(project) do %>
+                <div>
+                  <% if project.photo.attached? %>
+                    <%= cl_image_tag project.photo.key, class: "card-image"  %>
+                  <% else %>
+                    <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
+                  <% end %>
                 </div>
-                <p class="total-raise d-flex justify-content-start mt-3">
-                  <strong><%= humanized_money_with_symbol (project.total / 100.00) %> raised </strong>
-                </p>
-                <button class="pill"><%= project.display_categories %></button>
-                <button class="pill"><%= project.region %></button>
-              </div>
-            <% end %>
-            <%= link_to "Delete", project_path(project), class: "pill-small-green", style: "position: absolute; right: 10px; bottom: 10px;",
-              data: {
-              turbo_method: :delete,
-              turbo_confirm: "Are you sure?" } %>
-          </div>
-        <% end %>
-      </div>
+                <div class="card-body">
+                  <h5 class="card-title custom-padding d-flex justify-content-start">
+                    <p class="card-title"><%= project.title %></p>
+                  </h5>
+                  <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar d-flex justify-content-start" style="width: <%=( (project.total / project.target.to_f) * 100) > 100 ? 100 : (project.total / project.target.to_f) * 100  %>%;"></div>
+                  </div>
+                  <p class="total-raise d-flex justify-content-start mt-3">
+                    <strong><%= humanized_money_with_symbol (project.total / 100.00) %> raised </strong>
+                  </p>
+                  <button class="pill"><%= project.display_categories %></button>
+                  <button class="pill"><%= project.region %></button>
+                </div>
+              <% end %>
+              <%= link_to "Delete", project_path(project), class: "pill-small-green", style: "position: absolute; right: 10px; bottom: 10px;",
+                data: {
+                turbo_method: :delete,
+                turbo_confirm: "Are you sure?" } %>
+            </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="my-3 p-3 thin-info-card">
+          <h5>You haven't made any projects yet, click <%= link_to "here", "/projects/new", style: "color: #4AA761; text-decoration: underline;" %> to make your first one!</h5>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
