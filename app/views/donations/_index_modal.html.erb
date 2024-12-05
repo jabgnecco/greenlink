@@ -1,24 +1,51 @@
 <div class="modal-header">
-        <%# PUT YOUR DONATIONS HEADER CONTENT INTO THE H5 %>
-  <h5 class="modal-title">Donations: (<%= @project.donations.count %>) </h5>
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-recent" type="button" role="tab" aria-controls="pills-recent" aria-selected="true"><h5 class="modal-title">Donations: (<%= @project.donations.count %>) </h5></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-top-tab" data-bs-toggle="pill" data-bs-target="#pills-top" type="button" role="tab" aria-controls="pills-top" aria-selected="false">Top Donations</button>
+    </li>
+  </ul>
 </div>
 
-
-      <div class="modal-body">
-        <%#  ALL YOUR MODAL BODY CONTENT INSIDE THIS MODAL-BODY DIV %>
-        <div id="donations-list">
-          <% @project.donations.each do |donation|%>
-            <div class="list-decoration-none d-flex align-items-center">
-              <i class="fa-solid fa-earth-americas"></i>
-              <div>
-                <h5><%= donation.user.first_name %> <%= donation.user.last_name %></h5>
-                <p><%= humanized_money_with_symbol (donation.amount / 100.00) %> -  Created XXXX time ago</p>
-              </div>
+  <div class="modal-body">
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-recent" role="tabpanel" aria-labelledby="pills-top-tab" tabindex="0">
+            <%#  ALL YOUR MODAL BODY CONTENT INSIDE THIS MODAL-BODY DIV %>
+            <div id="donations-list" style="overflow: hidden; overflow-y: scroll; height: 40dvh;">
+              <% donations.each do |donation|%>
+                <div class="list-decoration-none d-flex align-items-center">
+                  <i class="fa-solid fa-earth-americas"></i>
+                  <div>
+                    <h5><%= donation.user.first_name %> <%= donation.user.last_name %></h5>
+                    <p><%= humanized_money_with_symbol (donation.amount / 100.00) %> - Created <%= time_ago_in_words(donation.created_at) %> ago</p>
+                  </div>
+                </div>
+              <% end %>
             </div>
+      </div>
 
-          <% end %>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
+    <div class="tab-pane fade" id="pills-top" role="tabpanel" aria-labelledby="pills-recent-tab" tabindex="0">
+
+            <% top_donations = donations.to_a.sort_by {|donation| -donation.amount } %>
+            <% top_donations.each do |top_donation| %>
+              <div class="list-decoration-none d-flex align-items-center">
+                <i class="fa-solid fa-earth-americas"></i>
+                <div>
+                  <h5><%= top_donation.user.first_name %> <%= top_donation.user.last_name %></h5>
+                  <p><%= humanized_money_with_symbol (top_donation.amount / 100.00) %> - Created <%= time_ago_in_words(top_donation.created_at) %> ago</p>
+                </div>
+              </div>
+            <% end %>
+
+    </div>
+  </div>
+
+
+</div>
+
+<div class="modal-footer">
+  <button type="button", class="button-blue", data-bs-dismiss="modal">Close</button>
+</div>
+<%# <div class="modal-body"> %>

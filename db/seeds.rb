@@ -150,14 +150,14 @@ puts "All users Created: #{User.count}"
         Additionally, the project integrates sustainability into the curriculum by teaching students about renewable energy systems and their benefits. These hands-on learning opportunities inspire eco-consciousness and encourage students to consider careers in the growing green energy sector. By combining education and clean energy access, this initiative empowers schools and their communities to embrace a sustainable future.",
         auditor: "GreenPeak Auditors",
         address: "Zhongwei, Ningxia, China",
-        region: "Asia",
+        region: "🌎 Asia",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,1,16),
         user: user1,
         categories_attributes: [
           {
-            name: "Solar Energy"
+            name: "☀️ Solar Energy"
           }
         ]
       },
@@ -170,7 +170,7 @@ puts "All users Created: #{User.count}"
         This initiative also emphasizes local ownership by involving community members in the planning, construction, and maintenance of the turbines. Training programs equip residents with the skills needed to manage the turbines, creating job opportunities and ensuring the long-term sustainability of the project. By blending clean energy with community empowerment, Community Wind Turbines strengthens rural resilience and promotes environmental stewardship.",
         auditor: "CleanEnergy Compliance",
         address: "Hornsdale SA 5491, Australia",
-        region: "Oceania",
+        region: "🌎 Oceania",
         target: (1000000..5000000).to_a.sample,
 
         progress: 0,
@@ -178,7 +178,7 @@ puts "All users Created: #{User.count}"
         user: user1,
         categories_attributes: [
           {
-            name: "Wind Energy"
+            name: "💨 Wind Energy"
           }
         ]
       },
@@ -191,14 +191,14 @@ puts "All users Created: #{User.count}"
         By improving water access, this project enhances food security and supports rural livelihoods. The combination of renewable energy and efficient water management allows communities to thrive while protecting the environment. Solar-Powered Water Pumps exemplify how solar technology can address both environmental and socioeconomic challenges.",
         auditor: "SolarTrust Solutions",
         address: "Ouarzazate, Morocco",
-        region: "Africa",
+        region: "🌎 Africa",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2024,12,25),
         user: user1,
         categories_attributes: [
           {
-            name: "Mixed Energy"
+            name: "🍃 Mixed Energy"
           }
         ]
       },
@@ -211,14 +211,14 @@ puts "All users Created: #{User.count}"
         Beyond skill-building, the program raises awareness about the importance of transitioning to renewable energy and energy-efficient practices. By creating a local workforce equipped to install and maintain clean energy systems, the project accelerates the adoption of renewables and empowers individuals to contribute to a sustainable future.",
         auditor: "EcoAudit Group",
         address: "Lancashire, United Kingdom",
-        region: "Europe",
+        region: "🌎 Europe",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,1,4),
         user: user1,
         categories_attributes: [
           {
-            name: "Mixed Energy"
+            name: "🍃 Mixed Energy"
           }
         ]
       },
@@ -231,14 +231,14 @@ puts "All users Created: #{User.count}"
         The project focuses on empowering communities to manage their own energy systems. Residents are trained in the operation and maintenance of the microgrids, ensuring long-term sustainability and creating local employment opportunities. By bringing renewable energy to rural areas, this initiative addresses energy poverty and promotes self-sufficiency in underserved regions.",
         auditor: "RenewEx Audit Services",
         address: "Sihwa Lake, South Korea",
-        region: "Asia",
+        region: "🌎 Asia",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,2,11),
         user: user1,
         categories_attributes: [
           {
-            name: "Solar Energy"
+            name: "☀️ Solar Energy"
           }
         ]
       },
@@ -251,14 +251,14 @@ puts "All users Created: #{User.count}"
         In addition to improving healthcare delivery, the project significantly reduces operational costs by eliminating dependency on expensive diesel generators. The savings can be redirected toward improving medical services and expanding access to care. By integrating clean energy into healthcare, this initiative improves patient outcomes while contributing to environmental sustainability.",
         auditor: "PowerWise Auditing",
         address: "Kenya",
-        region: "Africa",
+        region: "🌎 Africa",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,2,25),
         user: user1,
         categories_attributes: [
           {
-            name: "Solar Energy"
+            name: "☀️ Solar Energy"
           }
         ]
       },
@@ -272,14 +272,14 @@ puts "All users Created: #{User.count}"
         By combining renewable energy with electric mobility, the project supports the global transition to low-carbon transportation systems. It also makes EV ownership more accessible, particularly in underserved regions where charging infrastructure is scarce. The initiative encourages the adoption of green technology and contributes to cleaner air and reduced environmental impact.",
         auditor: "BlueSky Energy Auditors",
         address: "Brazil",
-        region: "South America",
+        region: "🌎 South America",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,2,26),
         user: user1,
         categories_attributes: [
           {
-            name: "Electric"
+            name: "💡 Electric"
           }
         ]
       },
@@ -292,14 +292,14 @@ puts "All users Created: #{User.count}"
         This project improves public health by eliminating the harmful smoke associated with traditional stoves, which disproportionately affects women and children. Additionally, the use of biogas reduces the need for firewood collection, giving families more time to focus on education and other productive activities. By turning waste into energy, Bioenergy for Cooking supports both environmental conservation and community well-being.",
         auditor: "EnviroCheck Auditors",
         address: "Yorkshire, United Kingdom",
-        region: "Europe",
+        region: "🌎 Europe",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,3,1),
         user: user1,
         categories_attributes: [
           {
-            name: "Bionergy"
+            name: "♻️ Bionergy"
           }
         ]
       },
@@ -312,14 +312,14 @@ puts "All users Created: #{User.count}"
         The project not only lowers household energy costs but also contributes to environmental sustainability by decreasing overall demand for fossil fuels. Families enjoy improved living conditions, while the community benefits from reduced emissions. By combining energy efficiency with renewable energy, Energy-Efficient Homes helps create a sustainable future for all.",
         auditor: "SunCert Auditing",
         address: "Perth, Western Australia",
-        region: "Oceania",
+        region: "🌎 Oceania",
         target: (1000000..5000000).to_a.sample,
         closing_date: Date.new(2025,3,27),
         progress: 0,
         user: user1,
         categories_attributes: [
           {
-            name: "Mixed Energy"
+            name: "🍃 Mixed Energy"
           }
         ]
       },
@@ -332,14 +332,14 @@ puts "All users Created: #{User.count}"
         This project not only diversifies renewable energy infrastructure but also provides energy access to communities near water sources. By utilizing solar power in this unique way, the initiative contributes to reducing greenhouse gas emissions and optimizing land use. Floating Solar Farms is a scalable solution that combines innovation, sustainability, and efficiency.",
         auditor: "EcoVerify Consulting",
         address: "Gitesi, Rwanda",
-        region: "Africa",
+        region: "🌎 Africa",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,1,8),
         user: user1,
         categories_attributes: [
           {
-            name: "Solar Energy"
+            name: "☀️ Solar Energy"
           }
         ]
       },
@@ -352,14 +352,14 @@ puts "All users Created: #{User.count}"
         The initiative improves the quality of life for refugees by enhancing safety and enabling productive activities after sunset. Solar lighting also reduces dependency on kerosene lamps, which are both costly and hazardous. By bringing renewable energy to vulnerable populations, Solar Lights for Refugees supports humanitarian efforts while promoting sustainability.",
         auditor: "GreenGuard Energy Auditors",
         address: "Denmark",
-        region: "Europe",
+        region: "🌎 Europe",
         target: (1000000..5000000).to_a.sample,
         closing_date: Date.new(2025,2,22),
         progress: 0,
         user: user1,
         categories_attributes: [
           {
-            name: "Solar Energy"
+            name: "☀️ Solar Energy"
           }
         ]
       },
@@ -372,14 +372,14 @@ puts "All users Created: #{User.count}"
         This initiative not only delivers renewable energy but also reduces reliance on fossil fuels, lowering greenhouse gas emissions. By creating community-owned energy solutions, the project empowers local residents and builds capacity for long-term management. Hydropower for Communities demonstrates how water resources can sustainably power rural development.",
         auditor: "SolisTech Auditors",
         address: "Hellisheiðarvirkjun, 816 Ölfus, Iceland",
-        region: "Europe",
+        region: "🌎 Europe",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,3,13),
         user: user1,
         categories_attributes: [
           {
-            name: "Hydropower"
+            name: "💧 Hydropower"
           }
         ]
       },
@@ -392,14 +392,14 @@ puts "All users Created: #{User.count}"
         By testing and deploying these innovations in both urban and rural settings, the project ensures that wind energy can meet diverse energy needs. The initiative also prioritizes reducing the environmental footprint of turbine manufacturing and operation, creating a more sustainable energy supply chain. Wind Energy Innovation contributes to the global energy transition by driving advancements in wind technology.",
         auditor: "EarthFirst Renewable Audits",
         address: "Tehachapi Pass, Kern County, California",
-        region: "North America",
+        region: "🌎 North America",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,4,29),
         user: user1,
         categories_attributes: [
           {
-            name: "Wind Energy"
+            name: "💨 Wind Energy"
           }
         ]
       },
@@ -412,14 +412,14 @@ puts "All users Created: #{User.count}"
         The project also introduces sustainability workshops for community members, teaching them about renewable energy technologies. These libraries serve as hubs for learning and innovation, inspiring communities to embrace green energy solutions in other aspects of their lives. By merging education with renewable energy, Renewable Energy Libraries promotes both intellectual and environmental empowerment.",
         auditor: "GreenWave Inspection Services",
         address: "Kochel, Bavaria, Germany",
-        region: "Europe",
+        region: "🌎 Europe",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2025,5,19),
         user: user1,
         categories_attributes: [
           {
-            name: "Solar Energy"
+            name: "💧 Hydropower"
           }
         ]
       },
@@ -432,14 +432,14 @@ puts "All users Created: #{User.count}"
         The initiative supports communities struggling with limited access to fresh water, improving public health and enabling agricultural activities. By utilizing abundant solar resources, the project minimizes its carbon footprint and operational costs. Solar-Powered Desalination offers a scalable solution to one of the most urgent global challenges.",
         auditor: "ClearPath Energy Audits",
         address: "Mojave Desert, California, USA",
-        region: "North America",
+        region: "🌎 North America",
         target: (1000000..5000000).to_a.sample,
         progress: 0,
         closing_date: Date.new(2024,4,17),
         user: user1,
         categories_attributes: [
           {
-            name: "Solar Energy"
+            name: "☀️ Solar Energy"
           }
         ]
       },
