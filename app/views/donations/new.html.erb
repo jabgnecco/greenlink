@@ -4,7 +4,11 @@
 </div>
 
 <div class="consistent-container d-flex justify-content-between", style="max-height: 380px">
-  <%= cl_image_tag @project.photo.key, class: "card-image", style: "width: 40%; border-radius: 16px; height: auto;" %>
+  <% if @project.photo.attached? %>
+    <%= cl_image_tag @project.photo.key, class: "card-image", style: "width: 40%; border-radius: 16px; height: auto;" %>
+  <% else %>
+    <%= image_tag "logo.png", alt: "Green Link Logo", class: "card-image logo-icon me-2", style: "width: 40%; border-radius: 16px; height: auto;" %>
+  <% end %>
   <div class="donation-container">
     <h2 class="project-title pt-3"><%= @project.title %></h2>
     <%= simple_form_for @donation, url: project_donations_path, html: { class: 'donation-form', data: { controller: "donation", turbo: false } } do |f| %>
