@@ -101,9 +101,9 @@ users = [
     password: "123123"
   },
   {
-    first_name: "Pablo",
+    first_name: "Pedro",
     last_name: "Escobar",
-    email: "pabloescobar@greenlink.com",
+    email: "pedroescobar@greenlink.com",
     password: "123123"
   },
   {
