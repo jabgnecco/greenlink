@@ -1,15 +1,16 @@
 .pill {
   display: flex;
-  font-size: 13px;
+  font-size: 10px;
+  font-weight: bolder;
   padding: 0.5em 1em;
-  margin: 4px 0px;
+  margin: 4px 6px;
   background-color: white;
   border-radius: 1em;
   border:none;
   outline: none;
   box-shadow: 0.5px 0.5px 0.25px rgb(156, 156, 156);
   width: fit-content;
-  margin-right: 10px;
+
 }
 
 .pill-small-green{
@@ -41,6 +42,7 @@
 }
 
 .pill-container{
+  justify-content: start;
   margin: 4px 0px;
   display: flex;
   align-items: center;
