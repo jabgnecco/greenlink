@@ -82,7 +82,7 @@
       </div>
     </div>
     <div class="tab-pane fade" id="pills-projects" role="tabpanel" aria-labelledby="pills-projects-tab" tabindex="0">
-      <% unless @donations.empty? %>
+      <% unless @projects.empty? %>
         <div class="profile-cards">
           <% @projects.each do |project| %>
             <div style="position: relative;" class="card w-100">
@@ -104,8 +104,10 @@
                   <p class="total-raise d-flex justify-content-start mt-3">
                     <strong><%= humanized_money_with_symbol (project.total / 100.00) %> raised </strong>
                   </p>
-                  <button class="pill"><%= project.display_categories %></button>
-                  <button class="pill"><%= project.region %></button>
+                  <div class="pill-container">
+                    <button class="pill row my-2"><%= project.display_categories %></button>
+                    <button class="pill row"><%= project.region %></button>
+                  </div>
                 </div>
               <% end %>
               <%= link_to "Delete", project_path(project), class: "pill-small-green", style: "position: absolute; right: 10px; bottom: 10px;",
