@@ -1,29 +1,33 @@
-<h1 class="d-flex justify-content-center mt-4 mb-2">Start a new project</h1>
-<h5 class="d-flex justify-content-center mb-2">Post your project and build the world you want to live in!</h5>
-<div class="project-new-container">
-  <%= simple_form_for(@project) do |f| %>
-    <p class="mt-2 mb-2"><strong>Add your project title:</strong></p>
-    <%= f.input :title, label: false, input_html: { placeholder: "e.g. E-Green Onshore Wind Farms" }, style: "background-color: white;" %>
-    <p class="mb-2"><strong>Tell us about your project:</strong></p>
-    <%= f.input :description, label: false, input_html: { placeholder: "e.g. At E-Green, our Onshore Wind Farms turn the power of wind into a reliable source of clean energy for communities in Buckinghamshire, one of the windiest places in the UK. ..." } %>
-    <p class="mb-2"><strong>What energy does your project provide?</strong></p>
-    <%= f.simple_fields_for :categories do |c| %>
-      <%= c.input :name, as: :select, input_html: { placeholder: "e.g. Wind Energy" }, collection: Category::ENERGY_TYPES, label: false %>
+<div class="home-page-banner" style="background-image: url('<%= asset_path('background_image/home-page-background.JPG') %>'); text-align: center;">
+  <h1 class="greenlink-title"><strong>GREENLINKS</strong></h1>
+  <h4 class="title-text" style='display:block;'>Post your project and build the world you want to live in!</h4>
+</div>
+<div class="consistent-container">
+  <div class="project-new-container">
+    <%= simple_form_for(@project) do |f| %>
+      <p class="mt-2 mb-2"><strong>Add your project title:</strong></p>
+      <%= f.input :title, label: false, input_html: { placeholder: "e.g. E-Green Onshore Wind Farms" }, style: "background-color: white;" %>
+      <p class="mb-2"><strong>Tell us about your project:</strong></p>
+      <%= f.input :description, label: false, input_html: { placeholder: "e.g. At E-Green, our Onshore Wind Farms turn the power of wind into a reliable source of clean energy for communities in Buckinghamshire, one of the windiest places in the UK. ..." } %>
+      <p class="mb-2"><strong>What energy does your project provide?</strong></p>
+      <%= f.simple_fields_for :categories do |c| %>
+        <%= c.input :name, as: :select, input_html: { placeholder: "e.g. Wind Energy" }, collection: Category::ENERGY_TYPES, label: false %>
+      <% end %>
+      <p class="mb-2"><strong>Add your fund-raising target (£):</strong></p>
+      <%= f.input :target, input_html: { placeholder: "e.g. 5,000" }, label: false %>
+      <p class="mb-2"><strong>Add your project's location:</strong></p>
+      <p class="mb-1">Address:</p>
+      <%= f.input :address, input_html: { placeholder: "e.g. Buckinghamshire" }, label: false %>
+      <p class="mb-1">Region:</p>
+      <%= f.input :region, input_html: { placeholder: "e.g. Europe" }, as: :select, collection: Project::CONTINENTS, label: false %>
+      <p class="mb-2"><strong>Who audited your project?</strong></p>
+      <%= f.input :auditor, input_html: { placeholder: "e.g. Environmental Services, Inc." }, label: false %>
+      <p class="mb-2"><strong>Choose the fund-raising closing date for your project:</strong></p>
+      <%= f.input :closing_date, input_html: { placeholder: "e.g. 17/02/2025" }, label: false,
+                        html5: true %>
+      <p class="mb-2"><strong>Add a photo of your project (optional):</strong></p>
+      <%= f.input :photo, label: false, as: :file %>
+      <%= f.submit "Start fundraising!", class: "button-small-green" %>
     <% end %>
-    <p class="mb-2"><strong>Add your fund-raising target (£):</strong></p>
-    <%= f.input :target, input_html: { placeholder: "e.g. 5,000" }, label: false %>
-    <p class="mb-2"><strong>Add your project's location:</strong></p>
-    <p class="mb-1">Address:</p>
-    <%= f.input :address, input_html: { placeholder: "e.g. Buckinghamshire" }, label: false %>
-    <p class="mb-1">Region:</p>
-    <%= f.input :region, input_html: { placeholder: "e.g. Europe" }, as: :select, collection: Project::CONTINENTS, label: false %>
-    <p class="mb-2"><strong>Who audited your project?</strong></p>
-    <%= f.input :auditor, input_html: { placeholder: "e.g. Environmental Services, Inc." }, label: false %>
-    <p class="mb-2"><strong>Choose the fund-raising closing date for your project:</strong></p>
-    <%= f.input :closing_date, input_html: { placeholder: "e.g. 17/02/2025" }, label: false,
-                      html5: true %>
-    <p class="mb-2"><strong>Add a photo of your project (optional):</strong></p>
-    <%= f.input :photo, label: false, as: :file %>
-    <%= f.submit "Start fundraising!", class: "button-small-green" %>
-  <% end %>
+  </div>
 </div>

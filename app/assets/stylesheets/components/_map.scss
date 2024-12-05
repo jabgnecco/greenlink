@@ -4,8 +4,6 @@
   position: sticky;
   top: 0;
   margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 8px;
   border: 0.5px solid lightgray;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 0.5px 0.25px;
 }
@@ -19,7 +17,6 @@
 
 .mapboxgl-popup {
   max-width: 200px;
-
 }
 
 .mapboxgl-popup-content {
