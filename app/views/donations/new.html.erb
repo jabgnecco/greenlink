@@ -1,11 +1,10 @@
 <div class="home-page-banner" style="background-image: url('<%= asset_path('background_image/home-page-background.JPG') %>');">
-  <h1 class="greenlink-title"><strong>GREENLINK</strong></h1>
-  <h4 class="title-text">Find and donate to verified projects that bring green energy to communities and fight climate change.</h4>
+  <h1 class="greenlink-title"><strong>GREENLINKS</strong></h1>
+  <h4 class="title-text">Join the fight against climate change and stand up for the future generations, who cannot stand up for themselves.</h4>
 </div>
 
 
 <div class="donation-container">
-  <h5 class="motivational-text"> Join the fight against climate change and stand up for the future generations, who cannot stand up for themselves</h5>
   <h2 class="project-title pt-3"><%= @project.title %></h2>
   <%= simple_form_for @donation, url: project_donations_path, html: { class: 'donation-form', data: { controller: "donation", turbo: false } } do |f| %>
     <div class="form-group">
