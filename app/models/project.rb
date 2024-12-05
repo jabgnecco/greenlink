@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-  CONTINENTS = ["Africa", "Antarctica", "Asia", "Oceania", "Europe", "North America", "South America"]
+  CONTINENTS = ["🌎 Africa", "🌎 Antarctica", "🌎 Asia", "🌎 Oceania", "🌎 Europe", "🌎 North America", "🌎 South America"]
 
   belongs_to :user
   has_many :donations, dependent: :destroy
@@ -14,7 +14,7 @@ class Project < ApplicationRecord
   validates :auditor, presence: true
   validates :progress, presence: true, numericality: { only_integer: true }
   validates :target, presence: true, numericality: { only_integer: true }
-  validates :region, inclusion: { in: CONTINENTS}
+  validates :region, inclusion: { in: CONTINENTS }
   after_validation :geocode, if: :will_save_change_to_address?
   geocoded_by :address
 
