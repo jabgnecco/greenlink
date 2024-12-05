@@ -2,7 +2,7 @@
   <% content_for :meta_description, @project.description %>
   <% content_for :meta_image, @project.photo.attached? ? cl_image_path(@project.photo.key) : "logo.png" %>
 
-<div class="container">
+<div class="consistent-container">
   <h1 class="projects-title my-3"><%= @project.title %></h1>
   <div class="flex-container">
     <div class="flex-item col-8">
@@ -32,7 +32,7 @@
 
 
 
-    <div class="flex-item col-3", style="width: auto;">
+    <div class="flex-item col-3", style="width: 31%;">
       <div class="card-donation mb-4" >
           <h6><strong><%= humanized_money_with_symbol (@project.total / 100.00) %> Raised</strong></h6>
           <h6><strong>£<%= number_to_human(@project.target / 100, :format => '%n%u', :units => { :thousand => 'K' })%> Target</strong></h6>
@@ -55,7 +55,8 @@
               <p><strong><i class="fa-solid fa-earth-americas", style="color: green;"></i> <%= humanized_money_with_symbol (@project.top_donation.amount / 100)%></strong> - <%= @project.top_donation.user.first_name %> <%= time_ago_in_words(@project.top_donation.created_at) %> ago</p>
             <% end %>
 
-        <div class="show-container justify-content-around see-button">
+
+        <div class="show-container justify-content-between see-button">
           <a class="button-white" href="#" data-bs-toggle="modal" data-bs-target="#donations-modal" id="see-all">See All</a>
           <%# STILL TO DO - CODE 'SEE TOP' BUTTON %>
         </div>
