@@ -1,6 +1,6 @@
   <% content_for :meta_title, "#{@project.title} is on #{DEFAULT_META["meta_name"]}" %>
   <% content_for :meta_description, @project.description %>
-  <% content_for :meta_image, cl_image_path(@project.photo.key) %>
+  <% content_for :meta_image, @project.photo.attached? ? cl_image_path(@project.photo.key) : "logo.png" %>
 
 <div class="container">
   <h1 class="projects-title my-3"><%= @project.title %></h1>
