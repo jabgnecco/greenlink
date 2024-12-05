@@ -23,5 +23,5 @@ Rails.application.routes.draw do
 
   get '/donations/:id/success', to: 'donations#success', as: :donation_success
 
-  # mount StripeEvent::Engine, at: '/stripe-webhooks'
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
 end
