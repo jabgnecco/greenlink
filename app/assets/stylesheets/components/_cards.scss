@@ -12,6 +12,7 @@
   flex-grow: 1;
   max-width: 55%;
   margin-bottom: 10px;
+
 }
 
 .card-body{
@@ -33,13 +34,14 @@
   align-items: stretch;
   min-width: 10rem;
   border-radius: 18px;
-  border-style: none;
+  border: 1px solid #f1fffe;
   flex-direction: column;
   //background-color: white;
   background-color: #f1fffe;
   // border: 2px solid #DDDDDD;
   &:hover {
-    border: 1px solid #888888;
+    border: 1px solid #ecfffe;
+    box-shadow: 2.5px 2.5px 7.25px rgb(222, 222, 222);
   }
 }
 
@@ -49,6 +51,8 @@
 }
 
 .progress {
+  margin-left: 4px;
+  margin-right: 5px;
   border: 0.5px solid white;
   border-radius: 10px;
   .progress-bar {
@@ -126,6 +130,7 @@
   object-fit: cover;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+
 }
 
 .profile-cards {
@@ -183,4 +188,9 @@
   p {
     margin: 0;
   }
+}
+
+.card-total-raise{
+  margin-top: 10px;
+  margin-bottom: 0px;
 }

@@ -16,21 +16,23 @@
           <% if project.photo.attached? %>
             <%= cl_image_tag project.photo.key, class: "card-image" %>
           <% else %>
-            <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
+            <%= image_tag "logo.png", alt: "Green Link Logo", class: "card-image" %>
           <% end %>
         </div>
         <div class="card-body">
-          <h5 class="card-title custom-padding d-flex justify-content-start">
+          <h5 class="card-title custom-padding d-flex justify-content-start m-0">
             <p class="card-title"><%= project.title %></p>
           </h5>
           <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
             <div class="progress-bar d-flex justify-content-start" style="width: <%=( (project.total / project.target.to_f) * 100) > 100 ? 100 : (project.total / project.target.to_f) * 100  %>%;"></div>
           </div>
-          <p class="total-raise d-flex justify-content-start mt-3"><strong>
-            <%= humanized_money_with_symbol (project.total / 100.00) %> raised </strong>
+          <p class="card-total-raise d-flex ms-2"><strong>
+              <%= humanized_money_with_symbol (project.total / 100.00) %> raised </strong>
           </p>
-          <button class="pill row my-2"><%= project.display_categories %></button>
-          <button class="pill row"><%= project.region %></button>
+          <div class="pill-container">
+            <button class="pill row my-2"><%= project.display_categories %></button>
+            <button class="pill row"><%= project.region %></button>
+          </div>
         </div>
       <% end %>
     <% end %>
