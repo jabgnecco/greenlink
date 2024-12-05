@@ -30,7 +30,12 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.user = current_user
     @project.progress = 0
+    p @project.target
+    if @project.target&.positive?
+      @project.target *= 100
+    end
     if @project.save
+      p @project.target
       redirect_to projects_path
     else
       render :new, status: :unprocessable_entity
