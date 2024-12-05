@@ -4,10 +4,32 @@
   width: 75%;
   border: 1px solid rgb(231, 230, 230);
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Keeps spacing from the card's bottom */
   padding: 15px 0px;
-  box-shadow: 4px 5px 10px #eeeeee;
+  padding-bottom: 15px;
   background-color: #f1fffe;
+}
+
+.home-page-button {
+  background-color: #409554;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 1.0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  padding: 14px;
+  text-align: center;
+}
+
+.home-page-button:hover {
+  background-color: #247238;
+  color: #ffffff;
+  transition: 0.5s;
 }
 
 .home-page-title {

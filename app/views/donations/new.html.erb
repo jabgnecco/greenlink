@@ -3,36 +3,37 @@
   <h4 class="title-text">Join the fight against climate change and stand up for the future generations, who cannot stand up for themselves.</h4>
 </div>
 
-
-<div class="donation-container">
-  <h2 class="project-title pt-3"><%= @project.title %></h2>
-  <%= simple_form_for @donation, url: project_donations_path, html: { class: 'donation-form', data: { controller: "donation", turbo: false } } do |f| %>
-    <div class="form-group">
-      <%= f.label :amount, "Enter Donation Amount:", class: "fs-5 fw-bold px-2" %>
-      <div class="donation-box">
-        <div class="donation-buttons mt-2 mb-4">
-          <% [50, 100, 200, 500, 1000].each do |preset| %>
-            <button type="button" class="donation-option" data-action="click->donation#setPreset" data-value="<%= preset %>">£<%= preset %></button>
-
-          <% end %>
-        </div>
-        <div class="">
-          <%= f.input :amount,
-          wrapper_html: { style: "display: flex; position: relative" },
-          input_html: { as: :number, class: 'donation-input', placeholder: "20", style: "padding-left: 20px;", pattern: "[0-9]",
-          data: { donation_target: "donationInput" } },
-          label_html: { style: "position: absolute; top: 25%; left: 2%; font-weight: 600;" },
-          label: "£"
-          %>
+<div class="consistent-container d-flex justify-content-between", style="max-height: 380px">
+  <div class="donation-container">
+    <h2 class="project-title pt-3"><%= @project.title %></h2>
+    <%= simple_form_for @donation, url: project_donations_path, html: { class: 'donation-form', data: { controller: "donation", turbo: false } } do |f| %>
+      <div class="form-group">
+        <%= f.label :amount, "Enter Donation Amount:", class: "fs-5 fw-bold px-2" %>
+        <div class="donation-box">
+          <div class="donation-buttons mt-2 mb-4">
+            <% [50, 100, 200, 500, 1000].each do |preset| %>
+              <button type="button" class="donation-option" data-action="click->donation#setPreset" data-value="<%= preset %>">£<%= preset %></button>
+            <% end %>
+          </div>
+          <div class="">
+            <%= f.input :amount,
+            wrapper_html: { style: "display: flex; position: relative" },
+            input_html: { as: :number, class: 'donation-input', placeholder: "20", style: "padding-left: 20px;", pattern: "[0-9]",
+            data: { donation_target: "donationInput" } },
+            label_html: { style: "position: absolute; top: 25%; left: 2%; font-weight: 600;" },
+            label: "£"
+            %>
+          </div>
         </div>
       </div>
-    </div>
 
-    <%# <div class="form-group"> %>
-      <%#= f.label :tip, "Tip:" %>
-      <%#= f.input :tip, input_html: { class: 'tip-input', placeholder: "£" }, label: false %>
-    <%# </div> %>
+      <%# <div class="form-group"> %>
+        <%#= f.label :tip, "Tip:" %>
+        <%#= f.input :tip, input_html: { class: 'tip-input', placeholder: "£" }, label: false %>
+      <%# </div> %>
 
-    <%= f.button :submit, "Checkout", class: "checkout-button" %>
-  <% end %>
+      <%= f.button :submit, "Checkout", class: "checkout-button" %>
+    <% end %>
+  </div>
+  <%= cl_image_tag @project.photo.key, class: "card-image", style: "width: 40%; border-radius: 16px; height: auto;" %>
 </div>
