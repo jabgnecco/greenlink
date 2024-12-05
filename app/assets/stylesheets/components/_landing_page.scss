@@ -7,11 +7,10 @@
   padding: 0px;
   padding-bottom: 15px;
   background: rgb(245, 245, 245);
-  box-shadow: 5px 5px 10px #d5d5d5;
 }
 
 .home-page-button {
-  background: #247238;
+  background-color: #409554;
   text-decoration: none;
   color: #ffffff;
   border-radius: 14px;
@@ -21,14 +20,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px auto 20px auto;
   width: 190px;
   padding: 14px;
   text-align: center;
 }
 
 .home-page-button:hover {
-  background-color: #409554;
+  background-color: #247238;
   color: #ffffff;
   transition: 0.5s;
 }

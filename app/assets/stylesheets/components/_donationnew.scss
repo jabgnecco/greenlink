@@ -1,10 +1,11 @@
 .donation-container {
   max-width: 640px;
-  margin: 16px auto;
   padding: 20px;
   font-family: Arial, sans-serif;
   background-color: #f0f9f4;
   border-radius: 8px;
+  flex-grow: 1;
+  max-height: 380px;
 
   .donation-form {
     .form-group {

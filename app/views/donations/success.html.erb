@@ -11,33 +11,35 @@
     origin: { x: 1, y: 0.6 },
   });
 </script>
-<div class="summary-card my-4">
-  <h2 class="d-flex justify-content-center mb-2">Thank you for donating!</h2>
-  <h5 class="d-flex justify-content-center mb-4">Your support really makes a difference</h5>
-  <div class="px-3 green-card">
-    <h2 class="project-title pt-3 pb-2"><%= @donation_paid.project.title %></h2>
-    <%= link_to project_path(@donation_paid.project), style: "text-decoration: none; color: black;" do %>
-      <div>
-        <% if @donation_paid.project.photo.attached? %>
-          <%= cl_image_tag @donation_paid.project.photo.key, class: "card-image", style: "border-radius: 16px;" %>
-        <% else %>
-          <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
-        <% end %>
-      </div>
-      <div class="card-body mt-3">
-        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-          <div class="progress-bar d-flex justify-content-start" style="width: <%=( (@donation_paid.project.total / @donation_paid.project.target.to_f) * 100) > 100 ? 100 : (@donation_paid.project.total / @donation_paid.project.target.to_f) * 100  %>%;"></div>
+<div class="consistent-container d-flex justify-content-center">
+  <div class="summary-card">
+    <h2 class="mb-2 d-flex justify-content-center">Thank you for donating!</h2>
+    <h5 class="mb-4 d-flex justify-content-center">Your support really makes a difference</h5>
+    <div class="px-3 green-card">
+      <h2 class="project-title pt-3 pb-2"><%= @donation_paid.project.title %></h2>
+      <%= link_to project_path(@donation_paid.project), style: "text-decoration: none; color: black;" do %>
+        <div>
+          <% if @donation_paid.project.photo.attached? %>
+            <%= cl_image_tag @donation_paid.project.photo.key, class: "card-image", style: "border-radius: 16px;" %>
+          <% else %>
+            <%= image_tag "logo.png", alt: "Green Link Logo", class: "logo-icon me-2" %>
+          <% end %>
         </div>
-        <p class="total-raise d-flex justify-content-start mt-3">
-          <strong><%= humanized_money_with_symbol (@donation_paid.project.total / 100.00) %> raised </strong>
-        </p>
-      </div>
-    <% end %>
-    <h5 class="mt-1"><strong>You donated:</strong></h5>
-  <div class="summary-box d-flex align-items-center px-3 mb-3">
-    <strong>£<%= (@donation_paid.amount.to_f / 100) %>0</strong>
+        <div class="card-body mt-3">
+          <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar d-flex justify-content-start" style="width: <%=( (@donation_paid.project.total / @donation_paid.project.target.to_f) * 100) > 100 ? 100 : (@donation_paid.project.total / @donation_paid.project.target.to_f) * 100  %>%;"></div>
+          </div>
+          <p class="total-raise d-flex justify-content-start mt-3">
+            <strong><%= humanized_money_with_symbol (@donation_paid.project.total / 100.00) %> raised </strong>
+          </p>
+        </div>
+      <% end %>
+      <h5 class="mt-1"><strong>You donated:</strong></h5>
+    <div class="summary-box d-flex align-items-center px-3 mb-3">
+      <strong>£<%= (@donation_paid.amount.to_f / 100) %>0</strong>
+    </div>
+    <a class="button-blue my-2", style="width: 100%; " href="whatsapp://send?text=<%= request.original_url %>" id="shareButton">Share on Whatsapp</a>
+    </div>
+    <%= link_to "View my Donations", profile_path(@donation_paid.project), class:"button-main-green my-4", style: "width: 100%; font-weight: 400;" %>
   </div>
-  <a class="button-blue my-2", style="width: 100%; " href="whatsapp://send?text=<%= request.original_url %>" id="shareButton">Share on Whatsapp</a>
-  </div>
-  <%= link_to "View my Donations", profile_path(@donation_paid.project), class:"button-main-green my-4", style: "width: 100%; font-weight: 400;" %>
 </div>

@@ -1,5 +1,5 @@
 
-.m-4 {
+.about-card {
   font-family: 'Arimo', sans-serif;
   padding: 20px;
   background-color: #f0f9f4;
@@ -9,7 +9,7 @@
 }
 
 
-.m-4 h5 {
+.about-card h5 {
   font-size: 1.4rem;
   color: #2c6e49;
   margin-bottom: 12px;
@@ -19,7 +19,7 @@
 }
 
 
-.m-4 p {
+.about-card p {
   font-size: 1rem;
   color: #34495e;
   line-height: 1.8;
@@ -28,7 +28,7 @@
 }
 
 
-.m-4 hr {
+.about-card hr {
   border: 0;
   height: 3px;
   background: linear-gradient(to right, #4caf50, #8bc34a);
@@ -37,12 +37,10 @@
 }
 
 
-.m-4 h5 + p {
+.about-card h5 + p {
   margin-top: 5px;
 }
 
-.m-4 p + h5 {
+.about-card p + h5 {
   margin-top: 25px;
 }
-
-
