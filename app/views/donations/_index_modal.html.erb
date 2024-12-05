@@ -16,7 +16,7 @@
             <div id="donations-list" style="overflow: hidden; overflow-y: scroll; height: 40dvh;">
               <% donations.each do |donation|%>
                 <div class="list-decoration-none d-flex align-items-center">
-                  <i class="fa-solid fa-earth-americas"></i>
+                  <i class="fa-solid fa-earth-americas fa-2xl", style="color: green; margin-right: 10px; margin-bottom: 15px;"></i>
                   <div>
                     <h5><%= donation.user.first_name %> <%= donation.user.last_name %></h5>
                     <p><%= humanized_money_with_symbol (donation.amount / 100.00) %> - Created <%= time_ago_in_words(donation.created_at) %> ago</p>
@@ -31,7 +31,7 @@
             <% top_donations = donations.to_a.sort_by {|donation| -donation.amount } %>
             <% top_donations.each do |top_donation| %>
               <div class="list-decoration-none d-flex align-items-center">
-                <i class="fa-solid fa-earth-americas"></i>
+                <i class="fa-solid fa-earth-americas fa-2xl", style="color: green; margin-right: 10px; margin-bottom: 15px;"></i>
                 <div>
                   <h5><%= top_donation.user.first_name %> <%= top_donation.user.last_name %></h5>
                   <p><%= humanized_money_with_symbol (top_donation.amount / 100.00) %> - Created <%= time_ago_in_words(top_donation.created_at) %> ago</p>

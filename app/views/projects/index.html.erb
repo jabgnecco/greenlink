@@ -29,6 +29,7 @@
             </div>
             <p class="card-total-raise d-flex"><strong>
                 <%= humanized_money_with_symbol (project.total / 100.00) %> raised </strong>
+                <p style="color:gray; font-weight: lighter; font-size: 12px;">Closing date: <%= project.closing_date.strftime('%d/%m/%Y') %></p>
             </p>
             <div class="pill-container">
               <button class="pill row my-2"><%= project.display_categories %></button>

@@ -36,7 +36,7 @@
       <div class="card-donation mb-4" >
           <h6><strong><%= humanized_money_with_symbol (@project.total / 100.00) %> Raised</strong></h6>
           <h6><strong>£<%= number_to_human(@project.target / 100, :format => '%n%u', :units => { :thousand => 'K' })%> Target</strong></h6>
-          <p><strong>Closing date:</strong> <%= @project.closing_date %></p>
+          <p><strong>Closing date:</strong> <%= @project.closing_date.strftime('%d/%m/%Y') %></p>
         <%= link_to "Donate Now", new_project_donation_path(@project), class: "btn button-medium button-main-green" %>
         <a class="btn button-medium button-blue" href="whatsapp://send?text=<%= request.original_url %>" id="shareButton">Share on Whatsapp</a>
         <p class="mb-3"><strong><%= @project.donations.count%> Donations:</strong></p>
@@ -45,14 +45,14 @@
               <p>No donations just yet, become the first to donate <%= link_to 'here!', new_project_donation_path(@project) %></p>
             <% else %>
 
-              <p><strong><i class="fa-solid fa-earth-americas"></i> <%=humanized_money_with_symbol (@project.recent_donation.amount / 100)%></strong> - <%= @project.recent_donation.user.first_name %> <%= time_ago_in_words(@project.recent_donation.created_at) %> ago</p>
+              <p><strong><i class="fa-solid fa-earth-americas", style="color: green;"></i> <%=humanized_money_with_symbol (@project.recent_donation.amount / 100)%></strong> - <%= @project.recent_donation.user.first_name %> <%= time_ago_in_words(@project.recent_donation.created_at) %> ago</p>
             <% end %>
               <p><strong>Top Donation</strong></p>
               <% if @project.top_donation.nil? %>
                 <p>No donations just yet, become the first to donate <%= link_to 'here!', new_project_donation_path(@project) %></p>
               <% else %>
 
-              <p><strong><i class="fa-solid fa-earth-americas"></i> <%= humanized_money_with_symbol (@project.top_donation.amount / 100)%></strong> - <%= @project.top_donation.user.first_name %> <%= time_ago_in_words(@project.top_donation.created_at) %> ago</p>
+              <p><strong><i class="fa-solid fa-earth-americas", style="color: green;"></i> <%= humanized_money_with_symbol (@project.top_donation.amount / 100)%></strong> - <%= @project.top_donation.user.first_name %> <%= time_ago_in_words(@project.top_donation.created_at) %> ago</p>
             <% end %>
 
         <div class="show-container justify-content-around see-button">
