@@ -31,18 +31,3 @@
     <% end %>
   </div>
 </div>
-
-<script>
-  // Add event listener to the form
-  document.addEventListener("DOMContentLoaded", function () {
-    const targetInput = document.getElementById("target-input");
-    const form = document.querySelector("form");
-
-    form.addEventListener("submit", function (event) {
-      // Get the input value and multiply by 100
-      if (targetInput.value) {
-        targetInput.value = parseFloat(targetInput.value) * 100;
-      }
-    });
-  });
-</script>
