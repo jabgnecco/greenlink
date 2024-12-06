@@ -14,7 +14,7 @@
 
   <%# Total raised and funding target %>
   <p class="total-raise">
-    <%= humanized_money_with_symbol(project.total / 100.00) %> raised out of
+    <%= humanized_money_with_symbol(project.total / 100.00, format: '%n%u', units: { thousand: 'K' }) %> raised out of
     £<%= number_to_human(project.target / 100, format: '%n%u', units: { thousand: 'K' }) %>
   </p>
 
