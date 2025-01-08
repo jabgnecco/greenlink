@@ -1,4 +1,4 @@
-.button-main-green{
+.button-main-green {
   text-decoration: none;
   margin: 10px auto;
   transition: 0.3s;
@@ -17,7 +17,8 @@
   border: none;
   width: 90%;
   font-style: normal;
-  &:hover{
+
+  &:hover {
     background-color: #247238;
     transition: 0.3s;
     color: #fff;
@@ -25,7 +26,7 @@
 }
 
 
-.button-small-green{
+.button-small-green {
   text-decoration: none;
   margin: 10px auto;
   transition: 0.3s;
@@ -44,7 +45,8 @@
   border: none;
   width: 20%;
   font-style: normal;
-  &:hover{
+
+  &:hover {
     background-color: #247238;
     transition: 0.3s;
     color: #fff;
@@ -52,7 +54,7 @@
 }
 
 
-.button-light-green{
+.button-light-green {
   text-decoration: none;
   transition: 0.3s;
   background-color: #95D2B3;
@@ -62,14 +64,13 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 0.9rem;
-  display: flex;
-  align-content: center;
-  align-items: center;
-  height: 30px;
-  justify-content: center;
+  display: inline-block;
+  text-align: center;
+  height: fit-content;
   border: none;
   font-style: normal;
-  &:hover{
+
+  &:hover {
     background-color: #4AA761;
     transition: 0.3s;
     color: black;
@@ -77,7 +78,7 @@
 }
 
 
-.button-blue{
+.button-blue {
   background-color: #4DA9E8;
   text-decoration: none;
   transition: 0.3s;
@@ -96,7 +97,8 @@
   border: none;
   width: 90%;
   font-style: normal;
-  &:hover{
+
+  &:hover {
     background-color: #0088C2;
     color: white;
     transition: 0.3s;
@@ -104,7 +106,7 @@
 }
 
 
-.button-circle{
+.button-circle {
   background-color: #4AA761;
   text-decoration: none;
   transition: 0.3s;
@@ -122,6 +124,7 @@
   justify-content: center;
   border: none;
   font-style: normal;
+
   &:hover {
     background-color: #247238;
     transition: 0.3s;
@@ -130,7 +133,7 @@
 }
 
 
-.button-white{
+.button-white {
   background-color: rgb(255, 255, 255);
   border-radius: 8px;
   text-decoration: none;
@@ -150,6 +153,7 @@
   width: 90%;
   font-style: normal;
   border: 0.5px solid rgb(221, 221, 221);
+
   &:hover {
     border-radius: 10px;
     transition: 0.3s;
@@ -158,11 +162,11 @@
 }
 
 
-.button-large{
+.button-large {
   width: 100%;
 }
 
-.button-medium{
+.button-medium {
   width: 90%;
   margin: 10px auto;
   display: block;
@@ -171,9 +175,9 @@
 
 }
 
-.button-small{
+.button-small {
   width: 42%;
   box-shadow: 0.5px 0.5px 0.25px rgb(207, 207, 207);
   font-size: small;
-  border:1px solid lightgray
+  border: 1px solid lightgray
 }
